@@ -19,9 +19,9 @@ if has("gui_running")
     set guioptions-=L
 
     if has("gui_gtk2")
-      set guifont=Inconsolata\ for\ Powerline:h14
+      set guifont=Roboto\ for\ Powerline:h12
     else
-      set guifont=Inconsolata\ for\ Powerline:h14
+      set guifont=Roboto\ for\ Powerline:h12
     endif
 endif
 
