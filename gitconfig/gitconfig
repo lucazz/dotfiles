@@ -1,0 +1,19 @@
+[user]
+  email = lucas.saboya@gmail.com
+  name = Lucas do Amaral Saboya
+
+[core]
+  editor = vim
+  push.default = simple
+  excludesfile = o/.gitignore
+
+[web]
+  browser = google-chrome
+
+[alias]
+a = add --all
+c = commit
+d = diff
+l = log --oneline --graph --decorate
+s = status -b
+

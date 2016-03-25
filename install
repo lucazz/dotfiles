@@ -1,0 +1,49 @@
+#!/bin/bash
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# gitconfig
+ln -s ${BASEDIR}/gitconfig/gitconfig ~/.gitconfig
+ln -s ${BASEDIR}/gitconfig/gitignore ~/.gitignore
+
+# ntp.br
+sudo bash ${BASEDIR}/ntp/install.sh
+
+# homesbrew
+bash ${BASEDIR}/homebrew/install.sh
+
+# vimfiles
+rm ~/.vimrc && ln -s ~ h ln -s ~/.dotfiles/vim/vimrc ~/.vimrc && vim +PlugInstall +qa!
+
+# osx
+bash ${BASEDIR}/osx-defaults/set-defaults.sh
+
+# Powerline
+git clone https://github.com/powerline/fonts ${BASEDIR}/.powerline/
+bash ${BASEDIR}/.powerline/install.sh
+
+# iTerm2
+rm ~/Library/Preferences/com.googlecode.iterm2.plist
+ln -s ${BASEDIR}/.iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+
+# OSX Lockdown
+mkdir ~/.dotfiles/osxlockdown
+wget -O ~/.dotfiles/osxlockdown/osxlockdown.tar.gz https://github.com/SummitRoute/osxlockdown/releases/download/0.9/osxlockdown-0.9.tar.gz
+tar -xf ~/.dotfiles/osxlockdown/osxlockdown.tar.gz -C ~/.dotfiles/osxlockdown/
+cd ~/.dotfiles/osxlockdown/osxlockdown-0.9/ && ./osxlockdown --remediate
+
+# Vagrant plugins
+bash ${BASEDIR}/vagrant/.vagrant-bundle
+
+# Razer Synapse Profile
+cp ~/.dotfiles/razer/Mac.RazerSynapse ~/Downloads/Mac.RazerSynapse
+
+# Prezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git ${BASEDIR}/zprezto
+ln -s ${BASEDIR}/zprezto/runcoms/zshrc ~/.zshrc
+ln -s ${BASEDIR}/zprezto/runcoms/zshenv ~/.zshenv
+ln -s ${BASEDIR}/zprezto/runcoms/zprofile ~/.zprofile
+ln -s ${BASEDIR}/zprezto/runcoms/zpreztorc ~/.zpreztorc
+ln -s ${BASEDIR}/zprezto/runcoms/zlogout ~/.zlogout
+ln -s ${BASEDIR}/zprezto/runcoms/zlogin ~/.zlogin
+ln -s ${BASEDIR}/zprezto/ ~/.zprezto
+chsh -s /bin/zsh
