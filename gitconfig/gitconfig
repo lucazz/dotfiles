@@ -1,19 +1,30 @@
 [user]
   email = lucas.saboya@gmail.com
   name = Lucas do Amaral Saboya
+	signingkey = 3A7B8270
 
 [core]
   editor = vim
-  push.default = simple
   excludesfile = o/.gitignore
+	autocrlf = input
 
 [web]
   browser = google-chrome
 
 [alias]
-a = add --all
-c = commit
-d = diff
-l = log --oneline --graph --decorate
-s = status -b
+  a = add --all
+  c = commit
+  d = diff
+  l = log --oneline --graph --decorate
+  s = status -b
+	log = log --oneline --decorate --all --graph
 
+[push]
+	default = simple
+
+[color]
+  ui = true
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
