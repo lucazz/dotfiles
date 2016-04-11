@@ -12,7 +12,8 @@ sudo bash ${BASEDIR}/ntp/install.sh
 bash ${BASEDIR}/homebrew/install.sh
 
 # vimfiles
-rm ~/.vimrc && ln -s ~ h ln -s ~/.dotfiles/vim/vimrc ~/.vimrc && vim +PlugInstall +qa!
+ln -s ${BASEDIR}/vim/vimrc -> ~/.vimrc
+ln -s ${BASEDIR}/vim/ -> ~/.vim
 
 # osx
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
@@ -23,7 +24,7 @@ bash ${BASEDIR}/.powerline/install.sh
 
 # iTerm2
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
-ln -s ${BASEDIR}/.iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # OSX Lockdown
 cd ~/.dotfiles/osxlockdown && sudo ./osxlockdown -remediate
@@ -35,7 +36,6 @@ bash ${BASEDIR}/vagrant/.vagrant-bundle
 cp ~/.dotfiles/razer/Mac.RazerSynapse ~/Downloads/Mac.RazerSynapse
 
 # Prezto
-git clone --recursive https://github.com/sorin-ionescu/prezto.git ${BASEDIR}/zprezto
 ln -s ${BASEDIR}/zprezto/runcoms/zshrc ~/.zshrc
 ln -s ${BASEDIR}/zprezto/runcoms/zshenv ~/.zshenv
 ln -s ${BASEDIR}/zprezto/runcoms/zprofile ~/.zprofile
