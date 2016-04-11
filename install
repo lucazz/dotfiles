@@ -26,10 +26,7 @@ rm ~/Library/Preferences/com.googlecode.iterm2.plist
 ln -s ${BASEDIR}/.iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # OSX Lockdown
-mkdir ~/.dotfiles/osxlockdown
-wget -O ~/.dotfiles/osxlockdown/osxlockdown.tar.gz https://github.com/SummitRoute/osxlockdown/releases/download/0.9/osxlockdown-0.9.tar.gz
-tar -xf ~/.dotfiles/osxlockdown/osxlockdown.tar.gz -C ~/.dotfiles/osxlockdown/
-cd ~/.dotfiles/osxlockdown/osxlockdown-0.9/ && ./osxlockdown --remediate
+cd ~/.dotfiles/osxlockdown && sudo ./osxlockdown -remediate
 
 # Vagrant plugins
 bash ${BASEDIR}/vagrant/.vagrant-bundle
