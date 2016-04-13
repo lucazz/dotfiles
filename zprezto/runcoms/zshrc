@@ -12,3 +12,7 @@ fi
 
 # Customize to your needs...
 alias vim='mvim'
+alias wow='git status'
+alias such='git'
+alias much= 'git'
+alias very='git'
