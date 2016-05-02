@@ -16,9 +16,8 @@ fi
 #
 # Editors
 #
-alias vim="mvim"
-export EDITOR='mvim'
-export VISUAL='mvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 #
