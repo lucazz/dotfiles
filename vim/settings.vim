@@ -1,7 +1,13 @@
 " ========= Appearance ================
+set t_Co=256
 set cursorline
 set mouse=a
 set clipboard=unnamed
+
+" NEOVIM
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let g:deoplete#enable_at_startup = 1
+colorscheme dracula
 
 " ========= NERDTree =================
 let NERDTreeIgnore = ['\.pyc$']
@@ -11,6 +17,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
+" ========= MacVim ====================
 if has("gui_running")
   set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
   set guioptions-=T " no toolbar
