@@ -29,8 +29,8 @@ brew tap caskroom/versions
 brew install vim --override-system-vi
 brew install homebrew/dupes/screen
 # Install homebrew packages
-brew install gnu-sed \
-python \
+brew install python \
+neovim/neovim/neovim \
 ansible \
 awscli \
 htop \
@@ -60,7 +60,7 @@ brew cask install the-unarchiver
 brew cask install cleanmymac
 brew cask install osxfuse
 brew cask install teamviewer
-brew cask install iterm2
+brew cask install iterm2-beta
 brew cask install transmission
 brew cask install evernote
 brew cask install istat-menus
@@ -70,8 +70,6 @@ brew cask install gpgtools
 brew cask install spectacle
 brew cask install dropbox
 brew cask install skype
-brew cask install nylas-n1
-brew cask install vmware-fusion
 brew cask install java
 brew cask install virtualbox
 brew cask install vlc
