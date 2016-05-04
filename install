@@ -12,8 +12,10 @@ sudo bash ${BASEDIR}/ntp/install.sh
 bash ${BASEDIR}/homebrew/install.sh
 
 # vimfiles
-ln -s ${BASEDIR}/vim/vimrc -> ~/.vimrc
-ln -s ${BASEDIR}/vim/ -> ~/.vim
+mkdir -p ~/.config
+ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
+ln -s ${BASEDIR}/vim/ ~/.vim
+ln -s ${BASEDIR}/vim/ ~/.config/nvim
 
 # osx
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
@@ -30,7 +32,7 @@ ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.go
 cd ~/.dotfiles/osxlockdown && sudo ./osxlockdown -remediate
 
 # Vagrant plugins
-bash ${BASEDIR}/vagrant/.vagrant-bundle
+bash ${BASEDIR}/vagrant/vagrant-bundle
 
 # Razer Synapse Profile
 cp ~/.dotfiles/razer/Mac.RazerSynapse ~/Downloads/Mac.RazerSynapse
