@@ -1,0 +1,3 @@
+vagrant plugin install vagrant-serverspec
+vagrant plugin install vagrant-hostmanager
+vagrant plugin install vagrant-host-shell
