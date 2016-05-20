@@ -16,6 +16,7 @@ mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
 ln -s ${BASEDIR}/vim/ ~/.config/nvim
+vim +PlugInstall +qa!
 
 # osx
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
