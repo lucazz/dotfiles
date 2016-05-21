@@ -68,6 +68,8 @@ brew cask install skype
 brew cask install java
 brew cask install virtualbox
 brew cask install vlc
+brew cask install razer-synapse
+brew cask install plex-media-server
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
