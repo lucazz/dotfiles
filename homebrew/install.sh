@@ -53,7 +53,6 @@ brew cask install alfred
 brew cask install slack
 brew cask install the-unarchiver
 brew cask install cleanmymac
-brew cask install osxfuse
 brew cask install teamviewer
 brew cask install iterm2-beta
 brew cask install transmission
