@@ -41,6 +41,7 @@ p7zip \
 findutils \
 keybase \
 pwgen \
+go \
 namebench
 # Install homebrew cask
 brew tap caskroom/cask
@@ -69,6 +70,7 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install razer-synapse
 brew cask install plex-media-server
+brew cask install google-cloud-sdk
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
