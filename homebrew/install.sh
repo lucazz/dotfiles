@@ -42,6 +42,7 @@ findutils \
 keybase \
 pwgen \
 go \
+ncdu \
 namebench
 # Install homebrew cask
 brew tap caskroom/cask
