@@ -42,6 +42,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  /opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
   /Library/TeX/texbin
   /usr/local/{bin,sbin}
   $path

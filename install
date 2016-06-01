@@ -11,6 +11,9 @@ sudo bash ${BASEDIR}/ntp/install.sh
 # homesbrew
 bash ${BASEDIR}/homebrew/install.sh
 
+#Google Cloud SDK components
+bash ${BASEDIR}/gcloud/install.sh
+
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc

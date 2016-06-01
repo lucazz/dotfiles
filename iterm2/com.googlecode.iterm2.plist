@@ -336,7 +336,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>972 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>859 257 759 520 0 0 1680 1027 </string>
+	<string>950 940 570 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>974 126 962 1256 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_6CEA2330-905A-41CB-8A8B-B670CC927EE9</key>
@@ -1198,7 +1198,7 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
-	<true/>
+	<false/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
