@@ -43,7 +43,8 @@ keybase \
 pwgen \
 go \
 ncdu \
-namebench
+namebench \
+dockviz
 # Install homebrew cask
 brew tap caskroom/cask
 brew install brew-cask
@@ -72,6 +73,7 @@ brew cask install vlc
 brew cask install razer-synapse
 brew cask install plex-media-server
 brew cask install google-cloud-sdk
+brew cask install bartender
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
