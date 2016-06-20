@@ -11,6 +11,9 @@ sudo bash ${BASEDIR}/ntp/install.sh
 # homesbrew
 bash ${BASEDIR}/homebrew/install.sh
 
+#Terraform modules
+ln -s ${BASEDIR}/terraform/terraformrc ~/.terraformrc
+
 #Google Cloud SDK components
 bash ${BASEDIR}/gcloud/install.sh
 
