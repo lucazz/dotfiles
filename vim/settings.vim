@@ -10,7 +10,10 @@ let g:deoplete#enable_at_startup = 1
 colorscheme dracula
 
 " ========= NERDTree =================
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowHidden = 1
 
 " ========= Vim Airline ===============
 let g:airline_powerline_fonts = 1
