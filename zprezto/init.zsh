@@ -111,3 +111,7 @@ unset zfunction{s,}
 zstyle -a ':prezto:load' pmodule 'pmodules'
 pmodload "$pmodules[@]"
 unset pmodules
+
+# Turn Reverse History search on
+bindkey -v
+bindkey '^R' history-incremental-search-backward

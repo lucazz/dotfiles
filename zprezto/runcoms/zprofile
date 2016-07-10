@@ -78,3 +78,8 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 # Gopath
 #
 export GOPATH=~/Projects/Go
+
+#
+# Vagrant Default provider
+#
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
