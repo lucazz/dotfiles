@@ -16,5 +16,3 @@ alias wow='git status'
 alias such='git'
 alias much= 'git'
 alias very='git'
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
