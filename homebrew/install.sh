@@ -39,6 +39,7 @@ terraform \
 youtube-dl \
 p7zip \
 findutils \
+tarsnap \
 keybase \
 pwgen \
 go \
@@ -49,17 +50,16 @@ dockviz
 brew tap caskroom/cask
 brew install brew-cask
 brew cask install google-chrome
+brew cask install docker
 brew cask install little-snitch
-brew cask install lastpass
+brew cask install 1password
 brew cask install spotify
 brew cask install alfred
 brew cask install slack
 brew cask install the-unarchiver
 brew cask install cleanmymac
-brew cask install teamviewer
 brew cask install iterm2-beta
 brew cask install transmission
-brew cask install evernote
 brew cask install istat-menus
 brew cask install screenhero
 brew cask install vagrant
@@ -68,7 +68,7 @@ brew cask install spectacle
 brew cask install dropbox
 brew cask install skype
 brew cask install java
-brew cask install virtualbox
+brew cask install vmware-fusion
 brew cask install vlc
 brew cask install razer-synapse
 brew cask install plex-media-server
