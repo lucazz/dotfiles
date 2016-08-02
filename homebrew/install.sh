@@ -74,6 +74,7 @@ brew cask install razer-synapse
 brew cask install plex-media-server
 brew cask install google-cloud-sdk
 brew cask install bartender
+brew cask install whatsapp
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
