@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 " ======== Interface ==========
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'dracula/vim'
 
 " ======== Project ===========
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
