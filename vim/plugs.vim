@@ -9,6 +9,7 @@ Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " ======= Vim improvments ===
+Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/bufkill.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Raimondi/delimitMate'
