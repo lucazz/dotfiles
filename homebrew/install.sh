@@ -77,6 +77,7 @@ brew cask install google-cloud-sdk
 brew cask install bartender
 brew cask install libreoffice
 brew cask install whatsapp
+brew cask install irccloud
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
