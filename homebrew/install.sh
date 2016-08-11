@@ -46,6 +46,7 @@ pwgen \
 go \
 ncdu \
 namebench \
+tree \
 dockviz
 # Install homebrew cask
 brew tap caskroom/cask
