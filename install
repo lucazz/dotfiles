@@ -11,6 +11,9 @@ sudo bash ${BASEDIR}/ntp/install.sh
 # homesbrew
 bash ${BASEDIR}/homebrew/install.sh
 
+#Installing Font
+ln -s ${BASEDIR}/fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/Library/Fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
+
 #Terraform modules
 ln -s ${BASEDIR}/terraform/terraformrc ~/.terraformrc
 
