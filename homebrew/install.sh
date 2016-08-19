@@ -47,6 +47,7 @@ go \
 ncdu \
 namebench \
 tree \
+cfssl \
 dockviz
 # Install homebrew cask
 brew tap caskroom/cask
