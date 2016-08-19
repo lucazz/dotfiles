@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 " On-demand loading
 " ======== Interface ==========
 Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim'
 
