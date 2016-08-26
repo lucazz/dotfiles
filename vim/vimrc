@@ -93,14 +93,15 @@ set wildignore+=*.class
 set wildignore+=*.pyc
 
 "
-" ================ Scrolling ========================
-
+" ====================== Scrolling ========================
+set lazyredraw
+set ttyfast
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" ================ Custom Settings ========================
+" ================= Custom Settings ========================
 so ~/.vim/settings.vim
 
-" ================= close vim if the only window left open is a NERDTree
+" == Close vim if the only window left open is a NERDTree ==
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
