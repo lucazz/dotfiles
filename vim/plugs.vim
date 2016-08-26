@@ -16,6 +16,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
+Plug 'b4b4r07/vim-hcl'
 
 " ====== Languages ==========
 " Add plugins to &runtimepath
