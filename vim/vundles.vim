@@ -14,7 +14,9 @@ set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/vundles/ "Submodules
 call vundle#rc()
 
+" =============================================
 " let Vundle manage Vundle (required)
+" =============================================
 Bundle "gmarik/vundle"
 
 " =============================================
@@ -27,6 +29,7 @@ Bundle "bling/vim-airline"
 " =============================================
 Bundle "jistr/vim-nerdtree-tabs.git"
 Bundle "scrooloose/nerdtree.git"
+
 " =============================================
 " Vim Improvements
 " =============================================
