@@ -21,7 +21,6 @@ Bundle "gmarik/vundle"
 " Appearance
 " =============================================
 Bundle "bling/vim-airline"
-Bundle "zenorocha/dracula-theme', {'rtp': 'vim/'}'}"
 
 " =============================================
 " Project
