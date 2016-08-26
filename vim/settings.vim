@@ -5,6 +5,7 @@ set mouse=a
 set clipboard=unnamed
 
 " NEOVIM
+set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:deoplete#enable_at_startup = 1
 colorscheme dracula
