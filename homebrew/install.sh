@@ -36,6 +36,7 @@ aria2 \
 nmap \
 packer \
 terraform \
+tig \
 youtube-dl \
 p7zip \
 wget \
