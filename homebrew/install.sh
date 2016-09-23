@@ -48,39 +48,35 @@ go \
 ncdu \
 namebench \
 tree \
-cfssl \
-dockviz
+cfssl
 # Install homebrew cask
 brew tap caskroom/cask
 brew install brew-cask
 brew cask install google-chrome
 brew cask install docker
 brew cask install little-snitch
-brew cask install 1password
 brew cask install spotify
 brew cask install alfred
 brew cask install slack
 brew cask install the-unarchiver
 brew cask install cleanmymac
-brew cask install iterm2-beta
+brew cask install iterm2
 brew cask install transmission
 brew cask install istat-menus
 brew cask install screenhero
-brew cask install vagrant
 brew cask install gpgtools
 brew cask install spectacle
 brew cask install dropbox
 brew cask install skype
 brew cask install java
-brew cask install vmware-fusion
 brew cask install vlc
 brew cask install razer-synapse
 brew cask install plex-media-server
 brew cask install google-cloud-sdk
 brew cask install bartender
-brew cask install libreoffice
 brew cask install whatsapp
 brew cask install irccloud
+brew cask install tunneblick
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
