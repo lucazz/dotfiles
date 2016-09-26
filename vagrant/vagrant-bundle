@@ -1,5 +1,0 @@
-vagrant plugin install vagrant-serverspec
-vagrant plugin install vagrant-vmware-fusion
-vagrant plugin install vagrant-hostmanager
-vagrant plugin install vagrant-host-shell
-vagrant plugin install vagrant-hosts
