@@ -13,14 +13,6 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
-
-# Menu bar: hide the Time Machine, Volume, and User icons
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-	defaults write "${domain}" dontAutoLoad -array \
-		"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
-		"/System/Library/CoreServices/Menu Extras/User.menu"
-done
 defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
@@ -357,9 +349,6 @@ sudo mdutil -E / > /dev/null 2>&1
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-# Install iTerm2 themes
-open "${HOME}/.dotfiles/.iterm2/Solarized Dark.itermcolors"
-open "${HOME}/.dotfiles/.iterm2/LondonTube.itermcolors"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
