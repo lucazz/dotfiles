@@ -181,8 +181,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Disable Creation of Metadata Files on USB Volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-
-
 # Show item info near icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
