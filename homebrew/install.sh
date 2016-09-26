@@ -45,7 +45,6 @@ tarsnap \
 keybase \
 pwgen \
 go \
-ncdu \
 namebench \
 tree \
 cfssl
@@ -70,10 +69,8 @@ brew cask install dropbox
 brew cask install skype
 brew cask install java
 brew cask install vlc
-brew cask install razer-synapse
 brew cask install plex-media-server
 brew cask install google-cloud-sdk
-brew cask install bartender
 brew cask install whatsapp
 brew cask install irccloud
 brew cask install tunneblick
