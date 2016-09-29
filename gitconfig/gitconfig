@@ -1,12 +1,12 @@
 [user]
   email = lucas.saboya@gmail.com
   name = Lucas do Amaral Saboya
-	signingkey = 8BB22BA1
+  signingkey = 8BB22BA1
 
 [core]
   editor = vim
   excludesfile = o/.gitignore
-	autocrlf = input
+  autocrlf = input
 
 [web]
   browser = google-chrome
@@ -17,14 +17,14 @@
   d = diff
   l = log --oneline --graph --decorate
   s = status -b
-	log = log --oneline --decorate --all --graph
+  log = log --oneline --decorate --all --graph
 
 [push]
-	default = simple
+  default = simple
 
 [color]
   ui = true
 [pull]
-	rebase = true
+  rebase = true
 [rerere]
-	enabled = true
+  enabled = true
