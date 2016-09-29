@@ -4,7 +4,7 @@
   signingkey = 8BB22BA1
 
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = o/.gitignore
   autocrlf = input
 
