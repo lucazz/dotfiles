@@ -17,6 +17,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-hcl'
+Plug 'fatih/vim-go'
 
 " ====== Languages ==========
 " Add plugins to &runtimepath
