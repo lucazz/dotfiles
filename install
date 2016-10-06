@@ -40,5 +40,5 @@ wgeti https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCo
 
 # Installing oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+ln -s ${BASEDIR}/zshrc/zshrc ~/.zshrc
 chsh -s /bin/zsh
