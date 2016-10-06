@@ -11,9 +11,6 @@ sudo bash ${BASEDIR}/ntp/install.sh
 # homesbrew
 bash ${BASEDIR}/homebrew/install.sh
 
-#Installing Font
-ln -s ${BASEDIR}/fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf ~/Library/Fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf
-
 #Terraform modules
 ln -s ${BASEDIR}/terraform/terraformrc ~/.terraformrc
 
@@ -27,12 +24,8 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 ln -s ${BASEDIR}/vim/ ~/.config/nvim
 vim +PlugInstall +qa!
 
-# osx
+# Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
-
-# Powerline
-git clone https://github.com/powerline/fonts ${BASEDIR}/.powerline/
-bash ${BASEDIR}/.powerline/install.sh
 
 # Configuring ssh
 sudo rm /etc/ssh/ssh_config
@@ -42,21 +35,10 @@ sudo cp ${BASEDIR}/ssh/ssh_config /etc/ssh/ssh_config
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
 ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 
-# OSX Lockdown
-cd ~/.dotfiles/osxlockdown && sudo ./osxlockdown -remediate
+# Installing NERDFonts
+wgeti https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf?raw=true -O  ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
 
-# Vagrant plugins
-bash ${BASEDIR}/vagrant/vagrant-bundle
-
-# Razer Synapse Profile
-cp ~/.dotfiles/razer/Mac.RazerSynapse ~/Downloads/Mac.RazerSynapse
-
-# Prezto
-ln -s ${BASEDIR}/zprezto/runcoms/zshrc ~/.zshrc
-ln -s ${BASEDIR}/zprezto/runcoms/zshenv ~/.zshenv
-ln -s ${BASEDIR}/zprezto/runcoms/zprofile ~/.zprofile
-ln -s ${BASEDIR}/zprezto/runcoms/zpreztorc ~/.zpreztorc
-ln -s ${BASEDIR}/zprezto/runcoms/zlogout ~/.zlogout
-ln -s ${BASEDIR}/zprezto/runcoms/zlogin ~/.zlogin
-ln -s ${BASEDIR}/zprezto/ ~/.zprezto
+# Installing oh-my-zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
