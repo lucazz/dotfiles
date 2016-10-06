@@ -21,7 +21,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 # Taping brew repos
 brew tap homebrew/versions
 brew tap caskroom/versions
@@ -50,7 +50,7 @@ tree \
 cfssl
 # Install homebrew cask
 brew tap caskroom/cask
-brew install brew-cask
+brew cask install 1password
 brew cask install google-chrome
 brew cask install docker
 brew cask install little-snitch
@@ -73,7 +73,7 @@ brew cask install plex-media-server
 brew cask install google-cloud-sdk
 brew cask install whatsapp
 brew cask install irccloud
-brew cask install tunneblick
+brew cask install tunnelblick
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
