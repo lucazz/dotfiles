@@ -74,6 +74,8 @@ brew cask install google-cloud-sdk
 brew cask install whatsapp
 brew cask install irccloud
 brew cask install tunnelblick
+brew cask install zoomus
+brew cask install macdown
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
