@@ -5,7 +5,7 @@
 
 [core]
   editor = nvim
-  excludesfile = o/.gitignore
+  excludesfile = ~/.gitignore
   autocrlf = input
 
 [web]
