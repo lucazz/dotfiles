@@ -5,6 +5,8 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.dotfiles/credentials
+
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
