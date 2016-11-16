@@ -66,7 +66,6 @@ brew cask install screenhero
 brew cask install gpgtools
 brew cask install spectacle
 brew cask install dropbox
-brew cask install skype
 brew cask install java
 brew cask install vlc
 brew cask install plex-media-server
@@ -76,6 +75,7 @@ brew cask install irccloud
 brew cask install tunnelblick
 brew cask install zoomus
 brew cask install macdown
+brew cask install karabiner-elements
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0

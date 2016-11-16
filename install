@@ -17,6 +17,10 @@ ln -s ${BASEDIR}/terraform/terraformrc ~/.terraformrc
 #Google Cloud SDK components
 bash ${BASEDIR}/gcloud/install.sh
 
+# Karabiner
+mkdir -p ~/.kararabiner.d/configuration/karabiner.json
+ln -s ${BASEDIR}/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
+
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
