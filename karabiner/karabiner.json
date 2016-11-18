@@ -27,23 +27,24 @@
             ],
             "fn_function_keys": {
                 "f1": "mute",
-                "f10": "mute",
-                "f11": "volume_down",
-                "f12": "volume_up",
+                "f10": "f10",
+                "f11": "f11",
+                "f12": "f12",
                 "f2": "volume_down",
                 "f3": "volume_up",
-                "f4": "vk_none",
+                "f4": "vk_mission_control",
                 "f5": "vk_consumer_previous",
                 "f6": "vk_consumer_play",
                 "f7": "vk_consumer_next",
                 "f8": "vk_none",
-                "f9": "vk_consumer_next"
+                "f9": "f9"
             },
             "name": "Default profile",
             "selected": true,
             "simple_modifications": {
                 "left_command": "left_option",
-                "left_option": "left_command"
+                "left_option": "left_command",
+                "right_option": "left_command"
             }
         }
     ]
