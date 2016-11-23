@@ -47,6 +47,7 @@ pwgen \
 go \
 namebench \
 tree \
+jq \
 cfssl
 # Install homebrew cask
 brew tap caskroom/cask
