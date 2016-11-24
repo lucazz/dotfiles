@@ -26,6 +26,7 @@ brew upgrade
 brew tap homebrew/versions
 brew tap caskroom/versions
 # Install homebrew packages
+brew install curl --with-openssl
 brew install python \
 neovim/neovim/neovim \
 ansible \
@@ -41,18 +42,16 @@ youtube-dl \
 p7zip \
 wget \
 findutils \
-tarsnap \
 keybase \
 pwgen \
 go \
-namebench \
 tree \
 jq \
 cfssl
 # Install homebrew cask
 brew tap caskroom/cask
 brew cask install 1password
-brew cask install google-chrome
+brew cask install firefox
 brew cask install docker
 brew cask install little-snitch
 brew cask install spotify
@@ -67,10 +66,8 @@ brew cask install screenhero
 brew cask install gpgtools
 brew cask install spectacle
 brew cask install dropbox
-brew cask install java
 brew cask install vlc
 brew cask install plex-media-server
-brew cask install google-cloud-sdk
 brew cask install whatsapp
 brew cask install irccloud
 brew cask install tunnelblick
