@@ -5,17 +5,15 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ln -s ${BASEDIR}/gitconfig/gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/gitconfig/gitignore ~/.gitignore
 
+# gnupg
+mkdir -p ~/.gnupg
+ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
+
 # ntp.br
 sudo bash ${BASEDIR}/ntp/install.sh
 
 # homesbrew
 bash ${BASEDIR}/homebrew/install.sh
-
-#Terraform modules
-ln -s ${BASEDIR}/terraform/terraformrc ~/.terraformrc
-
-#Google Cloud SDK components
-bash ${BASEDIR}/gcloud/install.sh
 
 # Karabiner
 mkdir -p ~/.kararabiner.d/configuration/karabiner.json
