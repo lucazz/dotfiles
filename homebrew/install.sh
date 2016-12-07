@@ -51,6 +51,7 @@ cfssl
 # Install homebrew cask
 brew tap caskroom/cask
 brew cask install 1password
+brew cask install sequel-pro
 brew cask install google-chrome
 brew cask install docker
 brew cask install little-snitch
