@@ -16,4 +16,6 @@ fi
 
 alias vim="nvim"
 
-export ANSIBLE_CONFIG="/Users/lucazz/.ansible/ansible.cfg"
+
+export ANSIBLE_VAULT_PASSWORD_FILE="~/.ansible/vaultpw"
+export ANSIBLE_CONFIG="~/.ansible/ansible.cfg"
