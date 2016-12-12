@@ -47,4 +47,5 @@ wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCod
 # Installing oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ln -s ${BASEDIR}/zshrc/zshrc ~/.zshrc
+ln -s ${BASEDIR}/zshrc/themes/ ~/.oh-my-zsh/custom/themes
 chsh -s /bin/zsh
