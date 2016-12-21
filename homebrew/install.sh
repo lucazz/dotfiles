@@ -10,7 +10,7 @@ sudo -v
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "  Installing Homebrew for you."
+  echo "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -19,37 +19,34 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Make sure we’re using the latest Homebrew.
 brew update
-
 # Upgrade any already-installed formulae.
 brew upgrade
-# Taping brew repos
-brew tap homebrew/versions
-brew tap caskroom/versions
 # Install homebrew packages
 brew install curl --with-openssl
-brew install python \
-neovim/neovim/neovim \
-ansible \
-awscli \
-htop \
-ssh-copy-id \
-aria2 \
-nmap \
-packer \
-terraform \
-tig \
-youtube-dl \
-p7zip \
-wget \
-findutils \
-keybase \
-pwgen \
-go \
-tree \
-jq \
-cfssl
+brew install python\
+  neovim/neovim/neovim\
+  ansible\
+  awscli\
+  htop\
+  ssh-copy-id\
+  aria2\
+  nmap\
+  packer\
+  terraform\
+  tig\
+  youtube-dl\
+  p7zip\
+  wget\
+  findutils\
+  keybase\
+  pwgen\
+  go\
+  tree\
+  jq\
+  kubernetes-cli\
+  cfssl
+
 # Install homebrew cask
-brew tap caskroom/cask
 brew cask install 1password
 brew cask install sequel-pro
 brew cask install google-chrome
