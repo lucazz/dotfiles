@@ -25,8 +25,6 @@ brew upgrade
 brew install curl --with-openssl
 brew install python\
   neovim/neovim/neovim\
-  ansible\
-  awscli\
   htop\
   ssh-copy-id\
   aria2\
@@ -60,7 +58,6 @@ brew cask install cleanmymac
 brew cask install iterm2
 brew cask install transmission
 brew cask install istat-menus
-brew cask install screenhero
 brew cask install gpgtools
 brew cask install spectacle
 brew cask install dropbox

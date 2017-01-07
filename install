@@ -26,7 +26,8 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 ln -s ${BASEDIR}/vim/ ~/.config/nvim
 vim +PlugInstall +qa!
 
-# Set Ansible configs
+# Install and configure Ansible
+bash ${BASEDIR}/ansible/install.sh
 mkdir ~/.ansible
 ln -s ${BASEDIR}/ansible/ansible.cfgansible.cfg ~/.ansible/ansible.cfg
 
