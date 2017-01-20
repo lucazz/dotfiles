@@ -45,6 +45,9 @@ ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.go
 # Installing NERDFonts
 wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf?raw=true -O  ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
 
+# Import gpg keys from keybase
+bash ${BASEDIR}/keybase/import_keys.sh
+
 # Installing oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ln -s ${BASEDIR}/zshrc/zshrc ~/.zshrc
