@@ -19,3 +19,4 @@ alias vim="nvim"
 
 export ANSIBLE_VAULT_PASSWORD_FILE="~/.ansible/vaultpw"
 export ANSIBLE_CONFIG="~/.ansible/ansible.cfg"
+export AUTO_MOUNT_HOME=false
