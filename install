@@ -15,6 +15,9 @@ sudo bash ${BASEDIR}/ntp/install.sh
 # homesbrew
 bash ${BASEDIR}/homebrew/install.sh
 
+# mas
+bash ${BASEDIR}/mas/install.sh
+
 # Karabiner
 mkdir -p ~/.kararabiner.d/configuration/karabiner.json
 ln -s ${BASEDIR}/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
