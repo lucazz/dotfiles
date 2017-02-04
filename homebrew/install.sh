@@ -24,6 +24,7 @@ brew upgrade
 # Install homebrew packages
 brew install curl --with-openssl
 brew install python\
+  mas\
   neovim/neovim/neovim\
   htop\
   ssh-copy-id\
