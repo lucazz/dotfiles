@@ -20,5 +20,7 @@ Plug 'b4b4r07/vim-hcl'
 Plug 'fatih/vim-go'
 
 " ====== Languages ==========
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python ./install.py --gocode-completer' }
 " Add plugins to &runtimepath
 call plug#end()
