@@ -34,6 +34,9 @@ bash ${BASEDIR}/ansible/install.sh
 mkdir ~/.ansible
 ln -s ${BASEDIR}/ansible/ansible.cfgansible.cfg ~/.ansible/ansible.cfg
 
+# PIP
+bash ${BASEDIR}/pip/install.sh
+
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
 

@@ -43,3 +43,16 @@ let NERDTreeMapOpenVSplit='v'
 set shell=/bin/bash
 
 nnoremap <C-tab> :tabnext<CR>
+
+" ======= Golang Settings ================
+au FileType go setlocal tabstop=8 shiftwidth=8 softtabstop=0 smarttab expandtab
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" ======= Python Settings ================
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pylint,pep8"
