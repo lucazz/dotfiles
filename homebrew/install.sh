@@ -69,7 +69,6 @@ brew cask install irccloud
 brew cask install tunnelblick
 brew cask install zoomus
 brew cask install macdown
-brew cask install karabiner-elements
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
