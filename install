@@ -18,10 +18,6 @@ bash ${BASEDIR}/homebrew/install.sh
 # mas
 bash ${BASEDIR}/mas/install.sh
 
-# Karabiner
-mkdir -p ~/.kararabiner.d/configuration/karabiner.json
-ln -s ${BASEDIR}/karabiner/karabiner.json ~/.karabiner.d/configuration/karabiner.json
-
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
