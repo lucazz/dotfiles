@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="odin"
+ZSH_THEME="bureau"
 
 plugins=(docker docker-compose pip python vagrant)
 
