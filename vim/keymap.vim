@@ -30,42 +30,6 @@ nmap <silent> <leader>m :NERDTreeToggle<cr>%
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 'ra'
 
-" ,# Surround a word with #{ruby interpolation}
-map ,# ysiw#
-vmap ,# c#{<C-R>"}<ESC>
-
-" ," Surround a word with "quotes"
-map ," ysiw"
-vmap ," c"<C-R>""<ESC>
-
-" ,' Surround a word with 'single quotes'
-map ,' ysiw'
-vmap ,' c'<C-R>"'<ESC>
-
-" ,) or ,( Surround a word with (parens)
-" The difference is in whether a space is put in
-map ,( ysiw(
-map ,) ysiw)
-vmap ,( c( <C-R>" )<ESC>
-vmap ,) c(<C-R>")<ESC>
-
-" ,[ Surround a word with [brackets]
-map ,] ysiw]
-map ,[ ysiw[
-vmap ,[ c[ <C-R>" ]<ESC>
-vmap ,] c[<C-R>"]<ESC>
-
-" ,{ Surround a word with {braces}
-map ,} ysiw}
-map ,{ ysiw{
-vmap ,} c{ <C-R>" }<ESC>
-vmap ,{ c{<C-R>"}<ESC>
-
-map ,` ysiw`
-
-map <leader>co :TComment<CR>
-imap <D-/> <Esc>:TComment<CR>i
-
 " ==============================
 " Window/Tab/Split Manipulation
 " ==============================
@@ -94,13 +58,6 @@ if has("user_commands")
     command! -bang Qa qa<bang>
 endif
 
-" Faster scroll
-" nnoremap <silent> <c-f> 5<c-e>
-" nnoremap <silent> <c-d> 5<c-y>
-
-" Copy line
-nmap çç yyp
-
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -117,5 +74,3 @@ vmap     <C-F>F <Plug>CtrlSFVwordExec
 nmap     <C-F>n <Plug>CtrlSFCwordPath
 nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>

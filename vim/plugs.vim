@@ -10,6 +10,7 @@ Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " ======= Vim improvments ===
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/bufkill.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -19,7 +20,5 @@ Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-hcl'
 Plug 'fatih/vim-go'
 
-" ====== Languages ==========
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 " Add plugins to &runtimepath
 call plug#end()

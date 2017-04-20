@@ -28,8 +28,6 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 " ========= Trailing ==================
-autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-autocmd FileType python set sw=4 sts=4 et
 autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
 autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 autocmd BufWritePre * :%s/\s\+$//e " strip trailing whitespace"
@@ -44,8 +42,10 @@ set shell=/bin/bash
 
 nnoremap <C-tab> :tabnext<CR>
 
+" ======= Ident guides ========
+let g:indent_guides_enable_on_vim_startup = 1
+
 " ======= Golang Settings ================
-au FileType go setlocal tabstop=8 shiftwidth=8 softtabstop=0 smarttab expandtab
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
