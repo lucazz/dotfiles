@@ -31,7 +31,7 @@ so ~/.vim/keymap.vim
 " This loads all the plugins specified in ~/.vim/vundle.vim
 " Use Vundle plugin to manage all other plugins
 " if filereadable(expand("~/.vim/vundles.vim"))
-  so ~/.vim/plugs.vim
+so ~/.vim/plugs.vim
 " endif
 
 " ================ Turn Off Swap Files ==============
@@ -54,17 +54,14 @@ endif
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=8
+set softtabstop=0
+set tabstop=8
 set expandtab
 
 filetype plugin on
 filetype indent on
 
-" Display tabs and trailing spaces visually
-set list
-set listchars=trail:·,tab:»·,eol:¬,space:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
