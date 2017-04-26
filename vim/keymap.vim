@@ -6,9 +6,6 @@ let mapleader = ","
 imap jk <ESC>
 nnoremap ; :
 
-" Paste mode
-set pastetoggle=<F2>
-
 " Search
 nnoremap / /\v
 vnoremap / /\v
