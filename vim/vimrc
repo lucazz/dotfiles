@@ -24,21 +24,20 @@ let mapleader=","
 colorscheme molokai
 syntax on
 set termguicolors
+set showmode
 set t_Co=256
 set t_ut= "Disable Background Color
+set t_vb="" "Enable visualbell
+set visualbell "Enable visualbell
 set cursorline
 set colorcolumn=80
 set clipboard=unnamed
 set hidden
 set list
-set listchars=tab:›\ ,eol:¬,trail:⋅ "Set the characters for the invisibles
-set showmode
-set gcr=a:blinkon0
-set visualbell "Enable visualbell
-set t_vb="" "Enable visualbell
+set listchars=tab:›\ ,eol:¬,trail:⋅ "set the characters for the invisibles
 let g:molokai_original = 1
 let g:rehash256 = 1
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $nvim_tui_enable_true_color=1
 
 " ======== Turn Off Swap Files
 set noswapfile
