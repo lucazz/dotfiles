@@ -43,7 +43,8 @@ brew install python\
   tree\
   jq\
   kubernetes-cli\
-  cfssl
+  cfssl\
+  the_silver_searcher
 
 # Install homebrew cask
 brew cask install 1password
