@@ -44,6 +44,9 @@ sudo cp ${BASEDIR}/ssh/ssh_config /etc/ssh/ssh_config
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
 ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 
+# Tmux
+ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
+
 # Installing NERDFonts
 wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf?raw=true -O  ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
 
