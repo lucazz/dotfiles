@@ -20,7 +20,7 @@ alias pip-update="pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n
 export ANSIBLE_VAULT_PASSWORD_FILE="~/.ansible/vaultpw"
 export ANSIBLE_CONFIG="~/.ansible/ansible.cfg"
 export AUTO_MOUNT_HOME=false
-export GOPATH="/Users/lucazz/Projects/Golang"
+export GOPATH="/Users/Lucas/Projects/Golang"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS=--require-sha
