@@ -28,3 +28,6 @@
   rebase = true
 [rerere]
   enabled = true
+
+[url "ssh://git@github.com/anki"]
+  insteadOf = https://github.com/anki
