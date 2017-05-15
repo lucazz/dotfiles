@@ -44,6 +44,7 @@ brew install python\
   jq\
   kubernetes-cli\
   cfssl\
+  tmux-mem-cpu-load\
   the_silver_searcher
 
 # Install homebrew cask
