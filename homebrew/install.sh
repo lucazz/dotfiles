@@ -23,29 +23,31 @@ brew update
 brew upgrade
 # Install homebrew packages
 brew install curl --with-openssl
-brew install python\
-  mas\
-  neovim/neovim/neovim\
-  htop\
-  ssh-copy-id\
-  aria2\
-  nmap\
-  packer\
-  terraform\
-  tig\
-  youtube-dl\
-  p7zip\
-  wget\
-  findutils\
-  keybase\
-  pwgen\
-  go\
-  tree\
-  jq\
-  kubernetes-cli\
-  cfssl\
-  tmux-mem-cpu-load\
-  the_silver_searcher
+brew install \
+	python\
+	mas\
+	neovim/neovim/neovim\
+	htop\
+	ssh-copy-id\
+	aria2\
+	nmap\
+	packer\
+	terraform\
+	tig\
+	youtube-dl\
+	p7zip\
+	wget\
+	findutils\
+	keybase\
+	pwgen\
+	go\
+	tree\
+	jq\
+	kubernetes-cli\
+	cfssl\
+	autojump\
+	tmux-mem-cpu-load\
+	the_silver_searcher
 
 # Install homebrew cask
 brew cask install 1password
