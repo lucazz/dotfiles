@@ -35,7 +35,7 @@ set clipboard=unnamed
 set number
 set hidden
 set list
-set listchars=trail:·,tab:»\ ,eol:¬,space:·
+set listchars=trail:·,tab:»\ ,eol:¬
 let $nvim_tui_enable_true_color=1
 
 " ======== Turn Off Swap Files
