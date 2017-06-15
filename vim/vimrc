@@ -63,7 +63,6 @@ autocmd BufWritePre * :%s/\s\+$//e " strip trailing whitespace"
 set autoindent
 set smartindent
 set smarttab
-set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
