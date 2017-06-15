@@ -23,6 +23,11 @@ export AUTO_MOUNT_HOME=false
 export GOPATH="/Users/Lucas/Projects/Golang"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
-export HOMEBREW_CASK_OPTS=--require-sha
-
 export PATH="/usr/local/sbin:$PATH"
+
+function delete_local_merged_branches() {
+  git branch --merged master | grep -v master | xargs git branch -d
+}
+
+#Auto jump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
