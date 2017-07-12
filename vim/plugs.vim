@@ -15,5 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'b4b4r07/vim-hcl'
 Plug 'fatih/vim-go'
 Plug 'dyng/ctrlsf.vim'
+Plug 'editorconfig/editorconfig-vim'
+
 " Add plugins to &runtimepath
 call plug#end()
