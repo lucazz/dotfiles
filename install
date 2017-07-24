@@ -27,8 +27,6 @@ vim +PlugInstall +qa!
 
 # Install and configure Ansible
 bash ${BASEDIR}/ansible/install.sh
-mkdir ~/.ansible
-ln -s ${BASEDIR}/ansible/ansible.cfgansible.cfg ~/.ansible/ansible.cfg
 
 # PIP
 bash ${BASEDIR}/pip/install.sh
