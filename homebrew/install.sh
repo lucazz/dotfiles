@@ -49,6 +49,8 @@ brew install \
 	tmux-mem-cpu-load\
 	the_silver_searcher
 
+brew link --overwrite python
+
 # Install homebrew cask
 brew cask install 1password
 brew cask install google-chrome
