@@ -25,11 +25,11 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 ln -s ${BASEDIR}/vim/ ~/.config/nvim
 vim +PlugInstall +qa!
 
-# Install and configure Ansible
-bash ${BASEDIR}/ansible/install.sh
-
 # PIP
 bash ${BASEDIR}/pip/install.sh
+
+# Install and configure Ansible
+bash ${BASEDIR}/ansible/install.sh
 
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
