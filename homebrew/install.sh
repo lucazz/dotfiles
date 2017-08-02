@@ -53,7 +53,7 @@ brew link --overwrite python
 
 # Install homebrew cask
 brew cask install 1password
-brew cask install google-chrome
+brew cask install firefox
 brew cask install docker
 brew cask install little-snitch
 brew cask install spotify
@@ -70,9 +70,10 @@ brew cask install dropbox
 brew cask install vlc
 brew cask install plex-media-server
 brew cask install whatsapp
-brew cask install tunnelblick
+brew cask install viscosity
 brew cask install zoomus
 brew cask install macdown
+
 # Remove outdated versions from the cellar.
 brew cleanup
 exit 0
