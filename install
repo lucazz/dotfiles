@@ -40,7 +40,8 @@ sudo cp ${BASEDIR}/ssh/ssh_config /etc/ssh/ssh_config
 
 # iTerm2
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
-ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist \
+	~/Library/Preferences/com.googlecode.iterm2.plist
 
 # Tmux
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
