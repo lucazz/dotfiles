@@ -6,7 +6,7 @@ ln -s ${BASEDIR}/gitconfig/gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/gitconfig/gitignore ~/.gitignore
 
 # gnupg
-mkdir -p ~/.gnupg
+mkdir ~/.gnupg
 ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
 
 # ntp.br
