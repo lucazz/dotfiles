@@ -1,5 +1,6 @@
 #!/bin/bash
-mas signin lucas.saboya@gmail.com
+mas signin lucas@saboya.pro
+
 mas upgrade
 # Twitter
 mas install 409789998
