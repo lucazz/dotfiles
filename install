@@ -47,7 +47,8 @@ ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist \
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
 
 # Installing NERDFonts
-wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Regular/complete/Sauce%20Code%20Pro%20Nerd%20Font%20Complete.ttf?raw=true -O  ~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
+ln -s ${BASEDIR}/fonts/Monaco\ for\ Powerline\ Nerd\ Font\ Complete.otf \
+	~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
 
 # Import gpg keys from keybase
 bash ${BASEDIR}/keybase/import_keys.sh
