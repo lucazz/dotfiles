@@ -12,7 +12,7 @@ ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
 # ntp.br
 sudo bash ${BASEDIR}/ntp/install.sh
 
-# homesbrew
+# homebrew
 bash ${BASEDIR}/homebrew/install.sh
 
 # mas
