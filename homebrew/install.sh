@@ -47,7 +47,8 @@ brew install \
 	cfssl\
 	autojump\
 	tmux-mem-cpu-load\
-	the_silver_searcher
+	the_silver_searcher\
+	fzf
 
 brew link --overwrite python
 

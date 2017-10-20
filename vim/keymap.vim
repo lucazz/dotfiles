@@ -23,19 +23,6 @@ nmap <leader>D :bufdo bd<CR>
 " NERDtree
 nmap <silent> <leader>m :NERDTreeToggle<cr>%
 
-" Ctrlp.vim
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_working_path_mode = 'ra'
-
-" ==============================
-" Window/Tab/Split Manipulation
-" ==============================
-" Move between split windows by using the four directions H, L, I, N
-nnoremap <silent> <C-Left> <C-w>h
-nnoremap <silent> <C-Right> <C-w>l
-nnoremap <silent> <C-Up> <C-w>k
-nnoremap <silent> <C-Down> <C-w>j
-
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
 " this to vv and ss
@@ -71,3 +58,6 @@ vmap     <C-F>F <Plug>CtrlSFVwordExec
 nmap     <C-F>n <Plug>CtrlSFCwordPath
 nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
+
+nmap ; :Buffers<CR>
+nmap <Leader>f :Files<CR>
