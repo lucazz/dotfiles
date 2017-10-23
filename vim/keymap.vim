@@ -23,6 +23,15 @@ nmap <leader>D :bufdo bd<CR>
 " NERDtree
 nmap <silent> <leader>m :NERDTreeToggle<cr>%
 
+" ==============================
+" Window/Tab/Split Manipulation
+" ==============================
+" Move between split windows by using the four directions H, L, I, N
+nnoremap <silent> <C-Left> <C-w>h
+nnoremap <silent> <C-Right> <C-w>l
+noremap <silent> <C-Up> <C-w>k
+nnoremap <silent> <C-Down> <C-w>j
+
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
 " this to vv and ss
