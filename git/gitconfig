@@ -1,0 +1,35 @@
+[user]
+	email = lucas.saboya@gmail.com
+	name = Lucas do Amaral Saboya
+	signingkey = 8BB22BA1
+
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
+	autocrlf = input
+
+[web]
+	browser = firefox
+
+[alias]
+	a = add --all
+	c = commit
+	d = diff
+	l = log --oneline --graph --decorate
+	s = status -b
+	log = log --oneline --decorate --all --graph
+
+[push]
+	default = simple
+
+[color]
+	ui = true
+
+[pull]
+	rebase = true
+
+[rerere]
+	enabled = true
+
+[url "ssh://git@github.com/anki"]
+	insteadOf = https://github.com/anki
