@@ -16,17 +16,13 @@ else
 fi
 
 alias vim="nvim"
-alias pip-update="pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
 
 export AUTO_MOUNT_HOME=false
 export GOPATH="/Users/Lucas/Projects/Golang"
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export PATH="/usr/local/sbin:$PATH"
-
-function delete_local_merged_branches() {
-  git branch --merged master | grep -v master | xargs git branch -d
-}
+export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
 #Auto jump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
