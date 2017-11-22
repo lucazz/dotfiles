@@ -50,8 +50,5 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 ln -s ${BASEDIR}/vim/ ~/.config/nvim
 vim +PlugInstall +qa!
 
-# Installing oh-my-zsh
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-ln -s ${BASEDIR}/zshrc/zshrc ~/.zshrc
-ln -s ${BASEDIR}/zshrc/themes/ ~/.oh-my-zsh/custom/themes
-chsh -s /bin/zsh
+# Installing bash_profile
+ln -s ${BASEDIR}/bash/bash_profile ~/.bash_profile
