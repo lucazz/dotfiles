@@ -1,25 +1,13 @@
-source $HOME/.dotfiles/credentials
-
-if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='vim'
-else
-	export EDITOR='nvim'
-fi
-
-alias vim="nvim"
-
-export PATH="$PATH:/usr/local/bin/"
-export AUTO_MOUNT_HOME=false
-export GOPATH="/Users/Lucas/Projects/Golang"
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_INSECURE_REDIRECT=1
-export PATH="/usr/local/sbin:$PATH"
-export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+for file in $HOME/.dotfiles/bash/*.d;
+do
+	source $file
+done
 
 #Auto jump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-#Prompt
-PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W \\$\[$(tput sgr0)\]\[$(tput sgr0)\] "
+#rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#Prompt
+PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W\[\033[33m\]\$(parse_git_branch) $(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\]\[$(tput sgr0)\] "
