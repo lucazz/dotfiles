@@ -1,0 +1,23 @@
+source $HOME/.dotfiles/credentials
+
+if [[ -n $SSH_CONNECTION ]]; then
+	export EDITOR='vim'
+else
+	export EDITOR='nvim'
+fi
+
+alias vim="nvim"
+
+export PATH="$PATH:/usr/local/bin/"
+export AUTO_MOUNT_HOME=false
+export GOPATH="/Users/Lucas/Projects/Golang"
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export PATH="/usr/local/sbin:$PATH"
+export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+
+#Auto jump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+#Prompt
+PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W \\$\[$(tput sgr0)\]\[$(tput sgr0)\] "
