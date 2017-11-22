@@ -9,5 +9,8 @@ done
 #rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Bash completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 #Prompt
 PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W\[\033[33m\]\$(parse_git_branch) $(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\]\[$(tput sgr0)\] "
