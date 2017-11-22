@@ -21,3 +21,5 @@ export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
 #Prompt
 PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W \\$\[$(tput sgr0)\]\[$(tput sgr0)\] "
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

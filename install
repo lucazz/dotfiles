@@ -21,6 +21,9 @@ bash ${BASEDIR}/mas/install.sh
 # PIP
 bash ${BASEDIR}/pip/install.sh
 
+# rvm
+bash ${BASEDIR}/rvm/install.sh
+
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
 
