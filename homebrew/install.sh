@@ -20,6 +20,8 @@ brew update
 brew upgrade
 brew install curl --with-openssl
 brew install \
+	bash\
+	bash-completion\
 	python\
 	mas\
 	neovim/neovim/neovim\
@@ -42,6 +44,7 @@ brew install \
 	kubernetes-cli\
 	cfssl\
 	autojump\
+	bash
 	fzf
 
 brew link --overwrite python
