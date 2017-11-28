@@ -20,6 +20,7 @@ bash ${BASEDIR}/mas/install.sh
 
 # PIP
 bash ${BASEDIR}/pip/install.sh
+ln -s ${BASEDIR}/pip/pydistutils.cfg ~/.pydistutils.cfg
 
 # rvm
 bash ${BASEDIR}/rvm/install.sh
