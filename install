@@ -1,6 +1,9 @@
 #!/bin/bash
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# create secrets file
+touch ${BASEDIR}/.secrets
+
 # gitconfig
 ln -s ${BASEDIR}/git/gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/git/gitignore ~/.gitignore
