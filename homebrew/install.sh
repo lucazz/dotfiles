@@ -69,7 +69,8 @@ brew cask install\
 	whatsapp\
 	viscosity\
 	zoomus\
-	macdown
+	macdown\
+	etcher
 
 brew cleanup
 exit 0
