@@ -21,6 +21,7 @@ brew upgrade
 brew install curl --with-openssl
 brew install \
 	bash\
+	watch\
 	bash-completion\
 	python\
 	mas\
