@@ -53,6 +53,7 @@ brew link --overwrite python
 brew cask install\
 	1password
 	firefox\
+	franz\
 	docker\
 	little-snitch\
 	spotify\
