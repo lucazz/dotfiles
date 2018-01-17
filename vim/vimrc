@@ -121,3 +121,7 @@ let g:go_highlight_build_constraints = 1
 " ======== Python Settings
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pylint,pep8"
+
+" ======== YAML Settings
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml/yaml.vim
+au BufNewFile,BufRead *.yml,*.yml so ~/.vim/syntax/yaml/yaml.vim
