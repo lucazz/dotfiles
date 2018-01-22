@@ -53,7 +53,7 @@ brew link --overwrite python
 brew cask install\
 	1password
 	firefox\
-	franz\
+	google-chrome\
 	docker\
 	little-snitch\
 	spotify\
@@ -72,6 +72,7 @@ brew cask install\
 	viscosity\
 	zoomus\
 	macdown\
+	thunderbird\
 	etcher
 
 brew cleanup
