@@ -45,7 +45,8 @@ brew install \
 	kubernetes-cli\
 	cfssl\
 	autojump\
-	bash
+	bash\
+	kubectx\
 	fzf
 
 brew link --overwrite python
