@@ -41,7 +41,7 @@ hi Keyword			guifg=#F92672	gui=bold
 hi Label			guifg=#E6DB74	gui=none
 hi Macro			guifg=#C4BE89	gui=italic
 hi SpecialKey		guifg=#66D9EF	gui=italic
-hi MatchParen		guifg=#000000	guibg=#171717	gui=bold
+hi MatchParen		guifg=#F62D73	guibg=#171717
 hi ModeMsg			guifg=#E6DB74
 hi MoreMsg			guifg=#E6DB74
 hi Operator			guifg=#F92672
@@ -53,7 +53,7 @@ hi PreCondit		guifg=#A6E22E	gui=bold
 hi PreProc			guifg=#A6E22E
 hi Question			guifg=#66D9EF
 hi Repeat			guifg=#F92672	gui=bold
-hi Search			guifg=#000000	guibg=#171717
+hi Search			guifg=#F62D73	guibg=#171717
 hi SignColumn		guifg=#A6E22E	guibg=#171717
 hi SpecialChar		guifg=#F92672	gui=bold
 hi SpecialComment	guifg=#7E8E91	gui=bold
