@@ -1,4 +1,5 @@
 HashKnownHosts yes
+AddKeysToAgent yes
 Host *
   ConnectTimeout 30
   KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
