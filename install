@@ -18,15 +18,9 @@ bash ${BASEDIR}/ntp/install.sh
 # homebrew
 bash ${BASEDIR}/homebrew/install.sh
 
-# mas
-bash ${BASEDIR}/mas/install.sh
-
 # PIP
 bash ${BASEDIR}/pip/install.sh
 ln -s ${BASEDIR}/pip/pydistutils.cfg ~/.pydistutils.cfg
-
-# rvm
-bash ${BASEDIR}/rvm/install.sh
 
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
@@ -39,6 +33,8 @@ sudo cp ${BASEDIR}/ssh/ssh_config /etc/ssh/ssh_config
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
 ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist \
 	~/Library/Preferences/com.googlecode.iterm2.plist
+
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 
 # Tmux
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
