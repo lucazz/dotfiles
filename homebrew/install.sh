@@ -18,26 +18,24 @@ while true;
 
 brew update
 brew upgrade
-brew install curl --with-openssl
+brew install curl \
+	--with-openssl
+brew install reattach-to-user-namespace \
+	--with-wrap-pbcopy-and-pbpaste
 brew install \
 	bash\
 	watch\
 	bash-completion\
 	python\
-	mas\
-	neovim/neovim/neovim\
+	neovim\
 	htop\
-	ssh-copy-id\
-	aria2\
 	nmap\
 	packer\
 	terraform\
-	tig\
 	youtube-dl\
 	p7zip\
 	wget\
 	findutils\
-	keybase\
 	pwgen\
 	go\
 	tree\
@@ -51,30 +49,26 @@ brew install \
 
 brew link --overwrite python
 
-brew cask install\
-	1password
-	firefox\
-	google-chrome\
-	docker\
-	little-snitch\
-	spotify\
-	alfred\
-	slack\
-	the-unarchiver\
-	cleanmymac\
-	iterm2\
-	transmission\
-	istat-menus\
-	gpgtools\
-	spectacle\
-	dropbox\
-	vlc\
-	whatsapp\
-	viscosity\
-	zoomus\
-	macdown\
-	thunderbird\
-	etcher
+brew cask install 1password
+brew cask install firefox
+brew cask install docker
+brew cask install little-snitch
+brew cask install spotify
+brew cask install alfred
+brew cask install slack
+brew cask install the-unarchiver
+brew cask install cleanmymac
+brew cask install iterm2
+brew cask install transmission
+brew cask install istat-menus
+brew cask install gpg-suite
+brew cask install spectacle
+brew cask install dropbox
+brew cask install vlc
+brew cask install whatsapp
+brew cask install viscosity
+brew cask install zoomus
+brew cask install macdown
 
 brew cleanup
 exit 0
