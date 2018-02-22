@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export PATH="$PATH:/usr/local/bin/"
 export AUTO_MOUNT_HOME=false
 export GOPATH="/Users/Lucas/Projects/Golang"
@@ -7,6 +6,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export PATH="/usr/local/sbin:$PATH"
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+export GPG_TTY=$(tty)
 
 if ls --color &> /dev/null; then
 	export colorflag="--color" # GNU syntax
