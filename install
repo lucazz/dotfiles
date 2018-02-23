@@ -7,6 +7,7 @@ touch ${BASEDIR}/.secrets
 # gitconfig
 ln -s ${BASEDIR}/git/gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/git/gitignore ~/.gitignore
+ln -s ${BASEDIR}/git/gitmessage ~/.gitmessage
 
 # gnupg
 mkdir ~/.gnupg
