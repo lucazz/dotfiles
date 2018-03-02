@@ -41,6 +41,7 @@ brew install \
 	tree\
 	jq\
 	kubernetes-cli\
+	kubernetes-helm\
 	cfssl\
 	autojump\
 	bash\
