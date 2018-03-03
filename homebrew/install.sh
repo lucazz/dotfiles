@@ -46,6 +46,10 @@ brew install \
 	autojump\
 	bash\
 	kubectx\
+	gpg\
+	gpg2\
+	gpg-agent\
+	pinentry-mac\
 	fzf
 
 brew link --overwrite python
