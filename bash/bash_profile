@@ -16,5 +16,5 @@ PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W \[\033[33m\]\$(parse_git_branch
 
 # Auto multiplexer over ssh
 function ssh () {
-	/usr/bin/ssh -t $@ "tmux attach || tmux new";
+	/usr/bin/ssh -t $@ "tmux attach || tmux new || echo 'No tmux installed on this host'";
 }
