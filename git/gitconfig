@@ -8,9 +8,6 @@
 	excludesfile = ~/.gitignore
 	autocrlf = input
 
-[web]
-	browser = firefox
-
 [alias]
 	a = add --all
 	c = commit
@@ -25,8 +22,13 @@
 [color]
 	ui = true
 
+[fetch]
+	prune = true
+	rebase = true
+
 [pull]
 	rebase = true
+	prune = true
 
 [rerere]
 	enabled = true
