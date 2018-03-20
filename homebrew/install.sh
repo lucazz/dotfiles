@@ -48,6 +48,7 @@ brew install \
 	kubectx\
 	gpg\
 	gpg2\
+	gnupg\
 	gpg-agent\
 	pinentry-mac\
 	fzf
