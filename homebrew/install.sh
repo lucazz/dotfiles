@@ -56,12 +56,11 @@ brew install \
 brew link --overwrite python
 
 brew cask install 1password
-brew cask install firefox
+brew cask install google-chrome
 brew cask install docker
 brew cask install little-snitch
 brew cask install spotify
 brew cask install alfred
-brew cask install slack
 brew cask install the-unarchiver
 brew cask install cleanmymac
 brew cask install iterm2
@@ -71,10 +70,10 @@ brew cask install gpg-suite
 brew cask install spectacle
 brew cask install dropbox
 brew cask install vlc
-brew cask install whatsapp
 brew cask install viscosity
 brew cask install zoomus
 brew cask install macdown
+brew cask install franz
 
 brew cleanup
 exit 0
