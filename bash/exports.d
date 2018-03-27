@@ -1,5 +1,6 @@
 #!/bin/bash
 export PATH="$PATH:/usr/local/bin/"
+export PATH="/usr/local/opt/curl/bin:$PATH"
 export AUTO_MOUNT_HOME=false
 export GOPATH="/Users/Lucas/Projects/Golang"
 export HOMEBREW_NO_ANALYTICS=1
@@ -8,9 +9,9 @@ export PATH="/usr/local/sbin:$PATH"
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
 if ls --color &> /dev/null; then
-	export colorflag="--color" # GNU syntax
+	export colorflag="--color"
 	export LS_COLORS="di=1;36:ln=1;32:so=37:pi=1;31;40:ex=35:bd=37:cd=37:su=37:sg=37:tw=32:ow=32"
-else # BSD syntax
+else
 	export colorflag="-G"
 	export CLICOLOR=1
 	export LSCOLORS="GxCxhxBafxhxhxhxhxcxcx"
