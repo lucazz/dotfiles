@@ -9,12 +9,12 @@ source ~/.secrets
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Bash completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash_completion.d ] && . /usr/local/etc/bash_completion.d
 
 #Prompt
 PS1="\[$(tput setaf 6)\]\h\[$(tput setaf 2)\] \W \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\\[$(tput sgr0)\] "
 
 # Auto multiplexer over ssh
-function ssh () {
-	/usr/bin/ssh -t $@ "tmux attach || tmux new || echo 'No tmux installed on this host'";
-}
+#function ssh () {
+#	/usr/bin/ssh -t $@ "tmux attach || tmux new || echo 'No tmux installed on this host'";
+#}
