@@ -1,6 +1,7 @@
 #!/bin/bash
 export PATH="$PATH:/usr/local/bin/"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="$PATH:/usr/local/mysql/bin"
 export AUTO_MOUNT_HOME=false
 export GOPATH="/Users/Lucas/Projects/Golang"
 export HOMEBREW_NO_ANALYTICS=1
