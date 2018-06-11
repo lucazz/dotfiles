@@ -17,4 +17,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'cburroughs/pep8.py'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+
