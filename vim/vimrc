@@ -23,7 +23,7 @@ let mapleader=","
 " ======== Appearance
 "colorscheme molokai
 syntax on
-color dracula
+color molokai
 set termguicolors
 set showmode
 set t_Co=256
