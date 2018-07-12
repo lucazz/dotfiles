@@ -68,7 +68,7 @@ nmap     <C-F>n <Plug>CtrlSFCwordPath
 nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
 
-nmap ; :Buffers<CR>
 nmap <Leader>f :Files<CR>
+nmap <Leader>F :Files<CR>
 map <Leader>c :TComment<CR>
 map <Leader>C :TComment<CR>
