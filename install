@@ -47,12 +47,15 @@ ln -s ${BASEDIR}/fonts/Monaco\ for\ Powerline\ Nerd\ Font\ Complete.otf \
 # Import gpg keys from keybase
 bash ${BASEDIR}/keybase/import_keys.sh
 
+mv /usr/local/bin/kubens /usr/local/bin/knamespace
+mv /usr/local/bin/kubectx /usr/local/bin/kcontext
+
+# Installing bash_profile
+ln -s ${BASEDIR}/bash/bash_profile ~/.bash_profile
+
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
 ln -s ${BASEDIR}/vim/ ~/.config/nvim
 vim +PlugInstall +qa!
-
-# Installing bash_profile
-ln -s ${BASEDIR}/bash/bash_profile ~/.bash_profile
