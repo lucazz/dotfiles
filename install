@@ -13,9 +13,6 @@ ln -s ${BASEDIR}/git/gitmessage ~/.gitmessage
 mkdir ~/.gnupg
 ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
 
-# ntp.br
-bash ${BASEDIR}/ntp/install.sh
-
 # homebrew
 bash ${BASEDIR}/homebrew/install.sh
 
@@ -30,11 +27,14 @@ bash ${BASEDIR}/osx-defaults/set-defaults.sh
 sudo rm /etc/ssh/ssh_config
 sudo cp ${BASEDIR}/ssh/ssh_config /etc/ssh/ssh_config
 
-# iTerm2
-rm ~/Library/Preferences/com.googlecode.iterm2.plist
-ln -s ${BASEDIR}/iterm2/com.googlecode.iterm2.plist \
-	~/Library/Preferences/com.googlecode.iterm2.plist
+# Install alacrity
+bash ${BASEDIR}/rust/install.sh
+make -f alacritty/Makefile app
+cp -r alacritty/target/release/osx/Alacritty.app /Applications/
+ln -s ${BASEDIR}/alacritty-config/config.yml \
+	~/.config/alacritty/alacritty.yml
 
+# Setup icloud
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 
 # Tmux

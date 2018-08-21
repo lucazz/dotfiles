@@ -1,3 +1,4 @@
 [submodule "alacritty"]
 	path = alacritty
 	url = https://github.com/jwilm/alacritty.git
+	ignore = dirty
