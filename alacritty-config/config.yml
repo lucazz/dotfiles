@@ -21,7 +21,7 @@ font:
   italic:
     family: "FiraCode Nerd Font Mono"
     style: Retina
-  size: 14
+  size: 16
   offset:
     x: 0
     y: 0
