@@ -70,7 +70,7 @@ colors:
 # Visual Bell
 visual_bell:
   animation: EaseOutExpo
-  duration: 0
+  duration: 10
 
 # Background opacity
 background_opacity: 1.0
