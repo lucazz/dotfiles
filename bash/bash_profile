@@ -16,5 +16,5 @@ source ~/.secrets
 PS1="\[$(tput setaf 2)\]\W \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\\[$(tput sgr0)\] "
 
 tmux attach
-
+clear
 cd
