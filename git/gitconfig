@@ -22,6 +22,20 @@
 [color]
 	ui = true
 
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
 [fetch]
 	prune = true
 	rebase = true
@@ -41,3 +55,13 @@
 
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg
+
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+
+[diff-so-fancy]
+	markEmptyLines = false
+	changeHunkIndicators = false
+	stripLeadingSymbols = false
+	useUnicodeRuler = false
