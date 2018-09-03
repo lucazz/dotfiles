@@ -11,6 +11,7 @@ source ~/.secrets
 # Bash completion
 [ -f /usr/local/etc/bash_completion.d ] && . /usr/local/etc/bash_completion.d
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 #Prompt
 PS1="\[$(tput setaf 2)\]\W \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\\[$(tput sgr0)\] "
