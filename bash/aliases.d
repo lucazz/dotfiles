@@ -1,3 +1,3 @@
 #!/bin/bash
-alias vim="nvim ."
+alias vim="nvim"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
