@@ -92,8 +92,8 @@ set wildignore+=*.pyc
 " ======== Scrolling
 set lazyredraw
 set ttyfast
-set scrolloff=999
-set sidescrolloff=15
+set scrolloff=5
+set sidescrolloff=5
 set sidescroll=1
 
 " ======== NERDTree
