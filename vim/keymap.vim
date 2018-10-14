@@ -14,6 +14,9 @@ vnoremap / /\v
 nmap <leader>q :q!<CR>
 nmap <leader>w :w!<CR>
 
+" Backing out of <paste> mode
+nmap <leader>p :set nopaste<CR>
+
 " Switch between / delete buffers
 noremap <M-tab> :bn<CR>
 noremap <S-tab> :bp<CR>
