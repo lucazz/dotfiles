@@ -109,7 +109,7 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 " ======== Write as root if we dont' have permission
-cmap w!! %!sudo tee > /dev/null %
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " ======== Golang Settings
 let g:go_highlight_functions = 1
