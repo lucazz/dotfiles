@@ -20,6 +20,7 @@ brew "libksba"
 brew "gnupg", link: false
 brew "go"
 brew "gpg-agent"
+brew "git-lfs"
 brew "htop"
 brew "imapsync"
 brew "jq"
