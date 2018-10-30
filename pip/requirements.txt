@@ -43,7 +43,7 @@ pylint==1.9.3
 PyNaCl==1.2.1
 python-dateutil==2.7.3
 PyYAML==3.13
-requests==2.19.1
+requests==2.20.0
 rsa==3.4.2
 s3transfer==0.1.13
 singledispatch==3.4.0.3
