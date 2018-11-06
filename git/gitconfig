@@ -1,7 +1,7 @@
 [user]
-	email = lucas.saboya@gmail.com
+	email = lucas@saboya.pro
 	name = Lucas do Amaral Saboya
-	signingkey = 8BB22BA1
+	signingkey = 2C5DE05D
 
 [core]
 	editor = nvim
