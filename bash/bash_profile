@@ -6,12 +6,18 @@ done
 source ~/.secrets
 
 #Auto jump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] \
+	&& . /usr/local/etc/profile.d/autojump.sh
 
 # Bash completion
-[ -f /usr/local/etc/bash_completion.d ] && . /usr/local/etc/bash_completion.d
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f /usr/local/etc/bash_completion.d ] \
+	&& . /usr/local/etc/bash_completion.d
+[ -f /usr/local/etc/bash_completion ] \
+	&& source /usr/local/etc/bash_completion
+[ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ] \
+	&& source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+[ -f ~/.fzf.bash ] \
+	&& source ~/.fzf.bash
 
 #Prompt
 PS1="\[$(tput setaf 2)\]\W \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\\[$(tput sgr0)\] "
