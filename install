@@ -29,7 +29,9 @@ ln -s ${BASEDIR}/ssh/config \
 
 # Install alacrity
 bash ${BASEDIR}/rust/install.sh
-make -f alacritty/Makefile app
+cd alacritty/ \
+	&& make app \
+	&& cd ..
 cp -r alacritty/target/release/osx/Alacritty.app /Applications/
 ln -s ${BASEDIR}/alacritty-config/config.yml \
 	~/.config/alacritty/alacritty.yml
