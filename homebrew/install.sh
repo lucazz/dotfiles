@@ -18,7 +18,7 @@ while true;
 brew update
 brew bundle install \
 	--verbose\
-	--file=Brewfile
+	--file=homebrew/Brewfile
 
 brew cleanup
 exit 0
