@@ -43,8 +43,8 @@ ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
 
 # Installing NERDFonts
-ln -s ${BASEDIR}/fonts/Fira\ Code\ Retina\ Nerd\ Font\ Complete\ Mono.otf \
-	~/Library/Fonts/Fira\ Code\ Retina\ Nerd\ Font\ Complete\ Mono.otf
+ln -s ${BASEDIR}/fonts/Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono.ttf \
+	~/Library/Fonts/Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono.ttf
 ln -s ${BASEDIR}/fonts/Monaco\ for\ Powerline\ Nerd\ Font\ Complete.otf \
 	~/Library/Fonts/Sauce\ Code\ Pro\ Nerd\ Font\ Complete.ttf
 ln -s ${BASEDIR}/fonts/Ubuntu\ Mono\ Nerd\ Font\ Complete.ttf \
