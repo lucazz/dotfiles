@@ -7,4 +7,4 @@ while true;
 	done 2>/dev/null &
 
 sudo easy_install pip
-sudo -H pip install -r requirements.txt
+sudo -H pip install -r pip/requirements.txt
