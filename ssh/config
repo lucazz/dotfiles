@@ -16,3 +16,4 @@ Host *
 
 Host vpn.kairos.com
 	User lucazz
+	ForwardAgent yes
