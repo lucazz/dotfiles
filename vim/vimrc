@@ -126,3 +126,8 @@ let g:pymode_lint_checker = "pylint,pep8"
 " ======== YAML Settings
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml/yaml.vim
 au BufNewFile,BufRead *.yml,*.yml so ~/.vim/syntax/yaml/yaml.vim
+
+augroup customFileTypes
+	autocmd!
+	autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
+augroup END
