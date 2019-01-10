@@ -123,6 +123,13 @@ let g:go_highlight_build_constraints = 1
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pylint,pep8"
 
+" ======== Terraform Settings
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
+let g:terraform_commentstring='//%s'
+
 " ======== YAML Settings
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml/yaml.vim
 au BufNewFile,BufRead *.yml,*.yml so ~/.vim/syntax/yaml/yaml.vim
