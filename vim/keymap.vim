@@ -17,6 +17,9 @@ nmap <leader>w :w!<CR>
 " Backing out of <paste> mode
 nmap <leader>p :set nopaste<CR>
 
+" Clear last search highlights
+nmap <leader>, :noh<CR>
+
 " Switch between / delete buffers
 noremap <M-tab> :bn<CR>
 noremap <S-tab> :bp<CR>
