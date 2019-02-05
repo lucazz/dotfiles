@@ -14,6 +14,4 @@ Host *
 	IdentityFile ~/.ssh/keys/kairos/kops
 	IdentityFile ~/.ssh/keys/kairos/us-east-1
 
-Host vpn.kairos.com
-	User lucazz
-	ForwardAgent yes
+Include ~/.ssh/config.d/
