@@ -10,6 +10,7 @@ source ~/.secrets
 	&& . /usr/local/etc/profile.d/autojump.sh
 
 # Bash completion
+complete -C /usr/local/Cellar/terraform/0.11.11/bin/terraform terraform
 [ -f /usr/local/etc/bash_completion.d ] \
 	&& . /usr/local/etc/bash_completion.d
 [ -f /usr/local/etc/bash_completion ] \
@@ -25,3 +26,4 @@ PS1="\[$(tput setaf 2)\]\W \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tpu
 tmux attach
 clear
 cd
+
