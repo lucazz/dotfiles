@@ -21,5 +21,6 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'b4b4r07/vim-ansible-vault'
 Plug 'hashivim/vim-terraform'
+Plug 'dracula/vim'
 call plug#end()
 

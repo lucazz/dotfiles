@@ -21,9 +21,8 @@ set mouse=a
 let mapleader=","
 
 " ======== Appearance
-"colorscheme molokai
 syntax on
-color molokai
+color dracula
 set termguicolors
 set showmode
 set t_Co=256
