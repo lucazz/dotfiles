@@ -60,9 +60,13 @@ curl -Lo kubectl-debug https://github.com/aylei/kubectl-debug/releases/download/
 chmod +x ./kubectl-debug
 mv kubectdl-debug /usr/local/bin/
 
+# Install
+curl -Lo rakkess.gz https://github.com/corneliusweig/rakkess/releases/download/v0.1.1/rakkess-darwin-amd64.gz \
+	&& gunzip rakkess.gz \
+	&& chmod +x rakkess \
+	&& mv rakkess $GOPATH/bin/
+
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
-ln -s ${BASEDIR}/vim/ ~/.config/nvim
-vim +PlugInstall +qa!
