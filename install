@@ -51,9 +51,10 @@ bash ${BASEDIR}/keybase/import_keys.sh
 
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
 mv /usr/local/bin/kubectx /usr/local/bin/kcontext
+ln -s ${BASEDIR}/bin/bash_profile ~/.bash_profile
 
 # Installing bash_profile
-ln -s ${BASEDIR}/bash/bash_profile ~/.bash_profile
+ln -s ${BASEDIR}/bash/get-kubeconfig /usr/local/bin/kgetkubeconfig
 
 # Installing kubectl-debug
 curl -Lo kubectl-debug https://github.com/aylei/kubectl-debug/releases/download/0.0.1/kubectl-debug_0.0.1_macos-amd64
