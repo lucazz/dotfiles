@@ -54,11 +54,6 @@ if has('persistent_undo')
 	set undofile
 endif
 
-" ========= Trailing
-autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
-autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
-autocmd BufWritePre * :%s/\s\+$//e " strip trailing whitespace"
-
 " ======== Indentation & tab settings
 set autoindent
 set smartindent
@@ -107,31 +102,30 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
+" ======== Aleconfig
+let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+	\'*':         ['remove_trailing_lines', 'trim_whitespace'],
+	\'python':    ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'pep8', 'isort'],
+	\'tf':        ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
+	\'yaml':      ['remove_trailing_lines', 'trim_whitespace', 'prettier']
+\}
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = {
+	\'python':    ['pylint'],
+	\'tf':        ['tflint'],
+	\'yaml':      ['yamllint']
+\}
+let g:ale_python_pylint_change_directory = 0
+
 " ======== Write as root if we dont' have permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
-" ======== Golang Settings
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-
-" ======== Python Settings
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pylint,pep8"
-
-" ======== Terraform Settings
-let g:terraform_align=1
-let g:terraform_fmt_on_save=1
-let g:terraform_fold_sections=1
-let g:terraform_remap_spacebar=1
-let g:terraform_commentstring='//%s'
-
 " ======== YAML Settings
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml/yaml.vim
-au BufNewFile,BufRead *.yml,*.yml so ~/.vim/syntax/yaml/yaml.vim
 
 augroup customFileTypes
 autocmd!
