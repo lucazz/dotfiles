@@ -1,0 +1,7 @@
+{
+	"name": "dotfiles",
+	"version": "0.0.1",
+	"dependencies": {
+		"prettier": "1.17.0"
+	}
+}

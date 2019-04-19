@@ -2,3 +2,4 @@
 .powerline/
 credentials
 .secrets
+yarn/node_modules/*
