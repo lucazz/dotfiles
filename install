@@ -54,20 +54,15 @@ mv /usr/local/bin/kubectx /usr/local/bin/kcontext
 ln -s ${BASEDIR}/bin/bash_profile ~/.bash_profile
 
 # Installing bash_profile
-ln -s ${BASEDIR}/bash/get-kubeconfig /usr/local/bin/kgetkubeconfig
+ln -s ${BASEDIR}/bin/get-kubeconfig /usr/local/bin/kgetkubeconfig
 
 # Installing kubectl-debug
 curl -Lo kubectl-debug https://github.com/aylei/kubectl-debug/releases/download/0.0.1/kubectl-debug_0.0.1_macos-amd64
-chmod +x ./kubectl-debug
-mv kubectdl-debug /usr/local/bin/
-
-# Install
-curl -Lo rakkess.gz https://github.com/corneliusweig/rakkess/releases/download/v0.1.1/rakkess-darwin-amd64.gz \
-	&& gunzip rakkess.gz \
-	&& chmod +x rakkess \
-	&& mv rakkess $GOPATH/bin/
+chmod +x ${BASEDIR}/kubectl-debug
+mv ${BASEDIR}/kubectdl-debug /usr/local/bin/
 
 # vimfiles
 mkdir -p ~/.config
+ln -s ${BASEDIR}/vim/ ~/config/nvim
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
