@@ -14,10 +14,4 @@ Host *
 	IdentityFile ~/.ssh/keys/kairos/kops
 	IdentityFile ~/.ssh/keys/kairos/us-east-1
 
-Host lab-bastion
-	Hostname 54.144.206.242
-	User ubuntu
-	IdentityFile ~/.ssh/keys/kairos/kops
-	ForwardAgent yes
-
 Include ~/.ssh/config.d/

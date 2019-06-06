@@ -1,24 +1,27 @@
 #!/bin/bash
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# create secrets file
-touch ${BASEDIR}/.secrets
-
-# gitconfig
+# Setup git
 ln -s ${BASEDIR}/git/gitconfig ~/.gitconfig
 ln -s ${BASEDIR}/git/gitignore ~/.gitignore
 ln -s ${BASEDIR}/git/gitmessage ~/.gitmessage
 
-# gnupg
+# Setup gnupg
 mkdir ~/.gnupg
 ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
 
-# homebrew
+# Install homebrew dependencies
 bash ${BASEDIR}/homebrew/install.sh
 
-# PIP
+# Install yarn dependencies
+bash ${BASEDIR}/yarn/install.sh
+
+# Install pip dependencies
 bash ${BASEDIR}/pip/install.sh
 ln -s ${BASEDIR}/pip/pydistutils.cfg ~/.pydistutils.cfg
+
+# Install rvm
+bash ${BASEDIR}/rvm/install.sh
 
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
@@ -27,42 +30,28 @@ bash ${BASEDIR}/osx-defaults/set-defaults.sh
 ln -s ${BASEDIR}/ssh/config \
 	~/.ssh/config
 
-# Install alacrity
-bash ${BASEDIR}/rust/install.sh
-cd alacritty/ \
-	&& make app \
-	&& cd ..
-cp -r alacritty/target/release/osx/Alacritty.app /Applications/
-ln -s ${BASEDIR}/alacritty-config/config.yml \
-	~/.config/alacritty/alacritty.yml
-
 # Setup icloud
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 
-# Tmux
+# Setup tmux
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
 
-# Installing NERDFonts
-ln -s ${BASEDIR}/fonts/FiraCode-Medium-Patched.ttf \
-	~/Library/Fonts/FiraCode-Medium-Patched.ttf
-
-# Import gpg keys from keybase
-bash ${BASEDIR}/keybase/import_keys.sh
-
+# Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
 mv /usr/local/bin/kubectx /usr/local/bin/kcontext
-ln -s ${BASEDIR}/bin/bash_profile ~/.bash_profile
-
-# Installing bash_profile
 ln -s ${BASEDIR}/bin/get-kubeconfig /usr/local/bin/kgetkubeconfig
-
-# Installing kubectl-debug
 curl -Lo kubectl-debug https://github.com/aylei/kubectl-debug/releases/download/0.0.1/kubectl-debug_0.0.1_macos-amd64
 chmod +x ${BASEDIR}/kubectl-debug
 mv ${BASEDIR}/kubectdl-debug /usr/local/bin/
+
+# Setup bash_profile
+ln -s ${BASEDIR}/bin/bash_profile ~/.bash_profile
 
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/vim/ ~/config/nvim
 ln -s ${BASEDIR}/vim/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
+
+# Create secrets file
+touch ${BASEDIR}/.secrets

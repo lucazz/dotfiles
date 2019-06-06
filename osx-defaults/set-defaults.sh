@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-
-HOSTNAME="bb-9"
+HOSTNAME="bb-11"
 
 # Ask for the administrator password upfront
-echo ".osx scripts"
 sudo -v
+
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
@@ -13,14 +12,6 @@ sudo scutil --set ComputerName $HOSTNAME
 sudo scutil --set HostName $HOSTNAME
 sudo scutil --set LocalHostName $HOSTNAME
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $HOSTNAME
-
-# Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
-defaults write com.apple.systemuiserver menuExtras -array \
-	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
-	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
@@ -48,15 +39,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
-
-# Disable automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-
-# Set Help Viewer windows to non-floating mode
-defaults write com.apple.helpviewer DevMode -bool true
-
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
@@ -69,7 +51,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
-
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -78,23 +59,11 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Enable full keyboard access for all controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-# Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0.02
-
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
-
-# Set the timezone
-sudo systemsetup -settimezone "America/Fortaleza" > /dev/null 2>&1
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null 2>&1
@@ -102,7 +71,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
-
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -140,15 +108,6 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Enable spring loading for directories
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-
-# Remove the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
-
 # Disable Creation of Metadata Files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -177,9 +136,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Use list view in all Finder windows by default
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-# Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
@@ -190,46 +146,55 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	OpenWith -bool true \
 	Privileges -bool true
 
-	# Unhide User Library Folder
-	chflags nohidden ~/Library
+# Unhide User Library Folder
+chflags nohidden ~/Library
 
-	# Set Default Finder Location to Home Folder
-	defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
-	defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
-
+# Set Default Finder Location to Home Folder
+defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 # Set the auto hide delay do zero
 defaults write com.apple.Dock autohide-delay -float 0
+
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
+
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
+
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
+
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
+
 # Wipe all (default) app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
+
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
+
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
+
 # Don’t group windows by application in Mission Control
 defaults write com.apple.dock expose-group-by-app -bool false
+
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
+
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
+
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
-
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
@@ -251,12 +216,6 @@ defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 ###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-###############################################################################
 # Time Machine                                                                #
 ###############################################################################
 # Prevent Time Machine from prompting to use new hard drives as backup volume
@@ -273,16 +232,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 # Disable continuous spell checking
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
-
-###############################################################################
-# Transmission.app                                                            #
-###############################################################################
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
 # Network, VPN, Active Directory & Time Service                               #
@@ -302,8 +251,8 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AllowPreReleas
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-	"Dock" "Finder" "Messages" "Opera" "Safari" "Spectacle" "SystemUIServer" \
-	"Transmission" "Twitter" "iCal"; do
-	killall "${app}" > /dev/null 2>&1
+for app in \
+	"Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" "Dock" "Finder" "Messages" "Safari" "Spectacle" "SystemUIServer" "iCal";
+	do
+		killall "${app}" > /dev/null 2>&1
 done
