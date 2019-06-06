@@ -31,3 +31,5 @@ cd
 complete -C /usr/local/Cellar/terraform/0.11.13/bin/terraform terraform
 
 eval "$(direnv hook bash)"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
