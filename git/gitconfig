@@ -48,9 +48,6 @@
 [rerere]
 	enabled = true
 
-[url "ssh://git@github.com/kairosinc"]
-	insteadOf = https://github.com/kairosinc
-
 [commit]
 	gpgsign = true
 
