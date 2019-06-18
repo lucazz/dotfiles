@@ -42,9 +42,10 @@ mv /usr/local/bin/kubectx /usr/local/bin/kcontext
 ln -s ${BASEDIR}/bin/get-kubeconfig /usr/local/bin/kgetkubeconfig
 curl -Lo kubectl-debug https://github.com/aylei/kubectl-debug/releases/download/0.0.1/kubectl-debug_0.0.1_macos-amd64
 chmod +x ${BASEDIR}/kubectl-debug
-mv ${BASEDIR}/kubectdl-debug /usr/local/bin/
+mv ${BASEDIR}/kubectl-debug /usr/local/bin/
 
 # Setup bash_profile
+rm ~/.bash_profile
 ln -s ${BASEDIR}/bin/bash_profile ~/.bash_profile
 
 # vimfiles
