@@ -36,6 +36,9 @@ ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 # Setup tmux
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
 
+# Setup alacritty
+ln -s ${BASEDIR}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 # Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
 mv /usr/local/bin/kubectx /usr/local/bin/kcontext
