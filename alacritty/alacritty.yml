@@ -66,11 +66,10 @@ mouse:
   url:
     launcher:
      program: open
-     args: []
     modifiers: None
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-  save_to_clipboard: true
+  save_to_clipboard: false
 dynamic_title: true
 cursor:
   style: Block
@@ -189,10 +188,10 @@ key_bindings:
   - { key: H,        mods: Command,         action: Hide             }
   - { key: Q,        mods: Command,         action: Quit             }
   - { key: W,        mods: Command,         action: Quit             }
-  - { key: F,        mods: Command|Control, action: ToggleFullscreen }
-  - { key: Paste,                   action: Paste                            }
-  - { key: Copy,                    action: Copy                             }
-  - { key: L,        mods: Control, action: ClearLogNotice                   }
+  - { key: F,        mods: Command,         action: ToggleFullscreen }
+  - { key: Paste,                           action: Paste            }
+  - { key: Copy,                            action: Copy             }
+  - { key: L,        mods: Control,         action: ClearLogNotice   }
   - { key: L,        mods: Control, chars: "\x0c"                            }
   - { key: Home,     mods: Alt,     chars: "\x1b[1;3H"                       }
   - { key: Home,                    chars: "\x1bOH",        mode: AppCursor  }

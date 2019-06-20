@@ -59,3 +59,4 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 
 # Create secrets file
 touch ${BASEDIR}/.secrets
+rm -f ~/.bashrc
