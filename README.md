@@ -14,3 +14,6 @@ But, if you do:
     $ git clone --recursive https://github.com/lucazz/dotfiles.git  ~/.dotfiles
     $ cd .dotfiles
     $ ./install
+
+### License
+[MIT](LICENSE.md)
