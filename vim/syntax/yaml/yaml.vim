@@ -10,7 +10,7 @@ if exists("b:did_indent")
 endif
 let b:did_indent = 1
 
-setlocal autoindent sw=2 et
+setlocal autoindent sw=4 et
 setlocal indentexpr=GetYamlIndent()
 setlocal indentkeys=o,O,*<Return>,!^F
 
@@ -63,4 +63,3 @@ hi link yamlOperator	Operator
 hi link yamlDelimiter	Delimiter
 hi link yamlString	String
 hi link yamlEscape	Special
-
