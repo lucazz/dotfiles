@@ -18,7 +18,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'b4b4r07/vim-ansible-vault'
-Plug 'dracula/vim'
 Plug 'w0rp/ale'
+Plug 'hashivim/vim-terraform'
 call plug#end()
-
