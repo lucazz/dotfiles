@@ -1,32 +1,23 @@
 for file in $HOME/.dotfiles/bash/*.d;
 do
-	source $file
+  source $file
 done
 
 source ~/.secrets
 
 # Bash completion
-complete -C /usr/local/Cellar/terraform/0.11.11/bin/terraform terraform
 [ -f /usr/local/etc/bash_completion.d ] \
-	&& . /usr/local/etc/bash_completion.d
+  && . /usr/local/etc/bash_completion.d
 [ -f /usr/local/etc/bash_completion ] \
-	&& source /usr/local/etc/bash_completion
+  && source /usr/local/etc/bash_completion
 [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ] \
-	&& source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+  && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 [ -f ~/.fzf.bash ] \
-	&& source ~/.fzf.bash
+  && source ~/.fzf.bash
 
 #Prompt
 PS1="\[$(tput setaf 2)\]\W \[\033[33m\]\$(parse_git_branch)\[\033[00m\]\$\[$(tput sgr0)\\[$(tput sgr0)\] "
 
 tmux attach
-clear
+/* clear */
 cd
-
-complete -C /usr/local/Cellar/terraform/0.12.1/bin/terraform terraform
-
-eval "$(direnv hook bash)"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-complete -C /usr/local/bin/terraform terraform
