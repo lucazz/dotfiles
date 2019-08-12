@@ -1,4 +1,5 @@
 tap "cytopia/tap"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -30,6 +31,7 @@ brew "fzf"
 brew "git-lfs"
 brew "gnu-getopt"
 brew "gnu-sed"
+brew "heroku"
 brew "libksba"
 brew "gnupg", link: false
 brew "go"
