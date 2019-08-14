@@ -23,6 +23,9 @@ ln -s ${BASEDIR}/pip/pydistutils.cfg ~/.pydistutils.cfg
 # Install rvm
 bash ${BASEDIR}/rvm/install.sh
 
+# Install gems
+bash ${BASEDIR}/gems/install.sh
+
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
 
