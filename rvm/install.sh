@@ -1,10 +1,10 @@
 #!/bin/bash
 
-RUBY_VERSION="2.4.1"
+RUBY_VERSION="2.6.3"
 
 if [ ! -f "$HOME/.ruby_version" ]
 then
-	rm -rf $HOME/.ruby-version
+  rm -rf $HOME/.ruby-version
 fi
 echo "$RUBY_VERSION" > $HOME/.ruby-version
 
@@ -15,13 +15,13 @@ source ~/.profile
 
 if test $(which rvm)
 then
-	rvm requirements
-	rvm install ruby-$RUBY_VERSION
-	rvm	use ruby-$RUBY_VERSION
-	rvm rubygems current
+  rvm requirements
+  rvm install ruby-$RUBY_VERSION
+  rvm use ruby-$RUBY_VERSION
+  rvm rubygems current
 fi
 
 if test $(which gem)
 then
-	gem install bundler
+  gem install bundler
 fi
