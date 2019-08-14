@@ -49,9 +49,9 @@ nmap t <Plug>(easymotion-t2)
 
 " ======== Persistent Undo
 if has('persistent_undo')
-	silent !mkdir ~/.vim/backups > /dev/null 2>&1
-	set undodir=~/.vim/backups
-	set undofile
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  set undodir=~/.vim/backups
+  set undofile
 endif
 
 " ======== Indentation & tab settings
@@ -110,20 +110,22 @@ let g:terraform_fmt_on_save=1
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-	\'*':          ['remove_trailing_lines', 'trim_whitespace'],
-	\'python':     ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'pep8', 'isort'],
-	\'tf':         ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
-	\'json':       ['remove_trailing_lines', 'trim_whitespace', 'prettier' ],
-	\'yaml':       ['remove_trailing_lines', 'trim_whitespace', 'prettier']
+  \'*':       ['remove_trailing_lines', 'trim_whitespace'],
+  \'python':  ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'pep8', 'isort'],
+  \'tf':      ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
+  \'json':    ['remove_trailing_lines', 'trim_whitespace', 'prettier' ],
+  \'yaml':    ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
+  \'ruby':    ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
 \}
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {
-	\'dockerfile': ['hadolint'],
-	\'python':     ['pylint'],
-	\'tf':         ['tflint'],
-	\'yaml':       ['yamllint']
+  \'dockerfile':  ['hadolint'],
+  \'python':      ['pylint'],
+  \'tf':          ['tflint'],
+  \'ruby':        ['standardrb', 'rubocop'],
+  \'yaml':        ['yamllint']
 \}
 let g:ale_python_pylint_change_directory = 0
 
