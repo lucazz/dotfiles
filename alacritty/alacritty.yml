@@ -57,18 +57,16 @@ visual_bell:
   duration: 10
   color: '0xffffff'
 background_opacity: 1.0
-mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
 mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
   hide_when_typing: true
   url:
     launcher:
-     program: open
+    program: open
     modifiers: None
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: false
 dynamic_title: true
 cursor:
