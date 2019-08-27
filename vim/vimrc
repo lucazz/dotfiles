@@ -124,7 +124,7 @@ let g:ale_linters = {
   \'dockerfile':  ['hadolint'],
   \'python':      ['pylint'],
   \'tf':          ['tflint'],
-  \'ruby':        ['standardrb', 'rubocop'],
+  \'ruby':        ['reek', 'standardrb', 'rubocop'],
   \'yaml':        ['yamllint']
 \}
 let g:ale_python_pylint_change_directory = 0
