@@ -20,4 +20,5 @@ Plug 'ervandew/supertab'
 Plug 'b4b4r07/vim-ansible-vault'
 Plug 'w0rp/ale'
 Plug 'hashivim/vim-terraform'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
