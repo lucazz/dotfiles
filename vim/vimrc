@@ -116,6 +116,7 @@ let g:ale_fixers = {
   \'json':    ['remove_trailing_lines', 'trim_whitespace', 'prettier' ],
   \'yaml':    ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'ruby':    ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
+  \'go':      ['remove_trailing_lines', 'trim_whitespace']
 \}
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
@@ -125,7 +126,7 @@ let g:ale_linters = {
   \'python':      ['pylint'],
   \'tf':          ['tflint'],
   \'ruby':        ['reek', 'standardrb', 'rubocop'],
-  \'yaml':        ['yamllint']
+  \'yaml':        ['yamllint'],
 \}
 let g:ale_python_pylint_change_directory = 0
 
