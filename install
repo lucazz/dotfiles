@@ -26,6 +26,9 @@ bash ${BASEDIR}/rvm/install.sh
 # Install gems
 bash ${BASEDIR}/gems/install.sh
 
+# Go get packages
+bash ${BASEDIR}/golang/install.sh
+
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
 
