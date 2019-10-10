@@ -1,72 +1,60 @@
 [user]
-	email = lucas@saboya.pro
-	name = Lucas do Amaral Saboya
-	signingKey = 40F696B9
-
+  email = lucas@saboya.pro
+  name = Lucas do Amaral Saboya
+  signingKey = 40F696B9
 [core]
-	editor = nvim
-	excludesfile = ~/.gitignore
-	autocrlf = input
-	filemode = false
-
+  editor = nvim
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  filemode = false
 [alias]
-	a = add --all
-	c = commit
-	d = diff
-	l = log --oneline --graph --decorate
-	s = status -b
-	log = log --oneline --decorate --all --graph
-
+  a = add --all
+  c = commit
+  d = diff
+  l = log --oneline --graph --decorate
+  s = status -b
+  log = log --oneline --decorate --all --graph
 [push]
-	default = simple
-
+  default = simple
 [color]
-	ui = true
-
+  ui = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "diff"]
-	meta = yellow
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 [fetch]
-	prune = true
-	rebase = true
-
+  prune = true
+  rebase = true
 [pull]
-	rebase = true
-	prune = true
-
+  rebase = true
+  prune = true
 [rerere]
-	enabled = true
-
+  enabled = true
 [commit]
-	gpgsign = true
-
+  gpgsign = true
 [gpg]
-        program = /usr/local/bin/gpg
-
+  program = /usr/local/bin/gpg
 [pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
-
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
 [diff-so-fancy]
-	markEmptyLines = false
-	changeHunkIndicators = false
-	stripLeadingSymbols = false
-	useUnicodeRuler = false
+  markEmptyLines = false
+  changeHunkIndicators = false
+  stripLeadingSymbols = false
+  useUnicodeRuler = false
+  noprefix = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [diff "sopsdiffer"]
-	textconv = sops -d
+  textconv = sops -d
