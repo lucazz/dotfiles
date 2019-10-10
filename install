@@ -16,10 +16,6 @@ bash ${BASEDIR}/homebrew/install.sh
 # Install yarn dependencies
 bash ${BASEDIR}/yarn/install.sh
 
-# Install pip dependencies
-bash ${BASEDIR}/pip/install.sh
-ln -s ${BASEDIR}/pip/pydistutils.cfg ~/.pydistutils.cfg
-
 # Install rvm
 bash ${BASEDIR}/rvm/install.sh
 
@@ -40,10 +36,8 @@ ln -s ${BASEDIR}/ssh/config \
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 
 # Setup tmux
+git clone https://github.com/tmux-plugins/tpm ~/.dotfiles/tmux/tpm
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
-
-# Setup alacritty
-ln -s ${BASEDIR}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
@@ -54,8 +48,8 @@ chmod +x ${BASEDIR}/kubectl-debug
 mv ${BASEDIR}/kubectl-debug /usr/local/bin/
 
 # Setup bash_profile
-rm ~/.bash_profile
-ln -s ${BASEDIR}/bin/bash_profile ~/.bash_profile
+rm ~/.profile
+ln -s ${BASEDIR}/zsh/profile ~/.profile
 
 # vimfiles
 mkdir -p ~/.config
@@ -65,4 +59,3 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 
 # Create secrets file
 touch ${BASEDIR}/.secrets
-rm -f ~/.bashrc

@@ -1,0 +1,49 @@
+autoload -U +X bashcompinit && bashcompinit
+for file in $HOME/.dotfiles/zsh/*.d;
+do
+  source $file
+done
+
+source ~/.secrets
+
+# Completions
+setopt auto_menu
+setopt always_to_end
+setopt complete_in_word
+unsetopt flow_control
+unsetopt menu_complete
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+[ -f /usr/local/etc/bash_completion.d ] \
+  && . /usr/local/etc/bash_completion.d
+[ -f /usr/local/etc/bash_completion ] \
+  && source /usr/local/etc/bash_completion
+[ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ] \
+  && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+[ -f ~/.fzf.zsh ] \
+  && source ~/.fzf.zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+#History
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+SAVEHIST=10000
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt inc_append_history
+setopt share_history
+
+#Prompt
+PROMPT="%F{blue}%1~%f \$vcs_info_msg_0_ %F{white}⌘ "
+[ ! -z "${TMUX+x}" ] && export TERM="xterm-256color"
+if [[ ! $TERM =~ xterm-256color ]]; then
+    exec tmux
+fi
