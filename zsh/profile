@@ -43,7 +43,11 @@ setopt share_history
 
 #Prompt
 PROMPT="%F{blue}%1~%f \$vcs_info_msg_0_ %F{white}⌘ "
-[ ! -z "${TMUX+x}" ] && export TERM="xterm-256color"
-if [[ ! $TERM =~ xterm-256color ]]; then
-    exec tmux
+
+tmux has-session -t main
+if [ $? != 0 ]
+then
+  tmux new-session -s main
 fi
+tmux attach -t main
+clear
