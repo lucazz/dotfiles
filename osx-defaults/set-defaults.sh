@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-HOSTNAME="bb-11"
+HOSTNAME="bb-12"
 
 # Ask for the administrator password upfront
 sudo -v
