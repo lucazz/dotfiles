@@ -7,6 +7,7 @@ while true;
   done 2>/dev/null &
 
 go get -u \
-  github.com/chuckha/kubeyaml/cmd/kubeyaml
+  github.com/chuckha/kubeyaml/cmd/kubeyaml \
+  golang.org/x/tools/gopls
 
 mv $GOPATH/bin/kubeyaml $GOPATH/bin/klint
