@@ -110,3 +110,7 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>F :Files<CR>
 map <Leader>c :TComment<CR>
 map <Leader>C :TComment<CR>
+
+" Golang mappings
+map <Leader>b :GoBuild<CR>
+map <Leader>r :GoRun<CR>
