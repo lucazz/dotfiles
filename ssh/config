@@ -11,7 +11,5 @@ Host *
 	ControlPersist yes
 	ControlPath ~/.ssh/socket-%r@%h:%p
 	IdentityFile ~/.ssh/id_ed25519
-	IdentityFile ~/.ssh/keys/kairos/kops
-	IdentityFile ~/.ssh/keys/kairos/us-east-1
 
-Include ~/.ssh/config.d/
+Include ~/.ssh/config.d/*
