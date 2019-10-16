@@ -1,7 +1,3 @@
-[user]
-  email = lucas@saboya.pro
-  name = Lucas do Amaral Saboya
-  signingKey = 40F696B9
 [core]
   editor = nvim
   excludesfile = ~/.gitignore
