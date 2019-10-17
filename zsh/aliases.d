@@ -2,3 +2,4 @@
 alias vim="nvim"
 alias cat="bat"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias ls="ls -GwF"
