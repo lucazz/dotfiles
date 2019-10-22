@@ -16,6 +16,9 @@ bash ${BASEDIR}/homebrew/install.sh
 # Install yarn dependencies
 bash ${BASEDIR}/yarn/install.sh
 
+# Install pip3 packages
+bash ${BASEDIR}/pip3/install.sh
+
 # Install rvm
 bash ${BASEDIR}/rvm/install.sh
 
