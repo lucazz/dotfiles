@@ -32,6 +32,7 @@ bash ${BASEDIR}/golang/install.sh
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
 
 # Configuring ssh
+mkdir -p ${BASEDIR}/ssh/
 ln -s ${BASEDIR}/ssh/config \
 	~/.ssh/config
 
@@ -45,10 +46,6 @@ ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
 # Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
 mv /usr/local/bin/kubectx /usr/local/bin/kcontext
-ln -s ${BASEDIR}/bin/get-kubeconfig /usr/local/bin/kgetkubeconfig
-curl -Lo kubectl-debug https://github.com/aylei/kubectl-debug/releases/download/0.0.1/kubectl-debug_0.0.1_macos-amd64
-chmod +x ${BASEDIR}/kubectl-debug
-mv ${BASEDIR}/kubectl-debug /usr/local/bin/
 
 # Setup bash_profile
 rm ~/.profile
