@@ -12,4 +12,4 @@ Host *
   ControlPath ~/.ssh/socket-%r@%h:%p
   UseKeychain yes
 
-Include ~/.ssh/config.d/*
+Include ~/.dotfiles/ssh/config.d/*
