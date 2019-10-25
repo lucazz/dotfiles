@@ -28,6 +28,9 @@ bash ${BASEDIR}/gems/install.sh
 # Go get packages
 bash ${BASEDIR}/golang/install.sh
 
+# Configure tarsnap
+bash ${BASEDIR}/tarsnap/configure.sh
+
 # Set osx defaults
 bash ${BASEDIR}/osx-defaults/set-defaults.sh
 

@@ -1,0 +1,7 @@
+cachedir ~/.tarsnap/cache
+keyfile ~/.tarsnap/tarsnap.key
+nodump
+print-stats
+checkpoint-bytes 1G
+humanize-numbers
+aggressive-networking
