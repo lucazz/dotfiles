@@ -37,7 +37,7 @@
 [commit]
   gpgsign = true
 [gpg]
-  program = /usr/local/bin/gpg
+  program = gpg2
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
@@ -54,3 +54,5 @@
   required = true
 [diff "sopsdiffer"]
   textconv = sops -d
+[user]
+  signingKey = 40F696B9
