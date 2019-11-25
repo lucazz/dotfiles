@@ -112,5 +112,5 @@ map <Leader>c :TComment<CR>
 map <Leader>C :TComment<CR>
 
 " Golang mappings
-map <Leader>b :GoBuild<CR>
-map <Leader>r :GoRun<CR>
+map <Leader>gb :GoBuild<CR>
+map <Leader>gr :GoRun<CR>
