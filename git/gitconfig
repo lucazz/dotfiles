@@ -53,6 +53,6 @@
   process = git-lfs filter-process
   required = true
 [diff "sopsdiffer"]
-  textconv = sops -d
+	textconv = sops -d
 [user]
   signingKey = 40F696B9

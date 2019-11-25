@@ -62,3 +62,7 @@ ln -s ${BASEDIR}/vim/ ~/.vim
 
 # Create secrets file
 touch ${BASEDIR}/.secrets
+
+# Configure helm
+helm init -c
+helm plugin install https://github.com/futuresimple/helm-secrets
