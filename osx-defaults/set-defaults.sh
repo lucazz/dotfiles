@@ -160,7 +160,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 # Set the auto hide delay do zero
-defaults write com.apple.Dock autohide-delay -float 0
+defaults write com.apple.Dock autohide-delay -float 0.1
 
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
