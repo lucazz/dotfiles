@@ -5,6 +5,8 @@
   filemode = false
 [alias]
   a = add --all
+  co = checkout
+  cob = checkout -b
   c = commit
   d = diff
   l = log --oneline --graph --decorate
@@ -53,6 +55,7 @@
   process = git-lfs filter-process
   required = true
 [diff "sopsdiffer"]
-	textconv = sops -d
+  textconv = sops -d
 [user]
-  signingKey = 40F696B9
+  name = Lucas do Amaral Saboya
+  useConfigOnly = true
