@@ -11,3 +11,4 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 export PATH="/usr/local/sbin:$PATH"
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 export HOST=$(hostname)
+export EDITOR="nvim"
