@@ -12,11 +12,11 @@ nnoremap <C-tab> :tabnext<CR>
 so ~/.vim/plugs.vim
 
 " ======== General Config
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
+set backspace=indent,eol,start
+set history=100
+set showcmd
 set ignorecase
-set autoread                    "Reload files changed outside vim
+set autoread
 set mouse=a
 let mapleader=","
 
@@ -26,9 +26,9 @@ colorscheme dracula
 set termguicolors
 set showmode
 set t_Co=256
-set t_ut= "Disable Background Color
-set t_vb="" "Enable visualbell
-set visualbell "Enable visualbell
+set t_ut=
+set t_vb=""
+set visualbell
 set cursorline
 set colorcolumn=80
 set clipboard=unnamed
@@ -43,10 +43,6 @@ set noswapfile
 set nobackup
 set nowb
 
-" ======== EasyMotion
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
-
 " ======== Persistent Undo
 if has('persistent_undo')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -58,15 +54,15 @@ endif
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set nowrap "Don't wrap lines
-set linebreak "Wrap lines at convenient points
+set nowrap
+set linebreak
 filetype plugin on
 filetype indent on
 
 " ======== Completion
 set wildmode=list:longest
-set wildmenu "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildmenu
+set wildignore=*.o,*.obj,*~
 set wildignore+=*vim/backups*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
@@ -83,8 +79,8 @@ set wildignore+=*.pyc
 " ======== Scrolling
 set lazyredraw
 set ttyfast
-set scrolloff=5
-set sidescrolloff=5
+set scrolloff=27
+set sidescrolloff=27
 set sidescroll=1
 
 " ======== NERDTree
@@ -103,32 +99,34 @@ set laststatus=2
 let g:terraform_align=1
 let g:terraform_fold_sections=0
 let g:terraform_remap_spacebar=1
-let g:terraform_commentstring='//%s'
+let g:terraform_commentstring='#%s'
 let g:terraform_fmt_on_save=1
 
 " ======== Aleconfig
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-  \'*':       ['remove_trailing_lines', 'trim_whitespace'],
-  \'python':  ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort'],
-  \'tf':      ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
-  \'json':    ['remove_trailing_lines', 'trim_whitespace', 'jq' ],
-  \'yaml':    ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
-  \'ruby':    ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
-  \'go':      ['remove_trailing_lines', 'trim_whitespace']
-\}
+let g:ale_python_pylint_change_directory = 0
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_linters = {
-  \'dockerfile':  ['hadolint'],
-  \'python':      ['pylint'],
-  \'tf':          ['tflint'],
-  \'ruby':        ['reek', 'standardrb', 'rubocop'],
-  \'yaml':        ['yamllint'],
+let g:ale_list_window_size = 5
+let g:ale_fixers = {
+  \'*':          ['remove_trailing_lines', 'trim_whitespace'],
+  \'python':     ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort'],
+  \'tf':         ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
+  \'json':       ['remove_trailing_lines', 'trim_whitespace', 'jq' ],
+  \'yaml':       ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
+  \'ruby':       ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
+  \'typescript': ['remove_trailing_lines', 'trim_whitespace', 'prettier-eslint'],
+  \'go':         ['remove_trailing_lines', 'trim_whitespace']
 \}
-let g:ale_python_pylint_change_directory = 0
+let g:ale_linters = {
+  \'dockerfile': ['hadolint'],
+  \'python':     ['pylint'],
+  \'tf':         ['tflint'],
+  \'ruby':       ['reek', 'standardrb', 'rubocop'],
+  \'yaml':       ['yamllint'],
+  \'typescript': ['eslint']
+\}
 
 " ======== Write as root if we dont' have permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
@@ -143,4 +141,3 @@ au BufNewFile,BufRead *.go so ~/.vim/syntax/golang.vim
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
 augroup customFileTypes
-autocmd!
