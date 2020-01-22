@@ -113,10 +113,10 @@ let g:ale_fixers = {
   \'*':          ['remove_trailing_lines', 'trim_whitespace'],
   \'python':     ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort'],
   \'tf':         ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
-  \'json':       ['remove_trailing_lines', 'trim_whitespace', 'jq' ],
+  \'json':       ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'yaml':       ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'ruby':       ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
-  \'typescript': ['remove_trailing_lines', 'trim_whitespace', 'prettier-eslint'],
+  \'typescript': ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'go':         ['remove_trailing_lines', 'trim_whitespace']
 \}
 let g:ale_linters = {
