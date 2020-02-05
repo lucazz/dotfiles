@@ -3,6 +3,8 @@
   excludesfile = ~/.gitignore
   autocrlf = input
   filemode = false
+[credential]
+  helper = osxkeychain
 [alias]
   a = add --all
   co = checkout
