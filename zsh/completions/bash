@@ -1,4 +1,0 @@
-[ -f /usr/local/etc/bash_completion.d ] \
-  && . /usr/local/etc/bash_completion.d
-[ -f /usr/local/etc/bash_completion ] \
-  && source /usr/local/etc/bash_completion

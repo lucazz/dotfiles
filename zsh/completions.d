@@ -1,5 +1,6 @@
 # SZH Completions
 autoload -U +X bashcompinit && bashcompinit
+zmodload -i zsh/complist
 autoload -U compinit
 setopt auto_menu
 setopt always_to_end
