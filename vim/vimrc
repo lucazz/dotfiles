@@ -130,9 +130,6 @@ let g:ale_linters = {
   \'typescript': ['eslint']
 \}
 
-" ======== Write as root if we dont' have permission
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
 " ======== YAML Settings
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml.vim
 
