@@ -1,7 +1,3 @@
-" Vim indent file
-" Language:	Go
-" Author:	Alecs King <alecsk@gmail.com>
-" Only load this indent file when no other was loaded.
 if exists("b:did_indent")
   finish
 endif
@@ -35,3 +31,29 @@ function! GetGoIndent()
   endif
   return ind
 endfunction
+
+au FileType go set noexpandtab
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
+
+let g:go_auto_sameids = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+let g:airline#extensions#ale#enabled = 1
+
+au FileType go nmap <leader>t :GoTest -short<cr>
+
+autocmd FileType go setlocal
+  \ autoindent
+  \ noexpandtab
+  \ tabstop=4
+  \ shiftwidth=4
