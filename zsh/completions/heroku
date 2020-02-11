@@ -1,1 +1,1 @@
-$(heroku autocomplete:script zsh)
+eval $(heroku autocomplete:script zsh)
