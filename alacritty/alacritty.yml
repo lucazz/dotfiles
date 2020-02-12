@@ -84,7 +84,9 @@ debug:
   print_events: false
   ref_test: false
 key_bindings:
-  - {key: F, mods: Command|Control, action: ToggleFullscreen}
+  - {key: Comma, mods: Command, command: {program: "nvim", args: ["~/.config/alacritty/alacritty.yml"]}}
+  - {key: Space, mods: Alt, chars: " "}
+  - {key: 36, mods: Command, action: ToggleFullscreen}
   - {key: Key0, mods: Command, action: ResetFontSize}
   - {key: Equals, mods: Command, action: IncreaseFontSize}
   - {key: Add, mods: Command, action: IncreaseFontSize}
