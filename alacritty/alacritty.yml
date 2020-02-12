@@ -1,5 +1,4 @@
 ---
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
 window:
   dimensions:
     columns: 0
@@ -30,57 +29,35 @@ font:
 draw_bold_text_with_bright_colors: true
 colors:
   primary:
-    # background: '0x1B1D1E'
-    # foreground: '0xF8F8F2'
     background: '0x282a36'
     foreground: '0xf8f8f2'
-  # normal:
-  #   black: '0x333333'
-  #   red: '0xC4265E'
-  #   green: '0x86B42B'
-  #   yellow: '0xB3B42B'
-  #   blue: '0x6A7EC8'
-  #   magenta: '0x8C6BC8'
-  #   cyan: '0x56ADBC'
-  #   white: '0xE3E3DD'
-  # bright:
-  #   black: '0x666666'
-  #   red: '0xF92672'
-  #   green: '0xA6E22E'
-  #   yellow: '0xE2E22E'
-  #   blue: '0x819AFF'
-  #   magenta: '0xAE81FF'
-  #   cyan: '0x66D9EF'
-  #   white: '0xF8F8F2'
-  #
   normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
+    black: '0x000000'
+    red: '0xff5555'
+    green: '0x50fa7b'
+    yellow: '0xf1fa8c'
+    blue: '0xbd93f9'
     magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
+    cyan: '0x8be9fd'
+    white: '0xbfbfbf'
   bright:
-    black:   '0x4d4d4d'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
+    black: '0x4d4d4d'
+    red: '0xff6e67'
+    green: '0x5af78e'
+    yellow: '0xf4f99d'
+    blue: '0xcaa9fa'
     magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
+    cyan: '0x9aedfe'
+    white: '0xe6e6e6'
   dim:
-    black:   '0x14151b'
-    red:     '0xff2222'
-    green:   '0x1ef956'
-    yellow:  '0xebf85b'
-    blue:    '0x4d5b86'
+    black: '0x14151b'
+    red: '0xff2222'
+    green: '0x1ef956'
+    yellow: '0xebf85b'
+    blue: '0x4d5b86'
     magenta: '0xff46b0'
-    cyan:    '0x59dffc'
-    white:   '0xe6e6d1'
-
+    cyan: '0x59dffc'
+    white: '0xe6e6d1'
   indexed_colors: []
 visual_bell:
   animation: EaseOutExpo
@@ -127,15 +104,14 @@ key_bindings:
   - {key: H, mods: Command, action: Hide}
   - {key: Q, mods: Command, action: Quit}
   - {key: W, mods: Command, action: Quit}
-  - {key: F, mods: Command|Control, action: ToggleFullscreen}
   - {key: Paste, action: Paste}
   - {key: Copy, action: Copy}
   - {key: L, mods: Control, action: ClearLogNotice}
   - {key: L, mods: Control, chars: "\x0c"}
-  - {key: Home, mods: Alt, chars: "\x1b[1;3H"}
+  - {key: Home, chars: "\x1b[1;3H"}
   - {key: Home, chars: "\x1bOH", mode: AppCursor}
   - {key: Home, chars: "\x1b[H", mode: ~AppCursor}
-  - {key: End, mods: Alt, chars: "\x1b[1;3F"}
+  - {key: End, chars: "\x1b[1;3F"}
   - {key: End, chars: "\x1bOF", mode: AppCursor}
   - {key: End, chars: "\x1b[F", mode: ~AppCursor}
   - {key: PageUp, mods: Shift, action: ScrollPageUp, mode: ~Alt}
