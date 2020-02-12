@@ -11,4 +11,7 @@ source ~/.secrets
 PROMPT="%F{blue}%1~%f \$vcs_info_msg_0_ %F{white}⌘ "
 
 #Start tmux
-tmux -S /tmp/tmux-session attach; clear
+# tmux -S /tmp/tmux-session attach; clear
+if [ "$TMUX" = "" ]; then
+  tmux -S /tmp/tmux-session attach
+fi
