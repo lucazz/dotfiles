@@ -84,6 +84,7 @@ debug:
   print_events: false
   ref_test: false
 key_bindings:
+  - {key: F, mods: Command|Control, action: ToggleFullscreen}
   - {key: Key0, mods: Command, action: ResetFontSize}
   - {key: Equals, mods: Command, action: IncreaseFontSize}
   - {key: Add, mods: Command, action: IncreaseFontSize}
@@ -97,8 +98,6 @@ key_bindings:
   - {key: W, mods: Command, action: Quit}
   - {key: Paste, action: Paste}
   - {key: Copy, action: Copy}
-  - {key: L, mods: Control, action: ClearLogNotice}
-  - {key: L, mods: Control, chars: "\x0c"}
   - {key: Home, chars: "\x1b[1;3H"}
   - {key: Home, chars: "\x1bOH", mode: AppCursor}
   - {key: Home, chars: "\x1b[H", mode: ~AppCursor}
