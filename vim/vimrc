@@ -42,6 +42,9 @@ let $nvim_tui_enable_true_color=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:dracula_italic = 0
+let g:dracula_colorterm = 0
+highlight Normal ctermbg=None
 
 " ======== Turn Off Swap Files
 set noswapfile
