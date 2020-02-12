@@ -28,6 +28,9 @@ bash ${BASEDIR}/gems/install.sh
 # Go get packages
 bash ${BASEDIR}/golang/install.sh
 
+# Configure Alacritty
+ln -s ${BASEDIR}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 # Configure tarsnap
 bash ${BASEDIR}/tarsnap/configure.sh
 
