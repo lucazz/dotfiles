@@ -21,9 +21,11 @@ set mouse=a
 let mapleader=","
 
 " ======== Appearance
+set background=dark
 syntax on
+syntax enable
+set hlsearch
 colorscheme dracula
-set termguicolors
 set showmode
 set t_Co=256
 set t_ut=
@@ -37,6 +39,9 @@ set hidden
 set list
 set listchars=trail:·,tab:»\ ,eol:¬
 let $nvim_tui_enable_true_color=1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " ======== Turn Off Swap Files
 set noswapfile
