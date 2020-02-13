@@ -17,15 +17,14 @@ tabspaces: 2
 font:
   normal:
     family: Hasklug Nerd Font Mono
-    # family: JetBrains Mono
     style: Regular
   size: 13.5
   offset:
     x: 0
     y: 0
   glyph_offset:
-    x: 0
-    y: 0
+    x: 1
+    y: 1
   use_thin_strokes: true
 draw_bold_text_with_bright_colors: true
 colors:
@@ -53,31 +52,21 @@ colors:
   indexed_colors: []
 visual_bell:
   animation: EaseOutExpo
-  duration: 10
-  color: '0xffffff'
+  duration: 2
+  color: '0x000000'
 background_opacity: 1.0
-mouse_bindings:
-  - {mouse: Middle, action: PasteSelection}
 mouse:
   double_click: {threshold: 300}
   triple_click: {threshold: 300}
-  hide_when_typing: true
   url:
     launcher:
       program: open
-      args: []
-    modifiers: None
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-  save_to_clipboard: true
-dynamic_title: true
 cursor:
   style: Block
   unfocused_hollow: true
 live_config_reload: true
-working_directory: None
-enable_experimental_conpty_backend: false
-alt_send_esc: true
 debug:
   render_timer: false
   persistent_logging: false
@@ -85,7 +74,6 @@ debug:
   print_events: false
   ref_test: false
 key_bindings:
-  - {key: Comma, mods: Command, command: {program: "nvim", args: ["~/.config/alacritty/alacritty.yml"]}}
   - {key: Space, mods: Alt, chars: " "}
   - {key: 36, mods: Command, action: ToggleFullscreen}
   - {key: Key0, mods: Command, action: ResetFontSize}
