@@ -16,6 +16,7 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'hashivim/vim-terraform'
+Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
