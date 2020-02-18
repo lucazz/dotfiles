@@ -1,5 +1,6 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
+" ooo
 set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
@@ -104,6 +105,9 @@ let NERDTreeMapOpenVSplit='v'
 " ======== Vim Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_statusline_ontop=1
+let g:airline_detect_modified=1
 set laststatus=2
 
 " ======== ViM Terraform
