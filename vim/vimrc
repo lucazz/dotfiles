@@ -108,7 +108,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_statusline_ontop=1
 let g:airline_detect_modified=1
-set laststatus=2
+
+" set laststatus=2
 
 " ======== ViM Terraform
 let g:terraform_align=1
