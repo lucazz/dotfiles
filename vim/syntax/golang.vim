@@ -51,6 +51,9 @@ let g:go_auto_type_info = 1
 let g:airline#extensions#ale#enabled = 1
 
 au FileType go nmap <leader>t :GoTest -short<cr>
+au FileType go nmap <leader>b :GoBuild<cr>
+au FileType go nmap <leader>r :GoRun<cr>
+au FileType go nmap <leader>i :GoInstall<cr>
 
 autocmd FileType go setlocal
   \ autoindent
