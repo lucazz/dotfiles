@@ -105,10 +105,9 @@ let NERDTreeMapOpenVSplit='v'
 " ======== Vim Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_detect_modified=1
-
-" set laststatus=2
 
 " ======== ViM Terraform
 let g:terraform_align=1
@@ -133,7 +132,6 @@ let g:ale_fixers = {
   \'json':       ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'yaml':       ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'ruby':       ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
-  \'typescript': ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
   \'go':         ['remove_trailing_lines', 'trim_whitespace']
 \}
 let g:ale_linters = {
@@ -141,8 +139,7 @@ let g:ale_linters = {
   \'python':     ['pylint'],
   \'tf':         ['tflint'],
   \'ruby':       ['reek', 'standardrb', 'rubocop'],
-  \'yaml':       ['yamllint'],
-  \'typescript': ['eslint']
+  \'yaml':       ['yamllint']
 \}
 
 " ======== YAML Settings
