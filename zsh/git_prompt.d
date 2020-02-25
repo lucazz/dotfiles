@@ -11,7 +11,7 @@ setopt prompt_subst
         # If instead you want to show the marker only if there are untracked
         # files in $PWD, use:
         #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
-        hook_com[staged]+="%F{red}|"
+        hook_com[staged]+="%F{yellow}|"
     fi
 }
 
@@ -20,5 +20,5 @@ zstyle ":vcs_info:git:*" formats "%F{green}(%b)%m%u%c"
 zstyle ":vcs_info:*" enable git
 zstyle ':vcs_info:git*:*' check-for-changes true
 zstyle ':vcs_info:git*:*' unstagedstr " %F{red}|"
-zstyle ':vcs_info:git*:*' stagedstr " %F{blue}|"
+zstyle ':vcs_info:git*:*' stagedstr " %F{blue}|"
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
