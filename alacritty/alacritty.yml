@@ -16,7 +16,7 @@ scrolling:
 tabspaces: 2
 font:
   normal:
-    family: Hasklug Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
   size: 13.5
   offset:
