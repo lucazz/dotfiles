@@ -6,3 +6,4 @@ yarn/node_modules/*
 node_modules/*
 yarn.lock
 ssh/config.d/*
+tmux/tpm*
