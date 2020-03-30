@@ -57,6 +57,7 @@ mv /usr/local/bin/kubectx /usr/local/bin/kcontext
 rm ~/.profile
 rm ~/.zshrc
 ln -s ${BASEDIR}/zsh/zshrc~/.zshrc
+/usr/local/opt/fzf/install
 
 # vimfiles
 mkdir -p ~/.config
