@@ -55,7 +55,8 @@ mv /usr/local/bin/kubectx /usr/local/bin/kcontext
 
 # Setup bash_profile
 rm ~/.profile
-ln -s ${BASEDIR}/zsh/profile ~/.profile
+rm ~/.zshrc
+ln -s ${BASEDIR}/zsh/zshrc~/.zshrc
 
 # vimfiles
 mkdir -p ~/.config
@@ -66,6 +67,11 @@ nvim +PlugInstall +qall
 
 # Create secrets file
 touch ${BASEDIR}/.secrets
+
+# Install JetBrainsMono Nerd Font Regular
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip -O /tmp/JetBrainsMono.zip
+unzip /tmp/JetBrainsMono.zip
+mv JetBrains\ Mono\ Regular\ Nerd\ Font\ Complete.ttf ~/Library/Fonts
 
 # Configure helm
 helm init -c

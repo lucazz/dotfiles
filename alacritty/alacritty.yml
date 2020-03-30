@@ -16,7 +16,7 @@ scrolling:
 tabspaces: 2
 font:
   normal:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font
     style: Regular
   size: 14
   offset:
