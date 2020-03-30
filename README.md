@@ -10,10 +10,12 @@ You don't. [Dotfiles Are Not Meant to Be Forked](http://www.anishathalye.com/201
 
 But, if you do:
 
-    $ xcode-select --install
-    $ git clone --recursive https://github.com/lucazz/dotfiles.git  ~/.dotfiles
-    $ cd .dotfiles
-    $ ./install
+```bash
+xcode-select --install
+git clone --recursive https://github.com/lucazz/dotfiles.git  ~/.dotfiles
+cd .dotfiles
+./install
+```
 
 ### License
 [MIT](LICENSE.md)
