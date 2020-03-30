@@ -12,8 +12,6 @@ window:
 scrolling:
   history: 10000
   multiplier: 3
-  auto_scroll: false
-tabspaces: 2
 font:
   normal:
     family: JetBrainsMono Nerd Font
