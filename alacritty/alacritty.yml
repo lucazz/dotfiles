@@ -14,9 +14,9 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: UbuntuMono Nerd Font
     style: Regular
-  size: 14
+  size: 17
   offset:
     x: 0
     y: 0
