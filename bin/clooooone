@@ -7,7 +7,7 @@ GIT_AUTHOR_NAME="Lucas do Amaral Saboya"
 GIT_SSH_COMMAND="ssh -i $4 -F /dev/null"
 PREFIX=
 
-repo_list=$(curl -s -H "Authorization: token $TOKEN" https://api.github.com/orgs/$ORGANIZATION/repos?per_page=200|grep ssh_url|awk "NR%2 == 0"|cut -d ":"  -f 2-3|tr -d '",')
+repo_list=$(curl -s -H "Authorization: $TOKEN" https://api.github.com/orgs/$ORGANIZATION/repos?per_page=200|grep ssh_url|awk "NR%2 == 0"|cut -d ":"  -f 2-3|tr -d '",')
 
 for repo in $repo_list; do
   echo "Cloning $repo..."
