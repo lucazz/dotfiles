@@ -148,6 +148,9 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml.vim
 " ======== Golang Settings
 au BufNewFile,BufRead *.go so ~/.vim/syntax/golang.vim
 
+" ======== Golang Settings
+au BufNewFile,BufRead *.kt so ~/.vim/syntax/kotlin.vim
+
 " ======== Jenkinsfile Settings
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
