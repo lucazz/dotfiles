@@ -46,8 +46,9 @@ ln -s ${BASEDIR}/ssh/config \
 ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
 
 # Setup tmux
-git clone --branch v3.0.0 https://github.com/tmux-plugins/tpm ~/.dotfiles/tmux/tpm
+git clone --branch v3.0.0 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
+bash '~/.tmux/plugins/tpm/bin/install_plugins'
 
 # Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
