@@ -1,16 +1,15 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-" ooo
 set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
 " ======== Keymaps
-so ~/.vim/keymap.vim
+so ~/.config/nvim/keymap.vim
 nnoremap <C-tab> :tabnext<CR>
 
 " ======== Vundle Initialization
-so ~/.vim/plugs.vim
+so ~/.config/nvim/plugs.vim
 
 " ======== General Config
 set backspace=indent,eol,start
@@ -57,8 +56,8 @@ set nowb
 
 " ======== Persistent Undo
 if has('persistent_undo')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
+  silent !mkdir ~/.config/nvim/.backups > /dev/null 2>&1
+  set undodir=~/.config/nvim/.backups
   set undofile
 endif
 
@@ -143,13 +142,13 @@ let g:ale_linters = {
 \}
 
 " ======== YAML Settings
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/syntax/yaml.vim
+au BufNewFile,BufRead *.yaml,*.yml so ~/.config/nvim/syntax/yaml.vim
 
 " ======== Golang Settings
-au BufNewFile,BufRead *.go so ~/.vim/syntax/golang.vim
+au BufNewFile,BufRead *.go so ~/.config/nvim/syntax/golang.vim
 
 " ======== Golang Settings
-au BufNewFile,BufRead *.kt so ~/.vim/syntax/kotlin.vim
+au BufNewFile,BufRead *.kt so ~/.config/nvim/syntax/kotlin.vim
 
 " ======== Jenkinsfile Settings
 au BufNewFile,BufRead Jenkinsfile setf groovy
