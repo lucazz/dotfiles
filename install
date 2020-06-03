@@ -57,7 +57,9 @@ mv /usr/local/bin/kubectx /usr/local/bin/kcontext
 # Setup bash_profile
 rm ~/.profile
 rm ~/.zshrc
-ln -s ${BASEDIR}/zsh/zshrc~/.zshrc
+git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+rm ~/.zshrc
+ln -s ${BASEDIR}/oh-my-zsh/zshrc ~/.zshrc
 /usr/local/opt/fzf/install
 
 # vimfiles

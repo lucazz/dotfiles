@@ -12,7 +12,6 @@ export PATH="$PATH:$HOME/Library/Python/3.7/bin"
 export AUTO_MOUNT_HOME=false
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
-export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 export HOST=$(hostname)
 export EDITOR="nvim"
 export N_PREFIX="$HOME/n"

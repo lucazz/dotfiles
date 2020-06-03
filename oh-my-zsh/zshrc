@@ -1,0 +1,26 @@
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CUSTOM="$HOME/.dotfiles/oh-my-zsh/zsh_custom"
+plugins=(
+  git
+  docker
+  direnv
+  golang
+  terraform
+  tmux
+  fzf
+  autojump
+  aliases
+  exports
+)
+ZSH_THEME="sorin"
+HYPHEN_INSENSITIVE="true"
+DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART_ONCE= "true"
+ZSH_TMUX_AUTOQUIT="true"
+ZSH_TMUX_AUTOCONNECT="true"
+
+source $ZSH/oh-my-zsh.sh
+export MANPATH="/usr/local/man:$MANPATH"
