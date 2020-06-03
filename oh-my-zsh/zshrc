@@ -9,6 +9,7 @@ plugins=(
   tmux
   fzf
   autojump
+  kubectl
   aliases
   exports
 )
