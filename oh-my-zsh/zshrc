@@ -4,12 +4,10 @@ plugins=(
   git
   docker
   direnv
-  golang
   terraform
   tmux
   fzf
   autojump
-  kubectl
   aliases
   exports
 )
