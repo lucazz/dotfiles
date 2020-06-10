@@ -13,3 +13,4 @@ Host *
   UseKeychain yes
 
 Include ~/.dotfiles/ssh/config.d/*
+StrictHostKeyChecking no
