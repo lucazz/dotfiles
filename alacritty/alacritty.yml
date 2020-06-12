@@ -14,9 +14,9 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: UbuntuMono Nerd Font
+    family: FuraMono Nerd Font
     style: Regular
-  size: 17
+  size: 14
   offset:
     x: 0
     y: 0
