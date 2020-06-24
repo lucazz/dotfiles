@@ -37,14 +37,19 @@ set clipboard=unnamed
 set number
 set hidden
 set list
-set listchars=trail:·,tab:»\ ,eol:¬
+set listchars=trail:·,tab:┊\ ,eol:¬
+set lcs+=space:·
 let $nvim_tui_enable_true_color=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:dracula_italic = 0
-let g:dracula_colorterm = 0
+
+" ======== Dracula theme configs
+let g:dracula_italic = 1
+let g:dracula_bold = 1
 highlight Normal ctermbg=None
+highlight SpecialKey ctermfg=60 guifg=#5f5f87
+highlight Whitespace ctermfg=60 guifg=#5f5f87
 
 " ======== Remove unused languages from polyglot
 let g:polyglot_disabled = ['acpiasl', 'apiblueprint', 'applescript', 'arduino', 'asciidoc', 'autohotkey', 'blade', 'c++11', 'c/c++', 'caddyfile', 'carp', 'cjsx', 'clojure', 'coffee-script', 'cql', 'cryptol', 'crystal', 'cucumber', 'cue', 'dart', 'dhall', 'dlang', 'elixir', 'elm', 'emberscript', 'emblem', 'erlang', 'ferm', 'fish', 'flatbuffers', 'fsharp', 'glsl', 'gmpl', 'gnuplot', 'graphql', 'haml', 'handlebars', 'haskell', 'haxe', 'hive', 'i3', 'idris', 'ion', 'jasmine', 'javascript', 'jst', 'jsx', 'julia', 'kotlin', 'latex', 'less', 'lilypond', 'livescript', 'llvm', 'lua', 'mako', 'mathematica', 'mdx', 'meson', 'moonscript', 'nim', 'nix', 'objc', 'ocaml', 'octave', 'opencl', 'perl', 'php', 'plantuml', 'pony', 'powershell', 'protobuf', 'pug', 'puppet', 'purescript', 'qml', 'r-lang', 'racket', 'ragel', 'raml', 'reason', 'rst', 'rust', 'sbt', 'scala', 'scss', 'slim', 'slime', 'smt2', 'solidity', 'stylus', 'svelte', 'svg-indent', 'svg', 'swift', 'sxhkd', 'textile', 'thrift', 'tomdoc', 'toml', 'tptp', 'twig', 'typescript', 'v', 'vala', 'vbnet', 'vcl', 'vifm', 'vm', 'vue', 'xdc', 'xls', 'xml', 'yaml', 'yard', 'zephir', 'zig']
