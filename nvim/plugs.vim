@@ -16,10 +16,12 @@ Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'hashivim/vim-terraform'
+Plug 'towolf/vim-helm'
 Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()

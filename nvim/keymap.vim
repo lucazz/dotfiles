@@ -32,14 +32,18 @@ nmap <silent> <leader>m :NERDTreeToggle<cr>%
 " ==============================
 " Window/Tab/Split Manipulation
 " ==============================
-nnoremap <C-DOWN> <C-W><C-J>
-nnoremap <C-UP> <C-W><C-K>
-nnoremap <C-RIGHT> <C-W><C-L>
-nnoremap <C-LEFT> <C-W><C-H>
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 
-" Create window splits easier. The default
-" way is Ctrl-w,v and Ctrl-w,s. I remap
-" this to vv and ss
+" nnoremap <C-DOWN> <C-W><C-J>
+" nnoremap <C-UP> <C-W><C-K>
+" nnoremap <C-RIGHT> <C-W><C-L>
+" nnoremap <C-LEFT> <C-W><C-H>
+
+" Create window splits
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
