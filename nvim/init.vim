@@ -166,6 +166,7 @@ let g:ale_linters = {
 au BufNewFile,BufRead *.yaml,*.yml so ~/.config/nvim/syntax/yaml.vim
 
 " ======== Golang Settings
+let g:go_fmt_command = "goimports"
 au BufNewFile,BufRead *.go so ~/.config/nvim/syntax/golang.vim
 
 " ======== Golang Settings
