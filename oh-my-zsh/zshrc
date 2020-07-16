@@ -11,6 +11,7 @@ plugins=(
   autojump
   aliases
   exports
+  asdf
 )
 ZSH_THEME="sorin"
 HYPHEN_INSENSITIVE="true"

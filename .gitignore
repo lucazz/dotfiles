@@ -10,3 +10,4 @@ tmux/tpm*
 nvim/.backups/*
 nvim/plugged/*
 nvim/.netrwhist
+asdf/
