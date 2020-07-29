@@ -12,6 +12,7 @@ plugins=(
   aliases
   exports
   asdf
+  custom-kubectl
 )
 ZSH_THEME="sorin"
 HYPHEN_INSENSITIVE="true"
