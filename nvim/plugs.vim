@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 " On-demand loading
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tomtom/tcomment_vim'
+Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-scripts/bufkill.vim'

@@ -38,11 +38,6 @@ nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 
-" nnoremap <C-DOWN> <C-W><C-J>
-" nnoremap <C-UP> <C-W><C-K>
-" nnoremap <C-RIGHT> <C-W><C-L>
-" nnoremap <C-LEFT> <C-W><C-H>
-
 " Create window splits
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
@@ -112,8 +107,6 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 
 nmap <Leader>f :Files<CR>
 nmap <Leader>F :Files<CR>
-map <Leader>c :TComment<CR>
-map <Leader>C :TComment<CR>
 
 " Golang mappings
 map <Leader>gb :GoBuild<CR>
