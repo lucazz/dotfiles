@@ -122,6 +122,13 @@ augroup localfzf
 augroup END
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
+" ======== Bash configs
+autocmd FileType sh setlocal
+  \ autoindent
+  \ noexpandtab
+  \ tabstop=4
+  \ shiftwidth=4
+
 " ======== Vim Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -169,10 +176,7 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.config/nvim/syntax/yaml.vim
 let g:go_fmt_command = "goimports"
 au BufNewFile,BufRead *.go so ~/.config/nvim/syntax/golang.vim
 
-" ======== Golang Settings
-au BufNewFile,BufRead *.kt so ~/.config/nvim/syntax/kotlin.vim
-
-" ======== Jenkinsfile Settings
-au BufNewFile,BufRead Jenkinsfile setf groovy
+" ======== Bash Settings
+au BufNewFile,BufRead *.sh,*.zsh setf sh
 
 augroup customFileTypes
