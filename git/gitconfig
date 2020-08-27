@@ -61,3 +61,4 @@
 [user]
   name = Lucas do Amaral Saboya
   useConfigOnly = true
+  signingkey = 58086B4C40F696B9
