@@ -64,7 +64,7 @@ ln -s ${BASEDIR}/oh-my-zsh/zshrc ~/.zshrc
 
 # vimfiles
 mkdir -p ~/.config
-ln -s ${BASEDIR}/nvim/ ~/config/
+ln -s ${BASEDIR}/nvim/ ~/.config/
 nvim +PlugInstall +qall
 
 # Create secrets file
