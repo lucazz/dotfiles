@@ -11,6 +11,8 @@ Host *
   ControlPersist yes
   ControlPath ~/.ssh/socket-%r@%h:%p
   UseKeychain yes
+  AddKeysToAgent yes
+
 
 Include ~/.dotfiles/ssh/config.d/*
 StrictHostKeyChecking no
