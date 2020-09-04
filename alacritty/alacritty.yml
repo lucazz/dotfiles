@@ -4,7 +4,7 @@ window:
     columns: 0
     lines: 0
   padding:
-    x: 0
+    x: 10
     y: 0
   dynamic_padding: false
   decorations: none
