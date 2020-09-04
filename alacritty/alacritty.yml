@@ -14,7 +14,7 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: FuraMono Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Regular
   size: 16
   offset:
