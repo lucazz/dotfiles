@@ -15,3 +15,4 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOST=$(hostname)
 export EDITOR="nvim"
 export N_PREFIX="$HOME/n"
+export CORRECT_IGNORE_FILE='.*'
