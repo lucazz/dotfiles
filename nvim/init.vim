@@ -105,6 +105,7 @@ autocmd VimEnter * wincmd p
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowHidden = 1
 let NERDTreeMapOpenVSplit='v'
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
  " ======== FZF mapping
 let g:fzf_layout = { 'window': 'enew' }
