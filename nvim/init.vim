@@ -72,6 +72,7 @@ set shiftwidth=2
 set softtabstop=2
 set nowrap
 set linebreak
+filetype on
 filetype plugin on
 filetype indent on
 
@@ -122,6 +123,9 @@ augroup localfzf
         \                 <bang>0)
 augroup END
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+" ======== Makefile configs
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " ======== Bash configs
 autocmd FileType sh setlocal
