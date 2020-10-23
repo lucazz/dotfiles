@@ -16,15 +16,6 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Disable special character pop-up
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
-
-# Addjust scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
-
-# Increase window resize speed for Cocoa applications
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -36,12 +27,6 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
@@ -50,14 +35,6 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
-# Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Enable full keyboard access for all controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -68,12 +45,6 @@ defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null 2>&1
-
-###############################################################################
-# Screen                                                                      #
-###############################################################################
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -87,12 +58,6 @@ defaults write com.apple.screencapture type -string "png"
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
-###############################################################################
-# Finder                                                                      #
-###############################################################################
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
@@ -156,9 +121,6 @@ chflags nohidden ~/Library
 defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
-###############################################################################
-# Dock, Dashboard, and hot corners                                            #
-###############################################################################
 # Set the auto hide delay do zero
 defaults write com.apple.Dock autohide-delay -float 0.1
 
@@ -195,9 +157,6 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
-###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
@@ -218,42 +177,26 @@ defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
-###############################################################################
-# Time Machine                                                                #
-###############################################################################
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
 hash tmutil &> /dev/null 2>&1
 
-###############################################################################
-# Messages                                                                    #
-###############################################################################
 # Disable smart quotes as it’s annoying for messages that contain code
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 # Disable continuous spell checking
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
-###############################################################################
-# Network, VPN, Active Directory & Time Service                               #
-###############################################################################
+# Network, VPN, Active Directory & Time Service
 killall cfprefsd
 sudo killall cupsd
 sudo launchctl unload /System/Library/LaunchDaemons/org.cups.cupsd.plist
 sudo launchctl load /System/Library/LaunchDaemons/org.cups.cupsd.plist
 sudo update_dyld_shared_cache -root /
 
-###############################################################################
-# Disable OS X OS Prerelease downloads for all users                          #
-###############################################################################
-sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AllowPreReleaseInstallation -bool false
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
+# Kill affected applications
 for app in \
 	"Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" "Dock" "Finder" "Messages" "Safari" "Spectacle" "SystemUIServer" "iCal";
 	do
