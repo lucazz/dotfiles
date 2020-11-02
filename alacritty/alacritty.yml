@@ -14,9 +14,9 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: Iosevka Nerd Font Mono
+    family: SFMono Nerd Font
     style: Regular
-  size: 16
+  size: 12
   offset:
     x: 0
     y: 0
