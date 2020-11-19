@@ -54,26 +54,15 @@ bash '~/.tmux/plugins/tpm/bin/install_plugins'
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
 mv /usr/local/bin/kubectx /usr/local/bin/kcontext
 
-# Setup bash_profile
-rm ~/.profile
-rm ~/.zshrc
-git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
-rm ~/.zshrc
-ln -s ${BASEDIR}/oh-my-zsh/zshrc ~/.zshrc
-/usr/local/opt/fzf/install
-
 # vimfiles
 mkdir -p ~/.config
 ln -s ${BASEDIR}/nvim/ ~/.config/
+curl -fLo ${BASEDIR}/nvim/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qall
 
 # Create secrets file
 touch ${BASEDIR}/.secrets
-
-# Install JetBrainsMono Nerd Font Regular
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip -O /tmp/JetBrainsMono.zip
-unzip /tmp/JetBrainsMono.zip
-mv JetBrains\ Mono\ Regular\ Nerd\ Font\ Complete.ttf ~/Library/Fonts
 
 # Configure helm
 helm init -c
@@ -82,11 +71,10 @@ helm plugin install https://github.com/futuresimple/helm-secrets
 # Configure rectangle
 ln -s ${BASEDIR}/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/com.knollsoft.Rectangle.plist
 
-# Configure K9s
-ln -s ${BASEDIR}/k9s/config.yml ~/.k9s/config.yml
-ln -s ${BASEDIR}/k9s/skin.yml ~/.k9s/skin.yml
-
-# Setup asdf
-git clone https://github.com/asdf-vm/asdf.git ~/${BASEDIR}/asdf --branch v0.7.8
-ln -s ${BASEDIR}/asdf/ ~/.asdf
-${BASEDIR}/asdf./asdf.sh
+# Setup bash_profile
+rm ~/.profile
+rm ~/.zshrc
+git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+rm ~/.zshrc
+ln -s ${BASEDIR}/oh-my-zsh/zshrc ~/.zshrc
+/usr/local/opt/fzf/install
