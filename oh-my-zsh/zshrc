@@ -26,3 +26,4 @@ ZSH_TMUX_AUTOCONNECT="true"
 
 source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
+. /usr/local/opt/asdf/asdf.sh
