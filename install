@@ -78,3 +78,11 @@ git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 rm ~/.zshrc
 ln -s ${BASEDIR}/oh-my-zsh/zshrc ~/.zshrc
 /usr/local/opt/fzf/install
+
+# Setup nix
+bash ${BASEDIR}/nix/requirements.sh
+
+echo "Run the followin commands after reboot:"
+echo "$ curl -L https://nixos.org/nix/install | sh"
+echo "$ nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer"
+echo "$ ./result/bin/darwin-installer"
