@@ -2,7 +2,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.dotfiles/oh-my-zsh/zsh_custom"
 plugins=(
   gitfast
-  git-auto-fetch
   docker
   direnv
   terraform
@@ -13,6 +12,7 @@ plugins=(
   exports
   asdf
   custom-kubectl
+  nix-shell
 )
 ZSH_THEME="sorin"
 HYPHEN_INSENSITIVE="true"

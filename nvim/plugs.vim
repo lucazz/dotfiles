@@ -25,4 +25,5 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chr4/nginx.vim'
+Plug 'LnL7/vim-nix'
 call plug#end()

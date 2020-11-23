@@ -1,3 +1,6 @@
 [submodule "tmux/tpm"]
 	path = tmux/tpm
 	url = https://github.com/tmux-plugins/tmux-yank
+[submodule "oh-my-zsh/zsh_custom/plugins/nix-shell"]
+	path = oh-my-zsh/zsh_custom/plugins/nix-shell
+	url = https://github.com/chisui/zsh-nix-shell.git

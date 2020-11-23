@@ -17,3 +17,4 @@ export EDITOR="nvim"
 export N_PREFIX="$HOME/n"
 export CORRECT_IGNORE_FILE='.*'
 export NIX_IGNORE_SYMLINK_STORE=1
+export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH
