@@ -12,19 +12,17 @@ plugins=(
   exports
   asdf
   custom-kubectl
-  nix-shell
 )
 ZSH_THEME="sorin"
 HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-ZSH_TMUX_AUTOSTART="true"
-ZSH_TMUX_AUTOSTART_ONCE= "true"
-ZSH_TMUX_AUTOQUIT="true"
-ZSH_TMUX_AUTOCONNECT="true"
-
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOQUIT=true
+ZSH_TMUX_AUTOCONNECT=true
 source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
 . /usr/local/opt/asdf/asdf.sh
-if [ -e /Users/lucas/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/lucas/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

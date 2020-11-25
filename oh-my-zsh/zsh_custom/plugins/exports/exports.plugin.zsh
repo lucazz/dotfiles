@@ -1,5 +1,5 @@
 export GOPATH="/Users/Lucas/Projects/Golang"
-export PATH="$PATH:/usr/local/bin/"
+export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -16,5 +16,3 @@ export HOST=$(hostname)
 export EDITOR="nvim"
 export N_PREFIX="$HOME/n"
 export CORRECT_IGNORE_FILE='.*'
-export NIX_IGNORE_SYMLINK_STORE=1
-export NIX_PATH=$HOME/.nix-defexpr/channels${NIX_PATH:+:}$NIX_PATH

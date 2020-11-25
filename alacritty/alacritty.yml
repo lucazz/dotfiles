@@ -14,9 +14,9 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: SFMono Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Regular
-  size: 14.5
+  size: 15
   offset:
     x: 0
     y: 0
@@ -47,37 +47,21 @@ colors:
     magenta: '0xff92d0'
     cyan: '0x9aedfe'
     white: '0xe6e6e6'
-  indexed_colors: []
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 2
   color: '0x000000'
-background_opacity: 1.0
-mouse:
-  double_click: {threshold: 300}
-  triple_click: {threshold: 300}
-  url:
-    launcher:
-      program: open
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 cursor:
   style: Block
   unfocused_hollow: true
 live_config_reload: true
-debug:
-  render_timer: false
-  persistent_logging: false
-  log_level: Warn
-  print_events: false
-  ref_test: false
 key_bindings:
   - {key: Space, mods: Alt, chars: " "}
   - {key: 36, mods: Command, action: ToggleFullscreen}
   - {key: Key0, mods: Command, action: ResetFontSize}
   - {key: Equals, mods: Command, action: IncreaseFontSize}
-  - {key: Add, mods: Command, action: IncreaseFontSize}
-  - {key: Minus, mods: Command, action: DecreaseFontSize}
   - {key: V, mods: Command, action: Paste}
   - {key: C, mods: Command, action: Copy}
   - {key: H, mods: Command, action: Hide}
