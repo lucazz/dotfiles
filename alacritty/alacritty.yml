@@ -14,8 +14,7 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: Iosevka Nerd Font Mono
-    style: Regular
+    family: Monaco Nerd Font
   size: 15
   offset:
     x: 0
