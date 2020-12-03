@@ -7,6 +7,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Display app switcher on all displays:
+defaults write com.apple.Dock appswitcher-all-displays -bool true
+
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName $HOSTNAME
 sudo scutil --set HostName $HOSTNAME
