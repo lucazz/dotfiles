@@ -1,0 +1,38 @@
+# Source all secrets
+source ~/.secrets
+
+# Source all exports
+source ~/.dotfiles/zsh/exports.zsh
+
+# Source all zsh configs
+source ~/.dotfiles/zsh/config.zsh
+
+# Source all aliases
+source ~/.dotfiles/zsh/aliases.zsh
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C $HOME/.asdf/installs/terraform/0.13.4/bin/terraform terraform
+source ~/.dotfiles/zsh/completion.zsh
+source ~/.dotfiles/zsh/plugins/kubectl.zsh
+
+# Enable autojump
+source /usr/local/etc/profile.d/autojump.sh
+
+# Enable git prompt
+source ~/.dotfiles/zsh/plugins/git.zsh
+
+# Enable ASDF
+. /usr/local/opt/asdf/asdf.sh
+
+# Enable direnv
+eval "$(direnv hook zsh)"
+
+# Enable tmux
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOQUIT=true
+ZSH_TMUX_AUTOCONNECT=true
+source ~/.dotfiles/zsh/plugins/tmux.zsh

@@ -1,3 +1,4 @@
+alias reload!='. ~/.zshrc'
 alias vi="nvim"
 alias vim="nvim"
 alias cat="bat"

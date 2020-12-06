@@ -70,7 +70,6 @@ ln -s ${BASEDIR}/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/c
 
 # Setup bash_profile
 rm ~/.profile
-git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 rm ~/.zshrc
-ln -s ${BASEDIR}/oh-my-zsh/zshrc ~/.zshrc
+ln -s ${BASEDIR}/zsh/zshrc ~/.zshrc
 /usr/local/opt/fzf/install
