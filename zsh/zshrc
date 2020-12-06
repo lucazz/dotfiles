@@ -30,6 +30,9 @@ source ~/.dotfiles/zsh/plugins/git.zsh
 # Enable direnv
 eval "$(direnv hook zsh)"
 
+# Enable FZF
+source ~/.fzf.zsh
+
 # Enable tmux
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
