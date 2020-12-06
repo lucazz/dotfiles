@@ -4,7 +4,7 @@ window:
     columns: 0
     lines: 0
   padding:
-    x: 10
+    x: 0
     y: 0
   dynamic_padding: false
   decorations: none
@@ -15,14 +15,8 @@ scrolling:
 font:
   normal:
     family: Monaco Nerd Font
-  size: 15
-  offset:
-    x: 0
-    y: 0
-  glyph_offset:
-    x: 1
-    y: 1
-  use_thin_strokes: true
+  size: 14
+  hinting: true
 draw_bold_text_with_bright_colors: true
 colors:
   primary:
