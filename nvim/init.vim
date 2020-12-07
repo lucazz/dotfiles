@@ -4,6 +4,9 @@ set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
 
+" ======== Remove unused languages from polyglot
+let g:polyglot_disabled = ['acpiasl', 'apiblueprint', 'applescript', 'arduino', 'asciidoc', 'autohotkey', 'blade', 'c++11', 'c/c++', 'caddyfile', 'carp', 'cjsx', 'clojure', 'coffee-script', 'cql', 'cryptol', 'crystal', 'cucumber', 'cue', 'dart', 'dhall', 'dlang', 'elixir', 'elm', 'emberscript', 'emblem', 'erlang', 'ferm', 'fish', 'flatbuffers', 'fsharp', 'glsl', 'gmpl', 'gnuplot', 'graphql', 'haml', 'handlebars', 'haskell', 'haxe', 'hive', 'i3', 'idris', 'ion', 'jasmine', 'javascript', 'jst', 'jsx', 'julia', 'kotlin', 'latex', 'less', 'lilypond', 'livescript', 'llvm', 'lua', 'mako', 'mathematica', 'mdx', 'meson', 'moonscript', 'nim', 'nix', 'objc', 'ocaml', 'octave', 'opencl', 'perl', 'php', 'plantuml', 'pony', 'powershell', 'protobuf', 'pug', 'puppet', 'purescript', 'qml', 'r-lang', 'racket', 'ragel', 'raml', 'reason', 'rst', 'rust', 'sbt', 'scala', 'scss', 'slim', 'slime', 'smt2', 'solidity', 'stylus', 'svelte', 'svg-indent', 'svg', 'swift', 'sxhkd', 'textile', 'thrift', 'tomdoc', 'toml', 'tptp', 'twig', 'typescript', 'v', 'vala', 'vbnet', 'vcl', 'vifm', 'vm', 'vue', 'xdc', 'xls', 'xml', 'yaml', 'yard', 'zephir', 'zig']
+
 " ======== Keymaps
 so ~/.config/nvim/keymap.vim
 nnoremap <C-tab> :tabnext<CR>
@@ -51,8 +54,6 @@ highlight Normal ctermbg=None
 highlight SpecialKey ctermfg=60 guifg=#B6B6C8
 highlight Whitespace ctermfg=60 guifg=#B6B6C8
 
-" ======== Remove unused languages from polyglot
-let g:polyglot_disabled = ['acpiasl', 'apiblueprint', 'applescript', 'arduino', 'asciidoc', 'autohotkey', 'blade', 'c++11', 'c/c++', 'caddyfile', 'carp', 'cjsx', 'clojure', 'coffee-script', 'cql', 'cryptol', 'crystal', 'cucumber', 'cue', 'dart', 'dhall', 'dlang', 'elixir', 'elm', 'emberscript', 'emblem', 'erlang', 'ferm', 'fish', 'flatbuffers', 'fsharp', 'glsl', 'gmpl', 'gnuplot', 'graphql', 'haml', 'handlebars', 'haskell', 'haxe', 'hive', 'i3', 'idris', 'ion', 'jasmine', 'javascript', 'jst', 'jsx', 'julia', 'kotlin', 'latex', 'less', 'lilypond', 'livescript', 'llvm', 'lua', 'mako', 'mathematica', 'mdx', 'meson', 'moonscript', 'nim', 'nix', 'objc', 'ocaml', 'octave', 'opencl', 'perl', 'php', 'plantuml', 'pony', 'powershell', 'protobuf', 'pug', 'puppet', 'purescript', 'qml', 'r-lang', 'racket', 'ragel', 'raml', 'reason', 'rst', 'rust', 'sbt', 'scala', 'scss', 'slim', 'slime', 'smt2', 'solidity', 'stylus', 'svelte', 'svg-indent', 'svg', 'swift', 'sxhkd', 'textile', 'thrift', 'tomdoc', 'toml', 'tptp', 'twig', 'typescript', 'v', 'vala', 'vbnet', 'vcl', 'vifm', 'vm', 'vue', 'xdc', 'xls', 'xml', 'yaml', 'yard', 'zephir', 'zig']
 
 " ======== Turn Off Swap Files
 set noswapfile
