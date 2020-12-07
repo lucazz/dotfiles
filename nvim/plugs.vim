@@ -5,6 +5,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/bufkill.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Raimondi/delimitMate'

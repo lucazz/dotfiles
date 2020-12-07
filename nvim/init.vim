@@ -108,6 +108,7 @@ let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowHidden = 1
 let NERDTreeMapOpenVSplit='v'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeGitStatusUseNerdFonts = 1
 
  " ======== FZF mapping
 let g:fzf_layout = { 'window': 'enew' }
