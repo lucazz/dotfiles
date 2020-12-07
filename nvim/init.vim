@@ -179,9 +179,3 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.config/nvim/syntax/yaml.vim
 
 " ======== Golang Settings
 let g:go_fmt_command = "goimports"
-au BufNewFile,BufRead *.go so ~/.config/nvim/syntax/golang.vim
-
-" ======== Bash Settings
-au BufNewFile,BufRead *.sh,*.zsh setf sh
-
-augroup customFileTypes
