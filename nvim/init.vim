@@ -103,7 +103,7 @@ set sidescroll=1
 
 " ======== NERDTree
 autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowHidden = 1
 let NERDTreeMapOpenVSplit='v'
