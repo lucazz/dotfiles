@@ -108,6 +108,5 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>F :Files<CR>
 
-" Golang mappings
-map <Leader>gb :GoBuild<CR>
-map <Leader>gr :GoRun<CR>
+nnoremap d "_d
+xnoremap d "_d
