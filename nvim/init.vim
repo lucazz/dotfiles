@@ -103,12 +103,12 @@ set sidescroll=1
 
 " ======== NERDTree
 autocmd VimEnter * NERDTree
-
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowHidden = 1
 let NERDTreeMapOpenVSplit='v'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:netrw_dirhistmax=0
 
  " ======== FZF mapping
 let g:fzf_layout = { 'window': 'enew' }
@@ -141,7 +141,13 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_detect_modified=1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline_detect_modified = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 " ======== ViM Terraform
 let g:terraform_align=1
