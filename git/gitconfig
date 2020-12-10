@@ -1,10 +1,7 @@
 [core]
   editor = nvim
-  excludesfile = ~/.gitignore
   autocrlf = input
   filemode = false
-[credential]
-  helper = osxkeychain
 [alias]
   a = add --all
   co = checkout
@@ -40,8 +37,6 @@
   enabled = true
 [commit]
   gpgsign = true
-[gpg]
-  program = gpg
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
@@ -61,4 +56,4 @@
 [user]
   name = Lucas do Amaral Saboya
   useConfigOnly = true
-  signingkey = 58086B4C40F696B9
+  signingkey = 12F3B3B31366C0C0
