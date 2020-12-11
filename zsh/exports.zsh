@@ -8,6 +8,7 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!{.git,node_modules,log,sorbet,rbi,vendor,vcr_cassettes}/*'"
 export FZF_DEFAULT_OPTS="--inline-info --height 40% --layout=reverse"
 export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+export GPG_TTY=$(tty)
 export HOST=$(hostname)
 export AUTO_MOUNT_HOME=false
 export LC_ALL=en_US.UTF-8

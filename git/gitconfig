@@ -30,6 +30,8 @@
 [fetch]
   prune = true
   rebase = true
+[gpg]
+  program = /usr/local/bin/gpg
 [pull]
   rebase = true
   prune = true
@@ -56,4 +58,4 @@
 [user]
   name = Lucas do Amaral Saboya
   useConfigOnly = true
-  signingkey = 12F3B3B31366C0C0
+  signingkey = 1366C0C0
