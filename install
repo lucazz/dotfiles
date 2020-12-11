@@ -7,8 +7,10 @@ ln -s ${BASEDIR}/git/gitignore ~/.gitignore
 ln -s ${BASEDIR}/git/gitmessage ~/.gitmessage
 
 # Setup gnupg
-mkdir ~/.gnupg
+open /Applications/GPG\ Keychain.app
+killall GPG\ Keychain
 ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
+ln -s ${BASEDIR}/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 # Install homebrew dependencies
 bash ${BASEDIR}/homebrew/install.sh
