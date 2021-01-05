@@ -63,6 +63,14 @@ helm plugin install https://github.com/futuresimple/helm-secrets
 # Configure rectangle
 ln -s ${BASEDIR}/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/com.knollsoft.Rectangle.plist
 
+# Configure tarsnap
+mkdir ~/.tarsnap/
+mkdir ~/.tarsnap/logs
+mkdir ~/.tarsnap/cache
+touch ~/.tarsnap/tarsnap.key
+ln -s ${BASEDIR}/tarsnap/tarsnaprc ~/.tarsnaprc
+launchctl load ~/.dotfiles/tarsnap/tarsnap.plist
+
 # Setup bash_profile
 rm ~/.profile
 rm ~/.zshrc

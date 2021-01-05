@@ -1,0 +1,24 @@
+#!/bin/bash
+
+LOGFILE=~/.tarsnap/logs/backup.log
+
+
+echo "Here's the last two versions of the archives you have:"
+/usr/local/bin/tarsnap -v --list-archives | head -n 6
+
+echo "If you need an older version of a file, list all of them with:"
+echo "tarsnap --list-archives"
+echo "And feed the archive's name under the next prompt."
+
+echo "Please type in the archive you want to restore:"
+read ARCHIVE_NAME
+
+echo "===================" >> $LOGFILE
+/usr/local/bin/tarsnap --noisy-warnings -x -f ${ARCHIVE_NAME} -C ~/Downloads/
+echo "OK: Successfully restored ${ARCHIVE_NAME}" >> $LOGFILE
+
+if [ $? -eq 0 ]; then
+	echo "OK: Successfully restored ${ARCHIVE_NAME}" >> $LOGFILE
+else
+	echo "ERROR: Failed to restore ${ARCHIVE_NAME}" >> $LOGFILE
+fi
