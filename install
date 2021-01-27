@@ -3,8 +3,6 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Setup git
 ln -s ${BASEDIR}/git/gitconfig ~/.gitconfig
-ln -s ${BASEDIR}/git/gitignore ~/.gitignore
-ln -s ${BASEDIR}/git/gitmessage ~/.gitmessage
 
 # Setup gnupg
 open /Applications/GPG\ Keychain.app
@@ -26,9 +24,6 @@ bash ${BASEDIR}/golang/install.sh
 
 # Configure Alacritty
 ln -s ${BASEDIR}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-
-# Set osx defaults
-bash ${BASEDIR}/osx-defaults/set-defaults.sh
 
 # Configuring ssh
 mkdir -p ${BASEDIR}/.ssh/
