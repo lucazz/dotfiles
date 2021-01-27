@@ -1,6 +1,5 @@
 HashKnownHosts yes
 AddKeysToAgent yes
-StrictHostKeyChecking yes
 
 Host *
   ConnectTimeout 30
