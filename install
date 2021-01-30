@@ -22,6 +22,9 @@ bash ${BASEDIR}/pip3/install.sh
 # Go get packages
 bash ${BASEDIR}/golang/install.sh
 
+# OSX defaults
+bash ${BASEDIR}/osx-defaults/osx-defaults.sh
+
 # Configure Alacritty
 ln -s ${BASEDIR}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
