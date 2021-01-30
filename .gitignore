@@ -11,3 +11,4 @@ nvim/.backups/*
 nvim/plugged/*
 nvim/.netrwhist
 nvim/autoload/plug.vim
+rectangle/com.knollsoft.Rectangle.plist
