@@ -1,5 +1,9 @@
 AWS_PROFILE=wmg-wea-nonprod
 export ASDF_TERRAFORM_VERSION=0.13.5
 alias terragrunt="aws-vault exec ${AWS_PROFILE} -- terragrunt"
-alias kubectl="aws-vault exec ${AWS_PROFILE} -- kubectl"
 alias helm="aws-vault exec ${AWS_PROFILE} -- helm"
+alias kubectl="aws-vault exec ${AWS_PROFILE} -- kubectl"
+alias knamespace="aws-vault exec ${AWS_PROFILE} -- knamespace"
+alias stern="aws-vault exec ${AWS_PROFILE} -- stern"
+alias watch="aws-vault exec ${AWS_PROFILE} -- watch"
+alias popeye="aws-vault exec ${AWS_PROFILE} -- popeye"
