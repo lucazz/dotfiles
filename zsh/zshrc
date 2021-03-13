@@ -19,13 +19,13 @@ source ~/.dotfiles/zsh/completion.zsh
 source ~/.dotfiles/zsh/plugins/kubectl.zsh
 
 # Enable autojump
-source /usr/local/etc/profile.d/autojump.sh
+. /usr/share/autojump/autojump.sh
 
 # Enable git prompt
 source ~/.dotfiles/zsh/plugins/git.zsh
 
 # Enable ASDF
-. /usr/local/opt/asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
 
 # Enable direnv
 eval "$(direnv hook zsh)"
@@ -34,8 +34,11 @@ eval "$(direnv hook zsh)"
 source ~/.fzf.zsh
 
 # Enable tmux
-ZSH_TMUX_AUTOSTART=true
+SH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOQUIT=true
 ZSH_TMUX_AUTOCONNECT=true
 source ~/.dotfiles/zsh/plugins/tmux.zsh
+if [[ ! $(tmux list-sessions) ]]; then 
+  tmux
+fi

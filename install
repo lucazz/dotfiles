@@ -5,25 +5,11 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ln -s ${BASEDIR}/git/gitconfig ~/.gitconfig
 
 # Setup gnupg
-open /Applications/GPG\ Keychain.app
-killall GPG\ Keychain
 ln -s ${BASEDIR}/gnupg/gpg.conf ~/.gnupg/gpg.conf
 ln -s ${BASEDIR}/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-# Install homebrew dependencies
-bash ${BASEDIR}/homebrew/install.sh
-
-# Install yarn dependencies
-bash ${BASEDIR}/yarn/install.sh
-
-# Install pip3 packages
-bash ${BASEDIR}/pip3/install.sh
-
 # Go get packages
 bash ${BASEDIR}/golang/install.sh
-
-# OSX defaults
-bash ${BASEDIR}/osx-defaults/osx-defaults.sh
 
 # Configure Alacritty
 ln -s ${BASEDIR}/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -33,13 +19,8 @@ mkdir -p ${BASEDIR}/.ssh/
 ln -s ${BASEDIR}/ssh/config \
 	~/.ssh/config
 
-# Setup icloud
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Projects ~/Projects
-
 # Setup tmux
-git clone --branch v3.0.0 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -s ${BASEDIR}/tmux/tmux.conf ~/.tmux.conf
-bash '~/.tmux/plugins/tpm/bin/install_plugins'
 
 # Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace

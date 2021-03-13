@@ -11,9 +11,9 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: CaskaydiaCove Nerd Font
-    style: Book
-  size: 17
+    family: FuraCode Nerd Font
+    style: Regular
+  size: 12
   hinting: true
 draw_bold_text_with_bright_colors: true
 # Colors (Dracula PRO)
