@@ -1,8 +1,8 @@
 ---
 window:
   dimensions:
-    columns: 0
-    lines: 0
+    columns: 200
+    lines: 50
   dynamic_padding: false
   decorations: none
   startup_mode: Windowed
