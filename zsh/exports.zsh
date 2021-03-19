@@ -19,4 +19,5 @@ PATH="$ZSH/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 PATH="$PATH:/usr/local/opt/fzf/bin"
 PATH="$PATH:$HOME/.dotfiles/bin"
+PATH="$PATH:$HOME/.local/bin"
 export -U PATH
