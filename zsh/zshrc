@@ -39,6 +39,6 @@ ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOQUIT=true
 ZSH_TMUX_AUTOCONNECT=true
 source ~/.dotfiles/zsh/plugins/tmux.zsh
-if [[ ! $(tmux list-sessions) ]]; then 
+if [[ ! $(tmux list-sessions) ]]; then
   tmux
 fi

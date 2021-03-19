@@ -1,4 +1,4 @@
-AWS_PROFILE=wmg-wea-nonprod
+AWS_PROFILE=wmg-wea-prod
 alias terragrunt="aws-vault exec ${AWS_PROFILE} -- terragrunt"
 alias helm="aws-vault exec ${AWS_PROFILE} -- helm"
 alias kubectl="aws-vault exec ${AWS_PROFILE} -- kubectl"
