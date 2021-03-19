@@ -25,7 +25,7 @@ source /usr/local/etc/profile.d/autojump.sh
 source ~/.dotfiles/zsh/plugins/git.zsh
 
 # Enable ASDF
-. /usr/local/opt/asdf/asdf.sh
+. "$(brew --prefix asdf)/asdf.sh"
 
 # Enable direnv
 eval "$(direnv hook zsh)"
