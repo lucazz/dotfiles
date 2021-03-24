@@ -1,4 +1,4 @@
-AWS_PROFILE=wmg-wea-nonprod
+export AWS_PROFILE=wmg-wea-nonprod
 alias terragrunt="aws-vault exec ${AWS_PROFILE} -- terragrunt"
 alias helm="aws-vault exec ${AWS_PROFILE} -- helm"
 alias kubectl="aws-vault exec ${AWS_PROFILE} -- kubectl"
@@ -6,3 +6,4 @@ alias knamespace="aws-vault exec ${AWS_PROFILE} -- knamespace"
 alias stern="aws-vault exec ${AWS_PROFILE} -- stern"
 alias watch="aws-vault exec ${AWS_PROFILE} -- watch"
 alias popeye="aws-vault exec ${AWS_PROFILE} -- popeye"
+alias aws="aws-vault exec ${AWS_PROFILE} -- aws"
