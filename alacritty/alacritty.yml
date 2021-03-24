@@ -11,10 +11,11 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: FuraCode Nerd Font
-    style: Regular
+    family: Ubuntu Mono
   size: 12
-  hinting: true
+  offset:
+    x: 0
+    y: 5
 draw_bold_text_with_bright_colors: true
 # Colors (Dracula PRO)
 colors:
