@@ -36,7 +36,7 @@ set t_vb=""
 set visualbell
 set cursorline
 set colorcolumn=80
-set clipboard=unnamed
+set clipboard=unnamedplus
 set number
 set hidden
 set list
