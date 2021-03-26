@@ -1,4 +1,3 @@
-alias reload!='. ~/.zshrc'
 alias vi="nvim"
 alias vim="nvim"
 alias cat="batcat"
@@ -6,3 +5,4 @@ alias ls="ls --color=auto"
 alias my-ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias wmg-wea-nonprod="source ~/.dotfiles/zsh/profiles/wmg-wea-nonprod"
 alias wmg-wea-prod="source ~/.dotfiles/zsh/profiles/wmg-wea-prod"
+alias aetion="source ~/.dotfiles/zsh/profiles/aetion"
