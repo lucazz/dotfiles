@@ -1,6 +1,9 @@
 #!/bin/bash
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Install packages
+bash ${BASEDIR}/apt/install.sh
+
 # Setup git
 ln -s ${BASEDIR}/git/gitconfig ~/.gitconfig
 
@@ -39,9 +42,6 @@ touch ${BASEDIR}/.secrets
 # Configure helm
 helm plugin install https://github.com/futuresimple/helm-secrets
 
-# Configure rectangle
-ln -s ${BASEDIR}/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/com.knollsoft.Rectangle.plist
-
 # Configure tarsnap
 mkdir ~/.tarsnap/
 mkdir ~/.tarsnap/logs
@@ -54,4 +54,3 @@ launchctl load ~/.dotfiles/tarsnap/tarsnap.plist
 rm ~/.profile
 rm ~/.zshrc
 ln -s ${BASEDIR}/zsh/zshrc ~/.zshrc
-/usr/local/opt/fzf/install

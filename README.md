@@ -1,4 +1,4 @@
-# Lucazz's Dotfiles
+# Lucazz's Dotfiles, Ubuntu version
 
 ## Overview
 
@@ -11,10 +11,11 @@ You don't. [Dotfiles Are Not Meant to Be Forked](http://www.anishathalye.com/201
 But, if you do:
 
 ```bash
-xcode-select --install
-git clone --recursive https://github.com/lucazz/dotfiles.git  ~/.dotfiles
-cd .dotfiles
-./install
+  sudo apt install -y git
+  git clone --recursive https://github.com/lucazz/dotfiles.git  ~/.dotfiles
+  cd .dotfiles
+  git switch ubuntu
+  ./install
 ```
 
 ### License

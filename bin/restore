@@ -2,14 +2,12 @@
 
 LOGFILE=~/.tarsnap/logs/backup.log
 
-
 echo "Here's the last two versions of the archives you have:"
 /usr/local/bin/tarsnap -v --list-archives | head -n 6
 
 echo "If you need an older version of a file, list all of them with:"
 echo "tarsnap --list-archives"
 echo "And feed the archive's name under the next prompt."
-
 echo "Please type in the archive you want to restore:"
 read ARCHIVE_NAME
 

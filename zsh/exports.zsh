@@ -14,6 +14,7 @@ export CLICOLOR=true
 export TERM=xterm-256color
 export MANPATH="/usr/local/man:$MANPATH"
 export GOPATH="/Users/Lucas/go"
+PATH="$PATH:/usr/local/go/bin"
 PATH="$GOPATH/bin:$PATH"
 PATH="$ZSH/bin:$PATH"
 PATH="$HOME/bin:$PATH"

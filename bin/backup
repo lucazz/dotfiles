@@ -1,11 +1,10 @@
 #!/bin/bash
 declare -a StringArray=(
-  "/Users/lucas/.kube/configs:kube-configs"
-  "/Users/lucas/.ssh:ssh-keys"
-  "/Users/lucas/.gnupg/1366C0C0.asc:gpg-key"
+	"/Users/lucas/.ssh:ssh-keys"
+	"/Users/lucas/.gnupg/1366C0C0.asc:gpg-key"
 )
 SSIDHOME="Lucas"
-SSID=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')
+SSID=$(nmcli -t -f active,ssid dev wifi | grep yes | sed 's/yes://g')
 DATETODAY=$(date "+%Y-%m-%d")
 TIMENOW=$(date "+%H-%M")
 LOGFILE=~/.tarsnap/logs/backup.log
@@ -13,20 +12,20 @@ LOGFILE=~/.tarsnap/logs/backup.log
 echo "===================" >> $LOGFILE
 echo $DATETODAY - $TIMENOW >> $LOGFILE
 for dir in "${StringArray[@]}"; do
-  LOC=$(echo $dir | cut -f1 -d : | tr -d [:blank:])
-  NAME=$(echo $dir | cut -f2 -d : | tr -d [:blank:])
-  if [ $SSID == $SSIDHOME ]; then
-    if [ $(/usr/local/bin/tarsnap --list-archives | grep $DATETODAY-$NAME-$TIMENOW) ]; then
-      echo "WARNING: " $DATETODAY ":" $NAME "archive already exists." >> $LOGFILE
-    else
-      /usr/local/bin/tarsnap --noisy-warnings -c -f $DATETODAY-$NAME-$TIMENOW $(/usr/local/bin/realpath ${LOC})
-      if [ $? -eq 0 ]; then
-        echo "SUCCESS: " $DATETODAY " " $TIMENOW  ":" $NAME ": Backup successfully completed." >> $LOGFILE
-      else
-        echo "ERROR: " $DATETODAY  " " $TIMENOW ":" $NAME ": Error uploading backup." >> $LOGFILE
-      fi
-    fi
-  else
-    echo "WARNING: " $DATETODAY " " $TIMENOW ": Not on home network.  Aborting backup for today." >> $LOGFILE
-  fi
+	LOC=$(echo $dir | cut -f1 -d : | tr -d [:blank:])
+	NAME=$(echo $dir | cut -f2 -d : | tr -d [:blank:])
+	if [ $SSID == $SSIDHOME ]; then
+		if [ $(/usr/local/bin/tarsnap --list-archives | grep $DATETODAY-$NAME-$TIMENOW) ]; then
+			echo "WARNING: " $DATETODAY ":" $NAME "archive already exists." >> $LOGFILE
+		else
+			/usr/local/bin/tarsnap --noisy-warnings -c -f $DATETODAY-$NAME-$TIMENOW $(/usr/local/bin/realpath ${LOC})
+			if [ $? -eq 0 ]; then
+				echo "SUCCESS: " $DATETODAY " " $TIMENOW  ":" $NAME ": Backup successfully completed." >> $LOGFILE
+			else
+				echo "ERROR: " $DATETODAY  " " $TIMENOW ":" $NAME ": Error uploading backup." >> $LOGFILE
+			fi
+		fi
+	else
+		echo "WARNING: " $DATETODAY " " $TIMENOW ": Not on home network.  Aborting backup for today." >> $LOGFILE
+	fi
 done
