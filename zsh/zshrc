@@ -33,6 +33,12 @@ eval "$(direnv hook zsh)"
 # Enable FZF
 source ~/.fzf.zsh
 
+# Share history across sessions
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+setopt sharehistory
+setopt extendedhistory
+
 # Enable tmux
 SH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
