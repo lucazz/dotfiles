@@ -2,24 +2,28 @@
   editor = nvim
   autocrlf = input
   filemode = false
+  whitespace = fix
+  trustctime = false
+
 [alias]
   a = add --all
-  co = checkout
-  cob = checkout -b
   c = commit
   d = diff
-  l = log --oneline --graph --decorate
   s = status -b
   log = log --oneline --decorate --all --graph
+  graph = "!f() { git log --oneline --abbrev-commit --graph --decorate; }; f"
+  undo = !git reset HEAD~1 --mixed
+  amend = !git commit --amend --no-edit
+
 [push]
-  default = simple
+  default = current
+
 [color]
   ui = true
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+  status = true
+  branch = true
+  interactive = true
+
 [color "diff"]
   meta = yellow
   frag = magenta bold
@@ -27,34 +31,39 @@
   old = red bold
   new = green bold
   whitespace = red reverse
+
+[branch]
+  autosetuprebase = always
+
 [fetch]
   prune = true
   rebase = true
+
 [gpg]
   program = /usr/bin/gpg
+
 [pull]
   rebase = true
+  default = current
   prune = true
-[rerere]
-  enabled = true
+
 [commit]
   gpgsign = true
+
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
+
 [diff-so-fancy]
   markEmptyLines = false
   changeHunkIndicators = false
   stripLeadingSymbols = false
   useUnicodeRuler = false
   noprefix = true
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+
 [diff "sopsdiffer"]
   textconv = sops -d
+
 [user]
   name = Lucas do Amaral Saboya
   useConfigOnly = true
