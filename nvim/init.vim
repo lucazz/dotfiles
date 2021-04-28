@@ -69,10 +69,10 @@ endif
 
 " ======== Indentation & tab settings
 set expandtab
-set shiftwidth=2
-set softtabstop=2
 set nowrap
 set linebreak
+set shiftwidth=2
+set softtabstop=2
 filetype on
 filetype plugin on
 filetype indent on
@@ -127,14 +127,11 @@ augroup END
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " ======== Makefile configs
-autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+autocmd FileType make set noexpandtab
 
 " ======== Bash configs
 autocmd FileType sh setlocal
   \ autoindent
-  \ noexpandtab
-  \ tabstop=4
-  \ shiftwidth=4
 
 " ======== Vim Airline
 let g:airline_powerline_fonts = 1
