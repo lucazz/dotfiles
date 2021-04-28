@@ -1,61 +1,71 @@
 [core]
-  editor = nvim
   autocrlf = input
+  editor = nvim
   filemode = false
+  trustctime = false
+  whitespace = fix
+
 [alias]
   a = add --all
-  co = checkout
-  cob = checkout -b
+  amend = !git commit --amend --no-edit
   c = commit
   d = diff
-  l = log --oneline --graph --decorate
-  s = status -b
+  graph = "!f() { git log --oneline --abbrev-commit --graph --decorate; }; f"
   log = log --oneline --decorate --all --graph
+  s = status -b
+  undo = !git reset HEAD~1 --mixed
+
 [push]
-  default = simple
+  default = current
+
 [color]
+  branch = true
+  interactive = true
+  status = true
   ui = true
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+
 [color "diff"]
-  meta = yellow
-  frag = magenta bold
   commit = yellow bold
-  old = red bold
+  frag = magenta bold
+  meta = yellow
   new = green bold
+  old = red bold
   whitespace = red reverse
+
 [fetch]
   prune = true
   rebase = true
+
 [gpg]
   program = /usr/local/bin/gpg
+
 [pull]
-  rebase = true
+  default = current
   prune = true
-[rerere]
-  enabled = true
+  rebase = true
+
 [commit]
   gpgsign = true
+
 [pager]
   diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
+
 [diff-so-fancy]
-  markEmptyLines = false
   changeHunkIndicators = false
+  markEmptyLines = false
+  noprefix = true
   stripLeadingSymbols = false
   useUnicodeRuler = false
-  noprefix = true
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+
 [diff "sopsdiffer"]
   textconv = sops -d
+
 [user]
+  email = lucas@saboya.pro
   name = Lucas do Amaral Saboya
-  useConfigOnly = true
   signingkey = 1366C0C0
+  useConfigOnly = true
+
+[credential]
+  helper = osxkeychain
