@@ -1,5 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-" On-demand loading
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
