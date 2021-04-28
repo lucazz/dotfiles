@@ -11,4 +11,15 @@ nvim/.backups/*
 nvim/plugged/*
 nvim/.netrwhist
 nvim/autoload/plug.vim
+nvim/bundle
+nvim/tags
+nvim/*~
+nvim/*.swp
+nvim/.VimballRecord
+nvim/view
+nvim/.netrwhist
+nvim/backups
+nvim/plugged
+nvim/session
+
 rectangle/com.knollsoft.Rectangle.plist
