@@ -7,12 +7,12 @@
 
 [alias]
   a = add --all
-  amend = !git commit --amend --no-edit
   c = commit
   d = diff
+  s = status -b
+  amend = !git commit --amend --no-edit
   graph = "!f() { git log --oneline --abbrev-commit --graph --decorate; }; f"
   log = log --oneline --decorate --all --graph
-  s = status -b
   undo = !git reset HEAD~1 --mixed
 
 [push]
