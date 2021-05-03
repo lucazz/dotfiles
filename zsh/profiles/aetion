@@ -1,1 +1,2 @@
 export AWS_PROFILE=aetion
+export AWS_OKTA_PASS=${AETION_AWS_OKTA_PASS}
