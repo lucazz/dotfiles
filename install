@@ -58,6 +58,9 @@ touch ${BASEDIR}/.secrets
 # Configure helm
 helm plugin install https://github.com/futuresimple/helm-secrets
 
+# Install linkerd-cli
+curl -sL run.linkerd.io/install | sh
+
 # Configure rectangle
 ln -s ${BASEDIR}/rectangle/com.knollsoft.Rectangle.plist ~/Library/Preferences/com.knollsoft.Rectangle.plist
 
