@@ -15,5 +15,4 @@ _tat() { reply=(`tmux ls -F "#{session_name}"`) }
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
-# flux
-. <(flux completion zsh)
+command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
