@@ -14,7 +14,6 @@ source ~/.dotfiles/zsh/aliases.zsh
 autoload -U compinit
 compinit
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C $HOME/.asdf/installs/terraform/0.13.4/bin/terraform terraform
 source ~/.dotfiles/zsh/completion.zsh
 source ~/.dotfiles/zsh/plugins/kubectl.zsh
 

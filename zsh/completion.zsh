@@ -11,8 +11,4 @@ fi
 compctl -K _tat tat
 _tat() { reply=(`tmux ls -F "#{session_name}"`) }
 
-# gcloud-cli
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
 command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
