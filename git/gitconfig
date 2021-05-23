@@ -37,7 +37,7 @@
   rebase = true
 
 [gpg]
-  program = /usr/local/bin/gpg
+  program = /usr/local/MacGPG2/bin/gpg
 
 [pull]
   default = current
