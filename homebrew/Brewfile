@@ -42,6 +42,7 @@ brew "unbound"
 brew "libksba"
 brew "pinentry"
 brew "gnupg", link: false
+brew "go"
 brew "hadolint"
 brew "htop"
 brew "httpie"
