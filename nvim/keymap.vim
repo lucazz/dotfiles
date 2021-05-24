@@ -11,6 +11,9 @@ vnoremap / /\v
 nmap <leader>q :q!<CR>
 nmap <leader>w :w!<CR>
 
+"Re-tab
+nmap <leader>tt :%s/	/\t/g<CR>
+
 " Backing out of <paste> mode
 nmap <leader>p :set nopaste<CR>
 
@@ -68,15 +71,15 @@ map ,` ysiw`]]))
 
 " Fix commom typos
 if has("user_commands")
-  command! -bang -nargs=? -complete=file E e<bang> <args>
-  command! -bang -nargs=? -complete=file W w<bang> <args>
-  command! -bang -nargs=? -complete=file Wq wq<bang> <args>
-  command! -bang -nargs=? -complete=file WQ wq<bang> <args>
-  command! -bang Wa wa<bang>
-  command! -bang WA wa<bang>
-  command! -bang Q q<bang>
-  command! -bang QA qa<bang>
-  command! -bang Qa qa<bang>
+	command! -bang -nargs=? -complete=file E e<bang> <args>
+	command! -bang -nargs=? -complete=file W w<bang> <args>
+	command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+	command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+	command! -bang Wa wa<bang>
+	command! -bang WA wa<bang>
+	command! -bang Q q<bang>
+	command! -bang QA qa<bang>
+	command! -bang Qa qa<bang>
 endif
 
 vmap <C-c> "+yi

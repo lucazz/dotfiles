@@ -72,6 +72,7 @@ set nowrap
 set linebreak
 set shiftwidth=2
 set softtabstop=2
+set tabstop=2
 filetype on
 filetype plugin on
 filetype indent on
