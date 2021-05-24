@@ -17,6 +17,8 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C $HOME/.asdf/installs/terraform/0.15.3/bin/terraform terraform
 source ~/.dotfiles/zsh/completion.zsh
 source ~/.dotfiles/zsh/plugins/kubectl.zsh
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Enable autojump
 source /usr/local/etc/profile.d/autojump.sh

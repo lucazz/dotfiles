@@ -1,5 +1,5 @@
-export PROMPT='%F{blue}%B%40<..<%1~ %b$(gitprompt)' \
-    && PROMPT+='%(?.%(!.%F{white}❯%F{yellow}❯%F{red}.%F{blue}❯%F{cyan}❯%F{green})❯.%F{red}❯❯❯)%f '
+export PROMPT='%F{blue}%40<..<%1~ $(gitprompt)' \
+	&& PROMPT+='%(?.%(!.%F{white}❯%F{yellow}❯%F{red}.%F{blue}❯%F{cyan}❯%F{green})❯.%F{red}❯❯❯)%f '
 setopt NO_BG_NICE
 setopt NO_HUP
 setopt NO_LIST_BEEP
@@ -19,6 +19,6 @@ setopt HIST_REDUCE_BLANKS
 setopt complete_aliases
 bindkey '^R' history-incremental-search-backward
 bindkey '^[[1;3D' backward-word #alt + <- (tmux)
-bindkey '^[^[[D'  backward-word #alt + <-
-bindkey '^[[1;3C' forward-word  #alt + -> (tmux)
-bindkey '^[^[[C'  forward-word  #alt + ->
+bindkey '^[^[[D'	backward-word #alt + <-
+bindkey '^[[1;3C' forward-word	#alt + -> (tmux)
+bindkey '^[^[[C'	forward-word	#alt + ->
