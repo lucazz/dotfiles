@@ -11,11 +11,10 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: CaskaydiaCove Nerd Font
-    style: Book
+    family: Iosevka Nerd Font Mono
+    style: Light
   size: 17
   hinting: true
-draw_bold_text_with_bright_colors: true
 mouse:
   hitns:
     launcher:
