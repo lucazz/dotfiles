@@ -13,7 +13,7 @@ font:
   normal:
     family: Iosevka Nerd Font Mono
     style: Light
-  size: 17
+  size: 17.5
   hinting: true
 mouse:
   hitns:
