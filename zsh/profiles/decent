@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+gcloud iam service-accounts keys create key-file --iam-account=lucas.saboya@decent.com
