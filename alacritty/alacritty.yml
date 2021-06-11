@@ -11,8 +11,8 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: Iosevka Nerd Font Mono
-    style: Light
+    family: GoMono Nerd Font Mono
+    style: Book
   size: 17.5
   hinting: true
 mouse:
