@@ -1,8 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/bufkill.vim'
@@ -25,5 +23,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chr4/nginx.vim'
-Plug 'LnL7/vim-nix'
+Plug 'tpope/vim-repeat'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 call plug#end()

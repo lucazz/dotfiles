@@ -5,7 +5,7 @@ scriptencoding utf-8
 set encoding=utf-8
 
 " Remove unused languages from polyglot
-let g:polyglot_disabled = ['acpiasl', 'apiblueprint', 'applescript', 'arduino', 'asciidoc', 'autohotkey', 'blade', 'c++11', 'c/c++', 'caddyfile', 'carp', 'cjsx', 'clojure', 'coffee-script', 'cql', 'cryptol', 'crystal', 'cucumber', 'cue', 'dart', 'dhall', 'dlang', 'elixir', 'elm', 'emberscript', 'emblem', 'erlang', 'ferm', 'fish', 'flatbuffers', 'fsharp', 'glsl', 'gmpl', 'gnuplot', 'graphql', 'haml', 'handlebars', 'haskell', 'haxe', 'hive', 'i3', 'idris', 'ion', 'jasmine', 'javascript', 'jst', 'jsx', 'julia', 'kotlin', 'latex', 'less', 'lilypond', 'livescript', 'llvm', 'lua', 'mako', 'mathematica', 'mdx', 'meson', 'moonscript', 'nim', 'nix', 'objc', 'ocaml', 'octave', 'opencl', 'perl', 'php', 'plantuml', 'pony', 'powershell', 'protobuf', 'pug', 'puppet', 'purescript', 'qml', 'r-lang', 'racket', 'ragel', 'raml', 'reason', 'rst', 'rust', 'sbt', 'scala', 'scss', 'slim', 'slime', 'smt2', 'solidity', 'stylus', 'svelte', 'svg-indent', 'svg', 'swift', 'sxhkd', 'textile', 'thrift', 'tomdoc', 'toml', 'tptp', 'twig', 'typescript', 'v', 'vala', 'vbnet', 'vcl', 'vifm', 'vm', 'vue', 'xdc', 'xls', 'xml', 'yaml', 'yard', 'zephir', 'zig']
+so ~/.config/nvim/plugin-configs/polyglot.vim
 
 " Keymaps
 so ~/.config/nvim/keymap.vim
@@ -29,7 +29,7 @@ syntax on
 syntax enable
 set hlsearch
 colorscheme dracula
-set showmode
+set noshowmode
 set t_Co=256
 set t_ut=
 set t_vb=""
@@ -132,18 +132,8 @@ autocmd FileType make set noexpandtab
 " Bash configs
 autocmd FileType sh setlocal autoindent
 
-" Vim Airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline_detect_modified = 1
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+" Lightline
+so ~/.config/nvim/plugin-configs/lightline.vim
 
 " ViM Terraform
 let g:terraform_align=1
@@ -153,30 +143,7 @@ let g:terraform_commentstring='#%s'
 let g:terraform_fmt_on_save=1
 
 " Ale
-let g:ale_completion_enabled = 1
-let g:ale_sign_error = '⤫'
-let g:ale_sign_warning = '⚠'
-let g:ale_fix_on_save = 1
-let g:ale_python_pylint_change_directory = 0
-let g:ale_lint_on_enter = 1
-let g:ale_lint_on_save = 1
-let g:ale_list_window_size = 5
-let g:ale_fixers = {
-  \'*':      ['remove_trailing_lines', 'trim_whitespace'],
-  \'python': ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort'],
-  \'tf':     ['remove_trailing_lines', 'trim_whitespace', 'terraform'],
-  \'json':   ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
-  \'yaml':   ['remove_trailing_lines', 'trim_whitespace', 'prettier'],
-  \'ruby':   ['remove_trailing_lines', 'trim_whitespace', 'prettier', 'rufo'],
-  \'go':     ['remove_trailing_lines', 'trim_whitespace']
-\}
-let g:ale_linters = {
-  \'dockerfile': ['hadolint'],
-  \'python':     ['pylint'],
-  \'tf':         ['tflint'],
-  \'ruby':       ['reek', 'standardrb', 'rubocop'],
-  \'yaml':       ['yamllint']
-\}
+so ~/.config/nvim/plugin-configs/ale.vim
 
 " ======== YAML Settings
 au BufNewFile,BufRead *.yaml,*.yml so ~/.config/nvim/syntax/yaml.vim
