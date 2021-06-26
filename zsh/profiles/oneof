@@ -1,0 +1,2 @@
+export AWS_PROFILE=oneof
+export AWS_REGION=us-west-2
