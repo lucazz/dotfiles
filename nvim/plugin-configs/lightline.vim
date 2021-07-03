@@ -3,7 +3,7 @@ let g:lightline#bufferline#number_map = {
   \ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'
 \}
 let g:lightline                    = {}
-let g:lightline.colorscheme        = 'darcula'
+let g:lightline.colorscheme        = 'one'
 let g:lightline.tabline            = {'left': [['buffers']]}
 let g:lightline.component_expand   = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type     = {'buffers': 'tabsel'}
