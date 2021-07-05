@@ -7,18 +7,23 @@ scriptencoding utf-8
 " Vundle Initialization
 so ~/.config/nvim/plugs.vim
 
-" Keymaps
-so ~/.config/nvim/keymap.vim
-nnoremap <C-tab> :tabnext<CR>
-
 " General Config
 set backspace=indent,eol,start
 set history=100
 set showcmd
 set ignorecase
-set autoread
 set mouse=a
+
+" Mapping leader key
 let mapleader=","
+
+" Automatically reload files on change
+set autoread
+au FocusGained,BufEnter * :silent! !
+
+" Key maps
+nmap <leader>q :q!<CR>
+nmap <leader>w :w!<CR>
 
 " Appearance
 set background=dark

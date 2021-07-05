@@ -8,9 +8,9 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:netrw_dirhistmax=0
 let g:NERDTreeChDirMode=2
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
-nmap <silent> <leader>m :NERDTreeToggle<cr>%
+let g:NERDTreeWinSize = 30
 autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nmap <silent> <leader>m :NERDTreeToggle<cr>%
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
