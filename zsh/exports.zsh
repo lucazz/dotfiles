@@ -25,4 +25,5 @@ PATH="${HOME}/bin:${PATH}"
 PATH="${PATH}:/usr/local/opt/fzf/bin"
 PATH="${PATH}:${HOME}/.dotfiles/bin"
 PATH="${PATH}:${HOME}/.linkerd2/bin"
+PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export -U PATH
