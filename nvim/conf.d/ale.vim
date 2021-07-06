@@ -6,6 +6,7 @@ let g:ale_python_pylint_change_directory = 0
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
 let g:ale_list_window_size = 5
+let g:ale_echo_msg_format = '[%severity%] %s'
 let g:ale_fixers = {
   \'*':      ['remove_trailing_lines', 'trim_whitespace'],
   \'python': ['remove_trailing_lines', 'trim_whitespace', 'add_blank_lines_for_python_control_statements', 'autopep8', 'isort'],

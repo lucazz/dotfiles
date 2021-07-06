@@ -14,3 +14,10 @@ nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 " Create window splits
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
+
+" Folding
+nmap <leader>f za
+
+" Key maps
+nmap <leader>q :q!<CR>
+nmap <leader>w :w!<CR>

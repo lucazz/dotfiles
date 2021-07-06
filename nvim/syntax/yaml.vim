@@ -1,61 +1,92 @@
-if version < 600
-	syntax clear
-elseif exists("b:current_syntax")
-	finish
-endif
-syntax clear
+scriptencoding utf-8
 
-if exists("b:did_indent")
-	finish
-endif
-let b:did_indent = 1
+let s:tags_regexp = '!\{1,2\}[^! ]\+!\?'
+let s:block_scalar_headers_regexp = '[|>]\%([+-]\=[1-9]\|[1-9]\=[+-]\)\='
+let s:tags_and_block_scalar_headers_regexp =
+      \ '\(\('. s:tags_regexp .'\)\s\+\)\?'. s:block_scalar_headers_regexp
 
-setlocal autoindent sw=4 et
-setlocal indentexpr=GetYamlIndent()
-setlocal indentkeys=o,O,*<Return>,!^F
+function! yaml#Context(...)
+  let l:obj = {}
+  let l:obj.settings = get(a:, 1, {})
 
-function! GetYamlIndent()
-	let lnum = v:lnum - 1
-	if lnum == 0
-		return 0
-	endif
-	let line = substitute(getline(lnum),'\s\+$','','')
-	let indent = indent(lnum)
-	let increase = indent + &sw
-	if line =~ ':$'
-		return increase
-	else
-		return indent
-	endif
+  function l:obj.GetIndentWidth()
+    if has_key(self.settings, 'indent_width')
+      return self.settings.indent_width
+    endif
+    return &l:shiftwidth
+  endfunction
+
+  function l:obj.GetNextIndent(line, indent)
+    let l:width = self.GetIndentWidth()
+
+
+    " ### The structures ###
+    if a:line =~ '^---\s\+'. s:tags_and_block_scalar_headers_regexp .'\s*$'
+      return a:indent + l:width
+    endif
+
+
+    " ### The block scalar headers('>' and '|') ###
+    if a:line =~ '^'. s:tags_and_block_scalar_headers_regexp .'\s*$'
+      return a:indent + l:width
+    endif
+
+
+    " ### The sequences ###
+    if a:line =~ '^\s*-\s*$'
+      return a:indent + l:width
+    end
+
+    " with the tags
+    if a:line =~ '^\s*-\s\+'. s:tags_regexp .'\s*$'
+      return a:indent + l:width
+    end
+
+    " with the tags and the block scalar headers
+    if a:line =~ '^\s*-\s\+'. s:tags_and_block_scalar_headers_regexp .'\s*$'
+      return a:indent + l:width
+    end
+
+    " with the mappings
+    if a:line =~ '^\s*-\s\+[^:]\+:\s*$'
+      return a:indent + 2*l:width
+    end
+
+    " with the mappings and the tags
+    if a:line =~ '^\s*-\s\+[^:]\+:\s*'. s:tags_regexp .'\s*$'
+      return a:indent + 2*l:width
+    end
+
+    " with the mappings, the tags and the block scalar headers
+    if a:line =~ '^\s*-\s\+[^:]\+:\s*'. s:tags_and_block_scalar_headers_regexp .'\s*$'
+      return a:indent + 2*l:width
+    end
+
+    " with the mappings and the flow scalars
+    if a:line =~ '^\s*-\s\+[^:]\+:\s\+.\+$'
+      return a:indent + l:width
+    end
+
+
+    " ### The mappings ###
+    if a:line =~ '^\s*[^:]\+:\s*$'
+      return a:indent + l:width
+    endif
+
+    " with the tags
+    if a:line =~ '^\s*[^:]\+:\s\+'. s:tags_regexp .'\s*$'
+      return a:indent + l:width
+    endif
+
+    " with the tags and the block scalar headers
+    if a:line =~ '^\s*[^:]\+:\s\+'. s:tags_and_block_scalar_headers_regexp .'\s*$'
+      return a:indent + l:width
+    endif
+
+
+    " ### others ###
+    return a:indent
+  endfunction
+
+  return l:obj
 endfunction
-
-syn region yamlString	start="'" end="'" skip="\\'"
-syn region yamlString	start='"' end='"' skip='\\"' contains=yamlEscape
-syn region yamlComment	start="\#" end="$"
-syn match yamlIndicator	"#YAML:\S\+"
-syn match yamlDelimiter	"[:,-]"
-syn match yamlBlock "[\[\]\{\}\|\>]"
-syn match yamlOperator "[?^+-]\|=>"
-syn match yamlEscape	+\\[abfnrtv'"\\]+ contained
-syn match yamlEscape	"\\\o\o\=\o\=" contained
-syn match yamlEscape	"\\x\x\+" contained
-syn match yamlKey	"\w\+\ze\s*:"
-syn match yamlAnchor	"&\S\+"
-syn match yamlAlias	"*\S\+"
-syn match yamlType	"!\S\+"
-syn keyword yamlConstant NULL Null null NONE None none NIL Nil nil
-syn keyword yamlConstant TRUE True true YES Yes yes ON On on
-syn keyword yamlConstant FALSE False false NO No no OFF Off off
-
-hi link yamlConstant Keyword
-hi link yamlIndicator PreCondit
-hi link yamlAnchor Function
-hi link yamlAlias Function
-hi link yamlKey Identifier
-hi link yamlType Type
-hi link yamlComment Comment
-hi link yamlBlock Operator
-hi link yamlOperator Operator
-hi link yamlDelimiter Delimiter
-hi link yamlString String
-hi link yamlEscape Special
