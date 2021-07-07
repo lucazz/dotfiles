@@ -16,7 +16,10 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " Folding
-nmap <leader>f za
+set foldmethod=indent
+set nofoldenable
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
 
 " Key maps
 nmap <leader>q :q!<CR>

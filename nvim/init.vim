@@ -15,8 +15,8 @@ set showcmd
 set ignorecase
 set mouse=a
 set autoread
-let mapleader=","
 
+let mapleader=","
 let g:go_fmt_command = "goimports"              " Golang Settings
 au FileType make set noexpandtab                " Makefile configs
 au FileType sh setlocal autoindent              " Bash configs
@@ -25,6 +25,7 @@ so ~/.config/nvim/conf.d/appearance.vim         " appearance configs
 so ~/.config/nvim/conf.d/dracula.vim            " dracula theme configs
 so ~/.config/nvim/conf.d/completions.vim        " completions configs
 so ~/.config/nvim/conf.d/indent-guides.vim      " indent-guides configs
+so ~/.config/nvim/conf.d/json.vim               " json configs
 so ~/.config/nvim/conf.d/lightline.vim          " lightline configs
 so ~/.config/nvim/conf.d/navigation.vim         " navigation configs
 so ~/.config/nvim/conf.d/nerdtree.vim           " nerdtree configs
