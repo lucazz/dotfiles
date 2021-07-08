@@ -8,5 +8,4 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 30
 let g:netrw_dirhistmax=0
 nmap <silent> <leader>m :NERDTreeToggle<cr>%
-"autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

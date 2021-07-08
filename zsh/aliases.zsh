@@ -1,6 +1,6 @@
 alias reload!='. ~/.zshrc'
-alias vi='nvim -c ":NERDTree"'
-alias vim='nvim -c ":NERDTree"'
+alias vi="nvim +:NERDTree"
+alias vim="nvim +:NERDTree"
 alias cat="bat"
 alias ls="ls -GwF"
 alias my-ip="dig +short myip.opendns.com @resolver1.opendns.com"
