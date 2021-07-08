@@ -1,6 +1,6 @@
 [core]
   autocrlf = input
-  editor = neovim-wo-nerdtree
+  editor = nvim
   filemode = false
   trustctime = false
   whitespace = fix
