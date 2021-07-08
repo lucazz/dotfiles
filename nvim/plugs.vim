@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdcommenter'
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'vim-scripts/bufkill.vim'
   Plug 'terryma/vim-multiple-cursors'

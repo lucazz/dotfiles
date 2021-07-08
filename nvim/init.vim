@@ -4,8 +4,6 @@ set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
 
-" Vundle Initialization
-so ~/.config/nvim/plugs.vim
 
 " General Config
 au FocusGained,BufEnter * :silent! !
@@ -20,6 +18,8 @@ let mapleader=","
 let g:go_fmt_command = "goimports"              " Golang Settings
 au FileType make set noexpandtab                " Makefile configs
 au FileType sh setlocal autoindent              " Bash configs
+so ~/.config/nvim/conf.d/polyglot.vim           " polyglot configs
+so ~/.config/nvim/plugs.vim                     " Vundle Initialization
 so ~/.config/nvim/conf.d/ale.vim                " ale configs
 so ~/.config/nvim/conf.d/appearance.vim         " appearance configs
 so ~/.config/nvim/conf.d/dracula.vim            " dracula theme configs
@@ -31,7 +31,6 @@ so ~/.config/nvim/conf.d/navigation.vim         " navigation configs
 so ~/.config/nvim/conf.d/nerdtree.vim           " nerdtree configs
 so ~/.config/nvim/conf.d/noswap.vim             " Turn Off Swap Files
 so ~/.config/nvim/conf.d/persistent-undo.vim    " persistent undo configs
-so ~/.config/nvim/conf.d/polyglot.vim           " polyglot configs
 so ~/.config/nvim/conf.d/search.vim             " search configs
 so ~/.config/nvim/conf.d/terraform.vim          " vim-terraform configs
 so ~/.config/nvim/conf.d/yaml.vim               " yaml configs
