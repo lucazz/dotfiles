@@ -44,6 +44,7 @@ bash '~/.tmux/plugins/tpm/bin/install_plugins'
 # Setup kubectl plugins & addons
 mv /usr/local/bin/kubens /usr/local/bin/knamespace
 mv /usr/local/bin/kubectx /usr/local/bin/kcontext
+kubectl krew install modify-secret
 
 # vimfiles
 mkdir -p ~/.config
