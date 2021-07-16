@@ -33,5 +33,6 @@ so ~/.config/nvim/conf.d/noswap.vim             " Turn Off Swap Files
 so ~/.config/nvim/conf.d/persistent-undo.vim    " persistent undo configs
 so ~/.config/nvim/conf.d/search.vim             " search configs
 so ~/.config/nvim/conf.d/terraform.vim          " vim-terraform configs
-so ~/.config/nvim/conf.d/yaml.vim               " yaml configs
 so ~/.config/nvim/conf.d/terminal.vim           " terminal emulation configs
+so ~/.config/nvim/conf.d/yaml.vim               " yaml configs
+so ~/.config/nvim/conf.d/ysiw.vim               " yaml configs
